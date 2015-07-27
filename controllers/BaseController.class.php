@@ -1,27 +1,27 @@
 <?php
-abstract class BaseController {
+abstract class BaseController extends Controller {
 
-	protected $controller;
+	public function __construct() {
 
-	public function __construct($controller) {
-
-		$this->controller = $controller;
+		parent::__construct();
 
 		$vars = array(
-			'HTTP_ROOT' => ROOT_HTTP.$controller->lang->getUserLang().'/',
+			'HTTP_ROOT' => ROOT_HTTP.$this->lang->getUserLang().'/',
 			'CSS_ROOT' => CSS_HTTP,
 			'JS_ROOT' => JS_HTTP,
 			'IMG_ROOT' => IMG_HTTP,
 			'referer' => REFERER,
-			'uri' => $controller->getUri(),
-			'querystring' => $controller->getQueryString(),
-			'current_page' => $controller->route,
-			'target' => $controller->target,
-			'action' => $controller->action,
-			'lang' => $controller->lang->getUserLang(),
-			'website_title' => 'VisitezTokyo',
+			'uri' => $this->getUri(),
+			'querystring' => $this->getQueryString(),
+			'current_page' => $this->route,
+			'target' => $this->target,
+			'action' => $this->action,
+			'lang' => $this->lang->getUserLang(),
+			'website_title' => 'Website Title',
 			'website_description' => 'Website Description',
-			'author' => 'Website Author'
+			'author' => 'Website Author',
+			'title' => '',
+			'description' => ''
 		);
 
 		$vars['pages'] = array(
@@ -30,6 +30,10 @@ abstract class BaseController {
 			array('url' => 'search', 'name' => Lang::_('Search')),
 			array('url' => 'contact', 'name' => Lang::_('Contact')),
 		);
+
+		if (User::isLogged()) {
+			$vars['user'] = User::get($this->session->user_id);
+		}
 
 		$archives_dates = array();
 		for($i = 0; $i < 12; $i++) {
@@ -42,7 +46,7 @@ abstract class BaseController {
 
 		$vars['archives_dates'] = $archives_dates;
 
-		$this->controller->response->addVars($vars);
+		$this->response->addVars($vars);
 	}
 
 }
