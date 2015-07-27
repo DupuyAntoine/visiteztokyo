@@ -17,13 +17,15 @@
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Les Quartiers <span class="caret"></span></a>
 							<ul class="dropdown-menu">
-								<li><a href="#">Action</a></li>
-								<li><a href="#">Another action</a></li>
-								<li><a href="#">Something else here</a></li>
-								<li role="separator" class="divider"></li>
-								<li><a href="#">Separated link</a></li>
-								<li role="separator" class="divider"></li>
-								<li><a href="#">One more separated link</a></li>
+								<li><a href="#">Akihabara</a></li>
+								<li><a href="#">Asakusa</a></li>
+								<li><a href="#">Harajuku</a></li>
+								<li><a href="#">Ikebukuro</a></li>
+								<li><a href="#">Roppongi</a></li>
+								<li><a href="#">Shinjuku</a></li>
+								<li><a href="#">Shibuya</a></li>
+								<li><a href="#">Tsukiji</a></li>
+								<li><a href="#">Ueno</a></li>
 							</ul>
 						</li>
 						<li class="active"><a href="#">Quartier aléatoire <span class="sr-only">(current)</span></a></li>
