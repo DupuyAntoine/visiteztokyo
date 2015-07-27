@@ -19,7 +19,6 @@
 		<h1 style ="text-align : center">{$website_title}</h1>
 		
 		{include file="partials/navbar.tpl"}
-
+	
 	</header>
-
 	<div class="container">

@@ -17,7 +17,7 @@ abstract class BaseController extends Controller {
 			'target' => $this->target,
 			'action' => $this->action,
 			'lang' => $this->lang->getUserLang(),
-			'website_title' => 'Website Title',
+			'website_title' => 'Visitez Tokyo',
 			'website_description' => 'Website Description',
 			'author' => 'Website Author',
 			'title' => '',
