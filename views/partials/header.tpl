@@ -22,4 +22,4 @@
 
 	</header>
 
-	<div class="container blog-content">
+	<div class="container">
