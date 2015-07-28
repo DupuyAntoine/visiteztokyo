@@ -32,8 +32,13 @@
 						<li><a href="#">Recherche</a></li>
 						<li><a href="#">Contact</a></li>
 						<li><a href="#">Photos des membres</a></li>
-						<li><a href="#">Se connecter</a></li>
-						<li><a href="#">S'enregistrer</a></li>
+						{if !empty($user) && User::isLogged()}
+							{t}Logged as{/t} {$user->firstname}
+							<a href="{$HTTP_ROOT}logout" class="blog-nav-item{if $current_page == 'user/logout/'} active{/if}">{t}Logout{/t}</a>&nbsp;|&nbsp;
+						{else}
+							<a href="{$HTTP_ROOT}login" class="blog-nav-item{if $current_page == 'user/login/'} active{/if}">{t}Login{/t}</a>
+							<a href="{$HTTP_ROOT}register" class="blog-nav-item{if $current_page == 'user/register/'} active{/if}">{t}Register{/t}</a>&nbsp;|&nbsp;
+						{/if}
 					</ul>
 
 					<ul class="nav navbar-nav navbar-right">
