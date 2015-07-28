@@ -8,14 +8,6 @@ $routes = array(
 		'target' => DEFAULT_CONTROLLER_TARGET,
 		'action' => DEFAULT_CONTROLLER_ACTION
 	),
-	'post/([0-9]+)' => array(
-		'target' => 'post',
-		'action' => 'view'
-	),
-	'post/archives/([0-9\-]+)/([0-9]+)' => array(
-		'target' => 'post',
-		'action' => 'archives'
-	),
 	'search' => array(
 		'target' => 'search',
 		'action' => 'results'
