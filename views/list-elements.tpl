@@ -1,3 +1,5 @@
+{include file="partials/header.tpl"}
+
 <div class="row">
 
 	<div class="col-md-12">
@@ -223,3 +225,5 @@
 		</div>
 
 	</div>
+
+	{include file="partials/footer.tpl"}
