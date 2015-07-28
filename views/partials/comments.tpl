@@ -1,5 +1,3 @@
-{include file="partials/header.tpl"}
-
 <form>
 	<div class="form-group">
 		<label for="pseudo">Pseudo</label>
@@ -36,5 +34,3 @@
 		<img height="60" width="60" src="../images/ueno/keijouen/facade.jpg" align="right">
 	</div>
 </div>
-
-{include file="partials/footer.tpl"}

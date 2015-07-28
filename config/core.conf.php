@@ -39,7 +39,7 @@ define('TPL_PATH', ROOT_PATH.'views/');
 define('TPL_CACHE_PATH', ROOT_PATH.'cache/views/');
 define('TPL_DEBUGGING', false);
 define('TPL_CACHING', false);
-define('TPL_FORCE_COMPILE', false);
+define('TPL_FORCE_COMPILE', true);
 
 // REFERER
 define('REFERER', !empty($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '');
@@ -59,7 +59,7 @@ if ($_SERVER['HTTP_HOST'] == 'localhost') {
 	define('DB_PASS', '');
 }
 define('DB_ENGINE', 'mysql');
-define('DB_NAME', 'blog');
+define('DB_NAME', 'visiteztokyo.com');
 
 // ERRORS CONFIG
 error_reporting((CORE_DEBUG ? (E_ALL | E_STRICT) : 0));

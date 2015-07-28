@@ -24,14 +24,21 @@ abstract class BaseController extends Controller {
 			'description' => ''
 		);
 
+		$quarters = Db::select('SELECT id, name FROM quarter ORDER BY name ASC');
+
+		$quarter_pages = array();
+		foreach($quarters as $quarter) {
+			$quarter_pages['quarter/'.$quarter['id'].'-'.strtolower($quarter['name'])] = $quarter['name'];
+		}
+
 		$vars['pages'] = array(
-			array('url' => 'index', 'name' => Lang::_('Accueil')),
-			array('url' => 'district', 'name' => Lang::_('Quartier')),
-			array('url' => 'search', 'name' => Lang::_('Search')),
-			array('url' => 'contact', 'name' => Lang::_('Contact')),
-			array('url' => 'district/info', 'name' => Lang::_('Lieu')),
-			array('url' => 'random/district', 'name' => Lang::_('Quartier aléatoire')),
-			array('url' => 'photo', 'name' => Lang::_('Photos des membres')),
+			'home/index' => Lang::_('Accueil'),
+			'quarter' => array(	Lang::_('Les quartiers'), $quarter_pages),
+			'search' => Lang::_('Search'),
+			'contact' => Lang::_('Contact'),
+			'quarter/info' => Lang::_('Lieu'),
+			'quarter/random' => Lang::_('Quartier aléatoire'),
+			'photo' => Lang::_('Photos des membres'),
 		);
 
 		if (User::isLogged()) {

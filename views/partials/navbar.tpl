@@ -8,30 +8,25 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="#">Accueil</a>
 				</div>
 
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Les Quartiers <span class="caret"></span></a>
-							<ul class="dropdown-menu">
-								<li><a href="#">Akihabara</a></li>
-								<li><a href="#">Asakusa</a></li>
-								<li><a href="#">Harajuku</a></li>
-								<li><a href="#">Ikebukuro</a></li>
-								<li><a href="#">Roppongi</a></li>
-								<li><a href="#">Shinjuku</a></li>
-								<li><a href="#">Shibuya</a></li>
-								<li><a href="#">Tsukiji</a></li>
-								<li><a href="#">Ueno</a></li>
-							</ul>
-						</li>
-						<li><a href="#">Quartier aléatoire <span class="sr-only">(current)</span></a></li>
-						<li><a href="#">Recherche</a></li>
-						<li><a href="#">Contact</a></li>
-						<li><a href="#">Photos des membres</a></li>
+						{foreach $pages as $page_url => $page}
+							{if !is_array($page)}
+							<li{if $page_url == $current_page || $page_url == $target || $page_url == "$target/$action"} class="active"{/if}><a href="{$HTTP_ROOT}{$page_url}">{$page}</a></li>
+							{else}
+							<li class="dropdown{if $page_url == $current_page || $page_url == $target || $page_url == "$target/$action"} active{/if}">
+								<a href="{$page_url}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{$page[0]} <span class="caret"></span></a>
+								<ul class="dropdown-menu" role="menu">
+									{foreach $page[1] as $subpage_url => $subpage}
+									<li><a href="{$HTTP_ROOT}{$subpage_url}">{$subpage}</a></li>
+									{/foreach}
+								</ul>
+							</li>
+							{/if}
+						{/foreach}
 					</ul>
 
 					<ul class="nav navbar-nav navbar-right">
@@ -51,7 +46,7 @@
 					</ul>
 				</div><!-- /.navbar-collapse -->
 
-				
+
 
 			</div><!-- /.container-fluid -->
 		</nav>
