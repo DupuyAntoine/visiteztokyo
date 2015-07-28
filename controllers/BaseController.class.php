@@ -38,7 +38,7 @@ abstract class BaseController extends Controller {
 			'contact' => Lang::_('Contact'),
 			'quarter/info' => Lang::_('Lieu'),
 			'quarter/random' => Lang::_('Quartier aléatoire'),
-			'photo' => Lang::_('Photos des membres'),
+			'wall' => Lang::_('Photos des membres'),
 		);
 
 		if (User::isLogged()) {
