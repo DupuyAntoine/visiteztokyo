@@ -4,15 +4,14 @@
         <ul class="thumbnails">
             <div class="col-md-4">
                 <div class="thumbnail">
-                    <img src="http://placehold.it/320x200" alt="ALT NAME" class="img-responsive" />
+                        <img src="http://placehold.it/320x200" alt="ALT NAME" class="img-responsive" />
                     <div class="caption">
-                         <h3>Header Name</h3>
+                        <h3>Header Name</h3>                
                         <p>Description</p>
-                       
                     </div>
                 </div>
             </div>
-       </ul>
+        </ul>
     </div>
 
 {include file="partials/footer.tpl"}
