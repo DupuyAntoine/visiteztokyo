@@ -32,6 +32,9 @@
 						<li><a href="#">Recherche</a></li>
 						<li><a href="#">Contact</a></li>
 						<li><a href="#">Photos des membres</a></li>
+					</ul>
+
+					<ul class="nav navbar-nav navbar-right">
 						{if !empty($user) && User::isLogged()}
 							{t}Logged as{/t} {$user->firstname}
 							<li><a href="{$HTTP_ROOT}logout" class="blog-nav-item{if $current_page == 'user/logout/'} active{/if}">{t}Logout{/t}</a></li>
@@ -39,9 +42,6 @@
 							<li{if $current_page == 'user/login/'} class="active"{/if}><a href="{$HTTP_ROOT}login" class="blog-nav-item">{t}Login{/t}</a></li>
 							<li{if $current_page == 'user/register/'} class="active"{/if}><a href="{$HTTP_ROOT}register" class="blog-nav-item">{t}Register{/t}</a></li>
 						{/if}
-					</ul>
-
-					<ul class="nav navbar-nav navbar-right">
 						<form class="navbar-form navbar-left" role="search">
 							<div class="form-group">
 								<input type="text" class="form-control" placeholder="Search">
