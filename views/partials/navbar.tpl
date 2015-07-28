@@ -28,16 +28,16 @@
 								<li><a href="#">Ueno</a></li>
 							</ul>
 						</li>
-						<li class="active"><a href="#">Quartier aléatoire <span class="sr-only">(current)</span></a></li>
+						<li><a href="#">Quartier aléatoire <span class="sr-only">(current)</span></a></li>
 						<li><a href="#">Recherche</a></li>
 						<li><a href="#">Contact</a></li>
 						<li><a href="#">Photos des membres</a></li>
 						{if !empty($user) && User::isLogged()}
 							{t}Logged as{/t} {$user->firstname}
-							<a href="{$HTTP_ROOT}logout" class="blog-nav-item{if $current_page == 'user/logout/'} active{/if}">{t}Logout{/t}</a>&nbsp;|&nbsp;
+							<li><a href="{$HTTP_ROOT}logout" class="blog-nav-item{if $current_page == 'user/logout/'} active{/if}">{t}Logout{/t}</a></li>
 						{else}
-							<a href="{$HTTP_ROOT}login" class="blog-nav-item{if $current_page == 'user/login/'} active{/if}">{t}Login{/t}</a>
-							<a href="{$HTTP_ROOT}register" class="blog-nav-item{if $current_page == 'user/register/'} active{/if}">{t}Register{/t}</a>&nbsp;|&nbsp;
+							<li{if $current_page == 'user/login/'} class="active"{/if}><a href="{$HTTP_ROOT}login" class="blog-nav-item">{t}Login{/t}</a></li>
+							<li{if $current_page == 'user/register/'} class="active"{/if}><a href="{$HTTP_ROOT}register" class="blog-nav-item">{t}Register{/t}</a></li>
 						{/if}
 					</ul>
 
