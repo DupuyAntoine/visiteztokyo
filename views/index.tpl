@@ -9,7 +9,7 @@
                     <div class="caption">
                         <h3>{$quarter['name']}</h3>
                         <p>Description</p>
-                        
+
                     </div>
                 </div>
             </div>
@@ -17,6 +17,6 @@
        </ul>
     </div>
 
-    {include file="partials/pagination.tpl"}    
+    {include file="partials/pagination.tpl"}
 
 {include file="partials/footer.tpl"}
