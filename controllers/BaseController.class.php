@@ -26,11 +26,11 @@ abstract class BaseController extends Controller {
 
 		$vars['pages'] = array(
 			array('url' => 'index', 'name' => Lang::_('Accueil')),
-			array('url' => 'district', 'name' => Lang::_('Quartier')),
+			array('url' => 'quarter', 'name' => Lang::_('Quartier')),
 			array('url' => 'search', 'name' => Lang::_('Search')),
 			array('url' => 'contact', 'name' => Lang::_('Contact')),
-			array('url' => 'district/info', 'name' => Lang::_('Lieu')),
-			array('url' => 'random/district', 'name' => Lang::_('Quartier aléatoire')),
+			array('url' => 'quarter/info', 'name' => Lang::_('Lieu')),
+			array('url' => 'random/quarter', 'name' => Lang::_('Quartier aléatoire')),
 			array('url' => 'photo', 'name' => Lang::_('Photos des membres')),
 		);
 
