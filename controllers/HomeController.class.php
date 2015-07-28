@@ -17,6 +17,7 @@ class HomeController extends BaseController {
 			'count_total' => $pagination->getTotalCount()
 		);
 
+		//$this->render('index', $vars);
 		$this->render('index', $vars);
 	}
 
