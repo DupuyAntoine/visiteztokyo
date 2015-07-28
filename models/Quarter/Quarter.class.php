@@ -19,6 +19,9 @@ class Quarter extends Model {
 	public function getDescription() {
 		return $this->description;
 	}
+	public function getSlug() {
+		return $this->id.'-'.strtolower($this->name);
+	}
 
 	public function setId($id) {
 		$this->id = $id;
@@ -32,5 +35,6 @@ class Quarter extends Model {
 	public function setDescription($description) {
 		$this->description = $description;
 	}
+
 
 }	
