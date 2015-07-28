@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Mar 28 Juillet 2015 à 14:56
+-- Généré le :  Mar 28 Juillet 2015 à 16:50
 -- Version du serveur :  5.6.24
 -- Version de PHP :  5.6.8
 
@@ -143,7 +143,7 @@ CREATE TABLE IF NOT EXISTS `photo` (
   `src` varchar(100) DEFAULT NULL,
   `info_id` int(11) DEFAULT NULL,
   `user_id` int(11) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=79 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=163 DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `photo`
@@ -227,7 +227,85 @@ INSERT INTO `photo` (`id`, `quarter_id`, `src`, `info_id`, `user_id`) VALUES
 (75, 1, '\\img\\Akihabara\\restaurant\\Menya_Musashi_Bujin\\Menya_Musashi_Bujin_3.jpg', 11, NULL),
 (76, 1, '\\img\\Akihabara\\restaurant\\Menya_Musashi_Bujin\\Menya_Musashi_Bujin_4.jpg', 11, NULL),
 (77, 1, '\\img\\Akihabara\\restaurant\\Menya_Musashi_Bujin\\Menya_Musashi_Bujin_5.jpg', 11, NULL),
-(78, 1, '\\img\\Akihabara\\map_akihabara.jpg', NULL, NULL);
+(78, 1, '\\img\\Akihabara\\map_akihabara.jpg', NULL, NULL),
+(79, 3, '\\img\\harajuku\\harajuku.jpg', NULL, NULL),
+(80, 3, '\\img\\harajuku\\harajuku_1.jpg', NULL, NULL),
+(81, 3, '\\img\\harajuku\\harajuku_2.jpg', NULL, NULL),
+(82, 3, '\\img\\harajuku\\harajuku_3.jpg', NULL, NULL),
+(83, 3, '\\img\\harajuku\\harajuku_4.jpg', NULL, NULL),
+(84, 3, '\\img\\harajuku\\lieux_visiter\\pont_des_cosplay\\pont_des_cosplay.jpg', 16, NULL),
+(85, 3, '\\img\\harajuku\\lieux_visiter\\pont_des_cosplay\\pont_des_cosplay_1.jpg', 16, NULL),
+(86, 3, '\\img\\harajuku\\lieux_visiter\\pont_des_cosplay\\pont_des_cosplay_2.jpg', 16, NULL),
+(87, 3, '\\img\\harajuku\\lieux_visiter\\pont_des_cosplay\\pont_des_cosplay_4.jpg', 16, NULL),
+(88, 3, '\\img\\harajuku\\lieux_visiter\\pont_des_cosplay\\pont_des_cosplay_5.jpg', 16, NULL),
+(89, 3, '\\img\\harajuku\\lieux_visiter\\pont_des_cosplay\\pont_des_cosplay_6.jpg', 16, NULL),
+(90, 3, '\\img\\harajuku\\lieux_visiter\\temple_meiji\\temple_meiji.jpg', 18, NULL),
+(91, 3, '\\img\\harajuku\\lieux_visiter\\temple_meiji\\temple_meiji_2.jpg', 18, NULL),
+(92, 3, '\\img\\harajuku\\lieux_visiter\\temple_meiji\\temple_meiji_3.jpg', 18, NULL),
+(93, 3, '\\img\\harajuku\\lieux_visiter\\temple_meiji\\temple_meiji_4.jpg', 18, NULL),
+(94, 3, '\\img\\harajuku\\lieux_visiter\\temple_meiji\\temple_meiji_6.jpg', 18, NULL),
+(95, 3, '\\img\\harajuku\\lieux_visiter\\temple_meiji\\temple_meiji_7.jpg', 18, NULL),
+(96, 3, '\\img\\harajuku\\restaurant\\gyoza_rou\\gyoza_rou.jpg', 12, NULL),
+(97, 3, '\\img\\harajuku\\restaurant\\gyoza_rou\\gyoza_rou_1.jpg', 12, NULL),
+(98, 3, '\\img\\harajuku\\restaurant\\gyoza_rou\\gyoza_rou_2.jpg', 12, NULL),
+(99, 3, '\\img\\harajuku\\restaurant\\gyoza_rou\\gyoza_rou_3.jpg', 12, NULL),
+(100, 3, '\\img\\harajuku\\restaurant\\gyoza_rou\\gyoza_rou_4.jpg', 12, NULL),
+(101, 3, '\\img\\harajuku\\restaurant\\gyoza_rou\\gyoza_rou_5.jpg', 12, NULL),
+(102, 3, '\\img\\harajuku\\restaurant\\Kyushu_Jangara\\Kyushu_Jangara.JPG', 14, NULL),
+(103, 3, '\\img\\harajuku\\restaurant\\Kyushu_Jangara\\Kyushu_Jangara_2.jpg', 14, NULL),
+(104, 3, '\\img\\harajuku\\restaurant\\Kyushu_Jangara\\Kyushu_Jangara_3.JPG', 14, NULL),
+(105, 3, '\\img\\harajuku\\restaurant\\Kyushu_Jangara\\Kyushu_Jangara_4.jpeg', 14, NULL),
+(106, 3, '\\img\\harajuku\\restaurant\\Kyushu_Jangara\\Kyushu_Jangara_5.jpg', 14, NULL),
+(107, 3, '\\img\\harajuku\\restaurant\\Kyushu_Jangara\\Kyushu_Jangara_6.jpg', 14, NULL),
+(108, 3, '\\img\\harajuku\\restaurant\\Minoringo\\Minoringo.JPG', 15, NULL),
+(109, 3, '\\img\\harajuku\\restaurant\\Minoringo\\Minoringo_1.jpg', 15, NULL),
+(110, 3, '\\img\\harajuku\\restaurant\\Minoringo\\Minoringo_3.jpg', 15, NULL),
+(111, 3, '\\img\\harajuku\\restaurant\\Minoringo\\Minoringo_2.jpg', 15, NULL),
+(112, 2, '\\img\\Ikebukuro\\hotel\\centurion_hotel\\centurion_hotel.jpg', 19, NULL),
+(113, 2, '\\img\\Ikebukuro\\hotel\\centurion_hotel\\centurion_hotel_1.jpg', 19, NULL),
+(114, 2, '\\img\\Ikebukuro\\hotel\\centurion_hotel\\centurion_hotel_2.jpg', 19, NULL),
+(115, 2, '\\img\\Ikebukuro\\hotel\\centurion_hotel\\centurion_hotel_3.jpg', 19, NULL),
+(116, 2, '\\img\\Ikebukuro\\hotel\\centurion_hotel\\centurion_hotel_4.jpg', 19, NULL),
+(117, 2, '\\img\\Ikebukuro\\hotel\\centurion_hotel\\centurion_hotel_5.jpg', 19, NULL),
+(118, 2, '\\img\\Ikebukuro\\hotel\\sakura_hotel\\sakura_hotel.jpg', 20, NULL),
+(119, 2, '\\img\\Ikebukuro\\hotel\\sakura_hotel\\sakura_hotel_1.jpg', 20, NULL),
+(120, 2, '\\img\\Ikebukuro\\hotel\\sakura_hotel\\sakura_hotel_2.jpg', 20, NULL),
+(121, 2, '\\img\\Ikebukuro\\hotel\\Tokyu_Stay_Ikebukuro\\Tokyu_Stay_Ikebukuro.jpg', 21, NULL),
+(122, 2, '\\img\\Ikebukuro\\hotel\\Tokyu_Stay_Ikebukuro\\Tokyu_Stay_Ikebukuro_1.jpg', 21, NULL),
+(123, 2, '\\img\\Ikebukuro\\hotel\\Tokyu_Stay_Ikebukuro\\Tokyu_Stay_Ikebukuro_2.jpg', 21, NULL),
+(124, 2, '\\img\\Ikebukuro\\hotel\\Tokyu_Stay_Ikebukuro\\Tokyu_Stay_Ikebukuro_3.jpg', 21, NULL),
+(125, 2, '\\img\\Ikebukuro\\lieux_visiter\\batting_center\\batting_center.jpg', 22, NULL),
+(126, 2, '\\img\\Ikebukuro\\lieux_visiter\\batting_center\\batting_center_1.jpg', 22, NULL),
+(127, 2, '\\img\\Ikebukuro\\lieux_visiter\\batting_center\\batting_center_2.jpg', 22, NULL),
+(128, 2, '\\img\\Ikebukuro\\lieux_visiter\\batting_center\\batting_center_3.jpg', 22, NULL),
+(129, 2, '\\img\\Ikebukuro\\lieux_visiter\\batting_center\\batting_center_4.jpg', 22, NULL),
+(130, 2, '\\img\\Ikebukuro\\lieux_visiter\\bosaikan\\bosaikan.jpg', 23, NULL),
+(131, 2, '\\img\\Ikebukuro\\lieux_visiter\\bosaikan\\bosaikan_1.jpg', 23, NULL),
+(132, 2, '\\img\\Ikebukuro\\lieux_visiter\\bosaikan\\bosaikan_2.jpg', 23, NULL),
+(133, 2, '\\img\\Ikebukuro\\lieux_visiter\\bosaikan\\bosaikan_3.jpg', 23, NULL),
+(134, 2, '\\img\\Ikebukuro\\lieux_visiter\\bosaikan\\bosaikan_4.jpg', 23, NULL),
+(135, 2, '\\img\\Ikebukuro\\lieux_visiter\\bosaikan\\bosaikan_5.jpg', 23, NULL),
+(136, 2, '\\img\\Ikebukuro\\lieux_visiter\\tokyo_dome\\tokyo_dome.jpg', 24, NULL),
+(137, 2, '\\img\\Ikebukuro\\lieux_visiter\\tokyo_dome\\tokyo_dome_1.jpg', 24, NULL),
+(138, 2, '\\img\\Ikebukuro\\lieux_visiter\\tokyo_dome\\tokyo_dome_2.jpg', 24, NULL),
+(139, 2, '\\img\\Ikebukuro\\lieux_visiter\\tokyo_dome\\tokyo_dome_3.jpg', 24, NULL),
+(140, 2, '\\img\\Ikebukuro\\lieux_visiter\\tokyo_dome\\tokyo_dome_4.jpg', 24, NULL),
+(141, 2, '\\img\\Ikebukuro\\lieux_visiter\\tokyo_dome\\tokyo_dome_5.jpg', 24, NULL),
+(148, 2, '\\img\\Ikebukuro\\restaurant\\uchi\\uchi.jpg', 25, NULL),
+(149, 2, '\\img\\Ikebukuro\\restaurant\\uchi\\uchi_1.jpg', 25, NULL),
+(150, 2, '\\img\\Ikebukuro\\restaurant\\uchi\\uchi_2.jpg', 25, NULL),
+(151, 2, '\\img\\Ikebukuro\\restaurant\\uchi\\uchi_3.jpg', 25, NULL),
+(152, 2, '\\img\\Ikebukuro\\restaurant\\uchi\\uchi_4.jpg', 25, NULL),
+(153, 2, '\\img\\Ikebukuro\\restaurant\\uchi\\uchi_5.jpg', 25, NULL),
+(154, 2, '\\img\\Ikebukuro\\restaurant\\Zubora\\Zubora.jpg', 26, NULL),
+(155, 2, '\\img\\Ikebukuro\\restaurant\\Zubora\\Zubora_1.jpg', 26, NULL),
+(156, 2, '\\img\\Ikebukuro\\restaurant\\Zubora\\Zubora_2.jpg', 26, NULL),
+(157, 2, '\\img\\Ikebukuro\\restaurant\\Zubora\\Zubora_3.jpg', 26, NULL),
+(158, 2, '\\img\\Ikebukuro\\restaurant\\Zubora\\Zubora_4.jpg', 26, NULL),
+(159, 2, '\\img\\Ikebukuro\\restaurant\\Zubora\\Zubora_5.jpg', 26, NULL),
+(160, 2, '\\img\\Ikebukuro\\restaurant\\Zubora\\Zubora_6.jpg', 26, NULL),
+(161, 2, '\\img\\Ikebukuro\\restaurant\\Zubora\\Zubora_7.jpg', 26, NULL),
+(162, 2, '\\img\\Ikebukuro\\restaurant\\Zubora\\Zubora_8.jpg', 26, NULL);
 
 -- --------------------------------------------------------
 
@@ -247,14 +325,14 @@ CREATE TABLE IF NOT EXISTS `quarter` (
 --
 
 INSERT INTO `quarter` (`id`, `name`, `type`, `description`) VALUES
-(1, 'Akihabara', 'Geek Otaku Commerce', 'Akihabara (秋葉原) est un quartier de Tokyo situé à cheval sur les arrondissements de Chiyoda et de Taitō. Il est célèbre pour ses très nombreuses boutiques d''électronique et pour les mangas qui s''y trouvent. Il est connu dans le monde sous le nom de Akihabara Electric Town (秋葉原電気街, Akihabara denki-gai?). Le centre de ce quartier est la gare d''Akihabara.'),
-(2, 'Ikebukuro', 'Commerce Spectacle', 'Ikebukuro (池袋) est un quartier fréquenté de Tokyo, principalement actif dans le domaine du commerce, de la restauration et du spectacle. Il est situé dans l''arrondissement de Toshima. La plus grande librairie du Japon, Junkudō, y est implantée à l''est, alors qu''à l''ouest est située l''Université privée Rikkyô (Rikkyô daigaku 立教大学). Il est également le lieu où se déroule l''action des séries TV et manga Ikebukuro West Gate Park et Durarara!!. Un des plus hauts gratte-ciel de Tōkyō, le Sunshine 60, construit dans le complexe Sunshine City1, possède le premier aquarium construit dans ce type d''immeuble.'),
-(3, 'Harajuku', 'Otaku Temple Commerce', 'Harajuku (原宿) fait partie du quartier de Shibuya à Tokyo et est situé sur la partie ouest de la ligne Yamanote, du réseau JR Est, entre les stations de Shinjuku et Shibuya.\r\n\r\nLes samedi et dimanche on y voit généralement des adeptes de la mode Lolita, des jeunes gens habillés en chanteur de rock ou en Visual Kei, et, des cosplayers déguisés en personnage de manga, d''anime ou de jeux vidéo.\r\n\r\nLe quartier d''Harajuku est également connu pour abriter l''un des plus célèbres sanctuaires shintoïste, le Meiji Jingū, au milieu du Parc Yoyogi, une forêt artificielle plantée vers 1920.\r\n\r\nLa célèbre avenue Omotesandō, les « Champs-Élysées » de Tokyo, relie Harajuku à Aoyama. L''autre rue connue du quartier est Takeshita-dōri, elle concentre un grand nombre de boutiques qui habillent entre autres les Gothic Lolita, les Cosplay, les Pink, les Sweet Lolita.\r\n\r\nCe quartier est fréquenté par un grand nombre de jeunes qui profitent du week-end, durant lequel ils n''ont pas l''obligation de porter l''habituel uniforme, pour se distinguer par leur style vestimentaire. De célèbres groupes de Visual Kei approvisionnent leurs garde-robes à Harajuku, tels que X Japan, Dir en Grey, AnCafe, etc. Ces modes vestimentaires sont ensuite reprises par les adolescents.'),
-(4, 'Ueno', 'Zoo Temple Parc', 'Le vaste Parc d''Ueno comprend un grand zoo, plusieurs temples (notamment le Bentendo et Tōshōgū) et des musées dont le Musée national de Tōkyō. De nombreux sans-abris habitent également dans le parc.\r\n\r\nEn contrebas du parc se trouve un étang le Shinobazu no Ike (不忍池?), ou les Tokyoites peuvent faire du pédalo. Ueno est proche d''Asakusa, que l''on peut rejoindre par la rue Kappabashi.\r\n\r\nLa gare d''Ueno est située sur de nombreuses lignes ferroviaires dont la célèbre ligne Yamanote du réseau JR East. C''est l''un des arrêts de ligne Shinkansen Tōhoku, ce qui permet de relier la gare avec le nord du pays. La gare d''Ueno est également desservie par le métro de Tokyo (lignes Ginza et Hibiya).\r\n\r\nÀ proximité, la gare de Keisei Ueno est le point de départ des trains Skyliner vers l''aéroport international de Narita.'),
-(5, 'Asakusa', 'Temple Commerce', 'Asakusa est connu des touristes pour son temple bouddhiste, le Sensō-ji (浅草寺?), dédié à la déesse bodhisattva Kannon. Le temple avec sa pagode à cinq étages, se trouve au bout d''une grande allée commerçante, et, dans tout le quartier se trouve un grand nombre de petites boutiques et restaurants.\r\n\r\nUn peu excentré par rapport au reste de la ville (et surtout son centre très vivant et moderne dont Shinjuku, Shibuya et Roppongi sont les quartiers les plus représentatifs), Asakusa n''en demeure pas moins un quartier très prisé des touristes : on y trouve de nombreux hôtels, dont la plupart sont moins chers qu''ailleurs en ville, et les restaurants et petites échoppes artisanales sont nombreux et accueillent volontiers (si ce n''est en priorité) les touristes.\r\n\r\nC''est ici qu''il faut se rendre pour visiter les boutiques d''ustensiles de cuisine, fréquenté à la fois par les professionnels de la restauration, et par le badaud désireux de ramener un souvenir typique du Japon: céramiques, bols, baguettes, théière, verres etc. il y a un choix très impressionnant de produits. C''est également dans cette rue que se trouvent les boutiques de faux aliments en cire, ça vaut le détour. Mais attention, ces représentations impérissables et très réalistes sont bien plus chers que leurs originaux périssables.\r\n\r\nSur le toit d''un building situé de l''autre côté du fleuve Sumida, se trouve la flamme de l''immeuble de la brasserie Asahi conçue par Philippe Starck. Bien qu''elle fût censée à l''origine représenter à la fois une bulle de bière qui s''élève et une flèche pointée vers l''avenir, les japonais la voient en général comme une grande crotte de chien... : la ville n''a pas autorisé son positionnement vertical, considérant que l''ensemble dépassait les hauteurs autorisées de l''époque, la statue est restée ainsi couchée depuis.'),
+(1, 'Akihabara', 'Geek - Otaku - Commerce', 'Akihabara (秋葉原) est un quartier de Tokyo situé à cheval sur les arrondissements de Chiyoda et de Taitō. Il est célèbre pour ses très nombreuses boutiques d''électronique et pour les mangas qui s''y trouvent. Il est connu dans le monde sous le nom de Akihabara Electric Town (秋葉原電気街, Akihabara denki-gai?). Le centre de ce quartier est la gare d''Akihabara.'),
+(2, 'Ikebukuro', 'Commerce - Spectacle', 'Ikebukuro (池袋) est un quartier fréquenté de Tokyo, principalement actif dans le domaine du commerce, de la restauration et du spectacle. Il est situé dans l''arrondissement de Toshima. La plus grande librairie du Japon, Junkudō, y est implantée à l''est, alors qu''à l''ouest est située l''Université privée Rikkyô (Rikkyô daigaku 立教大学). Il est également le lieu où se déroule l''action des séries TV et manga Ikebukuro West Gate Park et Durarara!!. Un des plus hauts gratte-ciel de Tōkyō, le Sunshine 60, construit dans le complexe Sunshine City1, possède le premier aquarium construit dans ce type d''immeuble.'),
+(3, 'Harajuku', 'Otaku - Temple - Commerce', 'Harajuku (原宿) fait partie du quartier de Shibuya à Tokyo et est situé sur la partie ouest de la ligne Yamanote, du réseau JR Est, entre les stations de Shinjuku et Shibuya.\r\n\r\nLes samedi et dimanche on y voit généralement des adeptes de la mode Lolita, des jeunes gens habillés en chanteur de rock ou en Visual Kei, et, des cosplayers déguisés en personnage de manga, d''anime ou de jeux vidéo.\r\n\r\nLe quartier d''Harajuku est également connu pour abriter l''un des plus célèbres sanctuaires shintoïste, le Meiji Jingū, au milieu du Parc Yoyogi, une forêt artificielle plantée vers 1920.\r\n\r\nLa célèbre avenue Omotesandō, les « Champs-Élysées » de Tokyo, relie Harajuku à Aoyama. L''autre rue connue du quartier est Takeshita-dōri, elle concentre un grand nombre de boutiques qui habillent entre autres les Gothic Lolita, les Cosplay, les Pink, les Sweet Lolita.\r\n\r\nCe quartier est fréquenté par un grand nombre de jeunes qui profitent du week-end, durant lequel ils n''ont pas l''obligation de porter l''habituel uniforme, pour se distinguer par leur style vestimentaire. De célèbres groupes de Visual Kei approvisionnent leurs garde-robes à Harajuku, tels que X Japan, Dir en Grey, AnCafe, etc. Ces modes vestimentaires sont ensuite reprises par les adolescents.'),
+(4, 'Ueno', 'Zoo - Temple - Parc', 'Le vaste Parc d''Ueno comprend un grand zoo, plusieurs temples (notamment le Bentendo et Tōshōgū) et des musées dont le Musée national de Tōkyō. De nombreux sans-abris habitent également dans le parc.\r\n\r\nEn contrebas du parc se trouve un étang le Shinobazu no Ike (不忍池?), ou les Tokyoites peuvent faire du pédalo. Ueno est proche d''Asakusa, que l''on peut rejoindre par la rue Kappabashi.\r\n\r\nLa gare d''Ueno est située sur de nombreuses lignes ferroviaires dont la célèbre ligne Yamanote du réseau JR East. C''est l''un des arrêts de ligne Shinkansen Tōhoku, ce qui permet de relier la gare avec le nord du pays. La gare d''Ueno est également desservie par le métro de Tokyo (lignes Ginza et Hibiya).\r\n\r\nÀ proximité, la gare de Keisei Ueno est le point de départ des trains Skyliner vers l''aéroport international de Narita.'),
+(5, 'Asakusa', 'Temple - Commerce', 'Asakusa est connu des touristes pour son temple bouddhiste, le Sensō-ji (浅草寺?), dédié à la déesse bodhisattva Kannon. Le temple avec sa pagode à cinq étages, se trouve au bout d''une grande allée commerçante, et, dans tout le quartier se trouve un grand nombre de petites boutiques et restaurants.\r\n\r\nUn peu excentré par rapport au reste de la ville (et surtout son centre très vivant et moderne dont Shinjuku, Shibuya et Roppongi sont les quartiers les plus représentatifs), Asakusa n''en demeure pas moins un quartier très prisé des touristes : on y trouve de nombreux hôtels, dont la plupart sont moins chers qu''ailleurs en ville, et les restaurants et petites échoppes artisanales sont nombreux et accueillent volontiers (si ce n''est en priorité) les touristes.\r\n\r\nC''est ici qu''il faut se rendre pour visiter les boutiques d''ustensiles de cuisine, fréquenté à la fois par les professionnels de la restauration, et par le badaud désireux de ramener un souvenir typique du Japon: céramiques, bols, baguettes, théière, verres etc. il y a un choix très impressionnant de produits. C''est également dans cette rue que se trouvent les boutiques de faux aliments en cire, ça vaut le détour. Mais attention, ces représentations impérissables et très réalistes sont bien plus chers que leurs originaux périssables.\r\n\r\nSur le toit d''un building situé de l''autre côté du fleuve Sumida, se trouve la flamme de l''immeuble de la brasserie Asahi conçue par Philippe Starck. Bien qu''elle fût censée à l''origine représenter à la fois une bulle de bière qui s''élève et une flèche pointée vers l''avenir, les japonais la voient en général comme une grande crotte de chien... : la ville n''a pas autorisé son positionnement vertical, considérant que l''ensemble dépassait les hauteurs autorisées de l''époque, la statue est restée ainsi couchée depuis.'),
 (6, 'Tsukiji', 'Marché aux poissons', 'Tsukiji (築地) est un quartier de l''arrondissement Chūō-ku à Tokyo, situé au niveau de l''embouchure du fleuve Sumida-gawa vers la baie de Tokyo.\r\n\r\nL''endroit est fortement connu pour le célèbre marché aux poissons de Tsukiji, le plus grand marché aux poissons du monde.\r\n\r\nTsukiji, qui veut littéralement dire « terre-plein », est un terrain gagné sur la mer dans les années 1700, durant l''époque d''Edo.\r\n\r\nIl y a également un quartier appelé Tsukiji dans les villes de Kōbe et d''Amagasaki dans la Préfecture de Hyōgo.'),
-(7, 'Roppongi', 'Vie nocturne', 'Roppongi (六本木) est un district de l''arrondissement de Minato de la ville de Tokyo, au Japon. Il est connu par sa vie nocturne et la présence de touristes étrangers et expatriés, bien que la majorité des visiteurs soient japonais. Il est situé dans la portion sud du cercle décrit par la ligne circulaire Yamanote, au sud d''Akasaka et au nord de Azabu.'),
-(8, 'Shinjuku', 'Affaire Commerce', 'Shinjuku est l''arrondissement de Tokyo comptant le plus grand nombre d''étrangers. Au 1er octobre 2005, on en comptait 29 353 de 107 nationalités différentes.[réf. nécessaire] Il s''agit d''abord de ressortissants de Corée (du Nord et du Sud), de Chine, de France, de Birmanie et des Philippines.\r\n\r\nDe façon plus restreinte, Shinjuku est un quartier situé autour de la gare de Shinjuku. C''est l''un des quartiers les plus animés de Tokyo, mais aussi un haut lieu des affaires abritant le siège de nombreuses grandes sociétés. La plupart des grands magasins japonais (Isetan, Keiō, Odakyu, Marui, Mitsukoshi, Seibu, Takashimaya et Tōkyū) sont présents à Shinjuku. On y trouve aussi des cinémas, restaurants, bars, et des hôtels internationaux.'),
+(7, 'Roppongi', 'Vie nocturne - Parc - Commerce', 'Roppongi (六本木) est un district de l''arrondissement de Minato de la ville de Tokyo, au Japon. Il est connu par sa vie nocturne et la présence de touristes étrangers et expatriés, bien que la majorité des visiteurs soient japonais. Il est situé dans la portion sud du cercle décrit par la ligne circulaire Yamanote, au sud d''Akasaka et au nord de Azabu.'),
+(8, 'Shinjuku', 'Affaire - Commerce', 'Shinjuku est l''arrondissement de Tokyo comptant le plus grand nombre d''étrangers. Au 1er octobre 2005, on en comptait 29 353 de 107 nationalités différentes.[réf. nécessaire] Il s''agit d''abord de ressortissants de Corée (du Nord et du Sud), de Chine, de France, de Birmanie et des Philippines.\r\n\r\nDe façon plus restreinte, Shinjuku est un quartier situé autour de la gare de Shinjuku. C''est l''un des quartiers les plus animés de Tokyo, mais aussi un haut lieu des affaires abritant le siège de nombreuses grandes sociétés. La plupart des grands magasins japonais (Isetan, Keiō, Odakyu, Marui, Mitsukoshi, Seibu, Takashimaya et Tōkyū) sont présents à Shinjuku. On y trouve aussi des cinémas, restaurants, bars, et des hôtels internationaux.'),
 (9, 'Shibuya', 'Mode', 'Shibuya (渋谷区) est un des 23 arrondissements spéciaux (区, ku?) formant Tokyo, au Japon. La population de l''arrondissement est de 208 371 habitants pour une superficie de 15,11 km2 (2008).\r\n\r\nEn même temps qu''au nom de l''arrondissement, le nom Shibuya se rapporte à la gare et au quartier d''affaires autour de la gare. La gare de Shibuya est une des plus fréquentées dans la région de Tokyo. L''arrondissement de Shibuya est connu comme un centre de la mode et c''est un quartier bien animé. Un symbole de ce quartier pour les jeunes est la tour 109 qui renferme une centaine de boutiques consacrées aux dernières tendances de la mode.');
 
 -- --------------------------------------------------------
@@ -322,7 +400,7 @@ ALTER TABLE `info`
 -- AUTO_INCREMENT pour la table `photo`
 --
 ALTER TABLE `photo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=79;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=163;
 --
 -- AUTO_INCREMENT pour la table `quarter`
 --
