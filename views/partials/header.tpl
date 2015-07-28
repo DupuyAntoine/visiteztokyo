@@ -21,4 +21,5 @@
 		{include file="partials/navbar.tpl"}
 	
 	</header>
+	
 	<div class="container">
