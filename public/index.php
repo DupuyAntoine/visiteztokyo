@@ -33,4 +33,6 @@ try {
 	if (CORE_DEBUG) {
 		echo '<pre>'.$msg_exception.'</pre>';
     }
+
+    
 }

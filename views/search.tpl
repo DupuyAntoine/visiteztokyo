@@ -35,9 +35,6 @@
 				{/if}
 
 			</div><!-- /.blog-main -->
-
-			{include file="partials/sidebar.tpl"}
-
 		</div><!-- /.row -->
 
 {include file="partials/footer.tpl"}
