@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Mar 28 Juillet 2015 à 13:32
+-- Généré le :  Mar 28 Juillet 2015 à 14:56
 -- Version du serveur :  5.6.24
 -- Version de PHP :  5.6.8
 
@@ -143,7 +143,91 @@ CREATE TABLE IF NOT EXISTS `photo` (
   `src` varchar(100) DEFAULT NULL,
   `info_id` int(11) DEFAULT NULL,
   `user_id` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=79 DEFAULT CHARSET=utf8;
+
+--
+-- Contenu de la table `photo`
+--
+
+INSERT INTO `photo` (`id`, `quarter_id`, `src`, `info_id`, `user_id`) VALUES
+(1, 1, '\\img\\Akihabara\\histoire\\histoire.jpg', 1, NULL),
+(2, 1, '\\img\\Akihabara\\histoire\\histoire_1.jpg', 1, NULL),
+(3, 1, '\\img\\Akihabara\\histoire\\histoire_2.jpg', 1, NULL),
+(4, 1, '\\img\\Akihabara\\hotel\\Akihabara_Hotel_3000\\Akihabara_Hotel_3000.jpg', 2, NULL),
+(5, 1, '\\img\\Akihabara\\hotel\\Akihabara_Hotel_3000\\Akihabara_Hotel_3000_4.jpg', 2, NULL),
+(6, 1, '\\img\\Akihabara\\hotel\\Akihabara_Hotel_3000\\Akihabara_Hotel_3000_3.jpg', 2, NULL),
+(7, 1, '\\img\\Akihabara\\hotel\\Akihabara_Hotel_3000\\Akihabara_Hotel_3000_2.jpg', 2, NULL),
+(8, 1, '\\img\\Akihabara\\hotel\\Akihabara_Hotel_3000\\Akihabara_Hotel_3000_1.jpg', 2, NULL),
+(9, 1, '\\img\\Akihabara\\hotel\\Akihabara_Washington_Hotel\\Akihabara_Washington_Hotel.jpg', 3, NULL),
+(10, 1, '\\img\\Akihabara\\hotel\\Akihabara_Washington_Hotel\\Akihabara_Washington_Hotel_1.jpg', 3, NULL),
+(11, 1, '\\img\\Akihabara\\hotel\\Akihabara_Washington_Hotel\\Akihabara_Washington_Hotel_2.jpg', 3, NULL),
+(12, 1, '\\img\\Akihabara\\hotel\\Akihabara_Washington_Hotel\\Akihabara_Washington_Hotel_3.jpg', 3, NULL),
+(13, 1, '\\img\\Akihabara\\hotel\\Akihabara_Washington_Hotel\\Akihabara_Washington_Hotel_4.jpg', 3, NULL),
+(14, 1, '\\img\\Akihabara\\hotel\\capsule\\capsule_14.jpg', 4, NULL),
+(15, 1, '\\img\\Akihabara\\hotel\\capsule\\capsule.jpg', 4, NULL),
+(16, 1, '\\img\\Akihabara\\hotel\\capsule\\capsule_1.jpg', 4, NULL),
+(17, 1, '\\img\\Akihabara\\hotel\\capsule\\capsule_2.jpg', 4, NULL),
+(18, 1, '\\img\\Akihabara\\hotel\\capsule\\capsule_3.jpg', 4, NULL),
+(19, 1, '\\img\\Akihabara\\hotel\\capsule\\capsule_4.jpg', 4, NULL),
+(20, 1, '\\img\\Akihabara\\hotel\\capsule\\capsule_5.jpg', 4, NULL),
+(21, 1, '\\img\\Akihabara\\hotel\\capsule\\capsule_6.jpg', 4, NULL),
+(22, 1, '\\img\\Akihabara\\hotel\\capsule\\capsule_7.jpg', 4, NULL),
+(23, 1, '\\img\\Akihabara\\hotel\\capsule\\capsule_8.jpg', 4, NULL),
+(24, 1, '\\img\\Akihabara\\hotel\\capsule\\capsule_9.jpg', 4, NULL),
+(25, 1, '\\img\\Akihabara\\hotel\\capsule\\capsule_10.jpg', 4, NULL),
+(26, 1, '\\img\\Akihabara\\hotel\\capsule\\capsule_11.jpg', 4, NULL),
+(27, 1, '\\img\\Akihabara\\hotel\\capsule\\capsule_12.jpg', 4, NULL),
+(28, 1, '\\img\\Akihabara\\hotel\\capsule\\capsule_13.jpg', 4, NULL),
+(29, 1, '\\img\\Akihabara\\hotel\\Remm_Akihabara\\Remm_Akihabara.jpg', 5, NULL),
+(30, 1, '\\img\\Akihabara\\hotel\\Remm_Akihabara\\Remm_Akihabara_1.jpg', 5, NULL),
+(31, 1, '\\img\\Akihabara\\hotel\\Remm_Akihabara\\Remm_Akihabara_2.jpg', 5, NULL),
+(32, 1, '\\img\\Akihabara\\hotel\\Remm_Akihabara\\Remm_Akihabara_3.jpg', 5, NULL),
+(33, 1, '\\img\\Akihabara\\hotel\\Remm_Akihabara\\Remm_Akihabara_4.jpg', 5, NULL),
+(34, 1, '\\img\\Akihabara\\hotel\\Remm_Akihabara\\Remm_Akihabara_5.jpg', 5, NULL),
+(35, 1, '\\img\\Akihabara\\lieux_a_visiter\\maid_cafe\\maid_cafe.jpg', 6, NULL),
+(36, 1, '\\img\\Akihabara\\lieux_a_visiter\\maid_cafe\\maid_cafe_1.jpg', 6, NULL),
+(37, 1, '\\img\\Akihabara\\lieux_a_visiter\\maid_cafe\\maid_cafe_2.jpg', 6, NULL),
+(38, 1, '\\img\\Akihabara\\lieux_a_visiter\\super_potato_shop\\super_potato_shop.jpg', 7, NULL),
+(39, 1, '\\img\\Akihabara\\lieux_a_visiter\\super_potato_shop\\super_potato_shop_1.jpg', 7, NULL),
+(40, 1, '\\img\\Akihabara\\lieux_a_visiter\\super_potato_shop\\super_potato_shop_2.jpg', 7, NULL),
+(41, 1, '\\img\\Akihabara\\lieux_a_visiter\\super_potato_shop\\super_potato_shop_3.jpg', 7, NULL),
+(42, 1, '\\img\\Akihabara\\lieux_a_visiter\\super_potato_shop\\super_potato_shop_4.jpg', 7, NULL),
+(43, 1, '\\img\\Akihabara\\lieux_a_visiter\\super_potato_shop\\super_potato_shop_5.jpg', 7, NULL),
+(44, 1, '\\img\\Akihabara\\lieux_a_visiter\\taito_station\\taito_station.jpg', 8, NULL),
+(45, 1, '\\img\\Akihabara\\lieux_a_visiter\\taito_station\\taito_station_1.jpg', 8, NULL),
+(46, 1, '\\img\\Akihabara\\lieux_a_visiter\\taito_station\\taito_station_2.jpg', 8, NULL),
+(47, 1, '\\img\\Akihabara\\lieux_a_visiter\\taito_station\\taito_station_3.jpg', 8, NULL),
+(48, 1, '\\img\\Akihabara\\lieux_a_visiter\\taito_station\\taito_station_4.jpg', 8, NULL),
+(49, 1, '\\img\\Akihabara\\lieux_a_visiter\\taito_station\\taito_station_5.jpg', 8, NULL),
+(50, 1, '\\img\\Akihabara\\lieux_a_visiter\\taito_station\\taito_station_6.jpg', 8, NULL),
+(51, 1, '\\img\\Akihabara\\restaurant\\gundam_cafe\\gundam_cafe.jpg', 9, NULL),
+(52, 1, '\\img\\Akihabara\\restaurant\\gundam_cafe\\gundam_cafe_1.jpg', 9, NULL),
+(53, 1, '\\img\\Akihabara\\restaurant\\gundam_cafe\\gundam_cafe_2.jpg', 9, NULL),
+(54, 1, '\\img\\Akihabara\\restaurant\\gundam_cafe\\gundam_cafe_3.jpg', 9, NULL),
+(55, 1, '\\img\\Akihabara\\restaurant\\gundam_cafe\\gundam_cafe_4.jpg', 9, NULL),
+(56, 1, '\\img\\Akihabara\\restaurant\\gundam_cafe\\gundam_cafe_5.jpg', 9, NULL),
+(57, 1, '\\img\\Akihabara\\restaurant\\gundam_cafe\\gundam_cafe_6.jpg', 9, NULL),
+(58, 1, '\\img\\Akihabara\\restaurant\\gundam_cafe\\gundam_cafe_7.jpg', 9, NULL),
+(59, 1, '\\img\\Akihabara\\restaurant\\gundam_cafe\\gundam_cafe_8.jpg', 9, NULL),
+(60, 1, '\\img\\Akihabara\\restaurant\\gundam_cafe\\gundam_cafe_9.jpg', 9, NULL),
+(61, 1, '\\img\\Akihabara\\restaurant\\gundam_cafe\\gundam_cafe_10.jpg', 9, NULL),
+(62, 1, '\\img\\Akihabara\\restaurant\\Kanda_Yabusoba\\Kanda_Yabusoba.jpg', 10, NULL),
+(63, 1, '\\img\\Akihabara\\restaurant\\Kanda_Yabusoba\\Kanda_Yabusoba_1.jpg', 10, NULL),
+(64, 1, '\\img\\Akihabara\\restaurant\\Kanda_Yabusoba\\Kanda_Yabusoba_2.jpg', 10, NULL),
+(65, 1, '\\img\\Akihabara\\restaurant\\Kanda_Yabusoba\\Kanda_Yabusoba_3.jpg', 10, NULL),
+(66, 1, '\\img\\Akihabara\\restaurant\\Kanda_Yabusoba\\Kanda_Yabusoba_4.jpg', 10, NULL),
+(67, 1, '\\img\\Akihabara\\restaurant\\Kanda_Yabusoba\\Kanda_Yabusoba_5.jpg', 10, NULL),
+(68, 1, '\\img\\Akihabara\\restaurant\\Kanda_Yabusoba\\Kanda_Yabusoba_6.jpg', 10, NULL),
+(69, 1, '\\img\\Akihabara\\restaurant\\Kanda_Yabusoba\\Kanda_Yabusoba_7.jpg', 10, NULL),
+(70, 1, '\\img\\Akihabara\\restaurant\\Kanda_Yabusoba\\Kanda_Yabusoba_8.jpg', 10, NULL),
+(71, 1, '\\img\\Akihabara\\restaurant\\Kanda_Yabusoba\\Kanda_Yabusoba_9.jpg', 10, NULL),
+(72, 1, '\\img\\Akihabara\\restaurant\\Menya_Musashi_Bujin\\Menya_Musashi_Bujin.jpg', 11, NULL),
+(73, 1, '\\img\\Akihabara\\restaurant\\Menya_Musashi_Bujin\\Menya_Musashi_Bujin_1.jpg', 11, NULL),
+(74, 1, '\\img\\Akihabara\\restaurant\\Menya_Musashi_Bujin\\Menya_Musashi_Bujin_2.jpg', 11, NULL),
+(75, 1, '\\img\\Akihabara\\restaurant\\Menya_Musashi_Bujin\\Menya_Musashi_Bujin_3.jpg', 11, NULL),
+(76, 1, '\\img\\Akihabara\\restaurant\\Menya_Musashi_Bujin\\Menya_Musashi_Bujin_4.jpg', 11, NULL),
+(77, 1, '\\img\\Akihabara\\restaurant\\Menya_Musashi_Bujin\\Menya_Musashi_Bujin_5.jpg', 11, NULL),
+(78, 1, '\\img\\Akihabara\\map_akihabara.jpg', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -238,7 +322,7 @@ ALTER TABLE `info`
 -- AUTO_INCREMENT pour la table `photo`
 --
 ALTER TABLE `photo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=79;
 --
 -- AUTO_INCREMENT pour la table `quarter`
 --
