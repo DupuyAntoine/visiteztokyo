@@ -28,12 +28,17 @@
 								<li><a href="#">Ueno</a></li>
 							</ul>
 						</li>
-						<li class="active"><a href="#">Quartier aléatoire <span class="sr-only">(current)</span></a></li>
+						<li><a href="#">Quartier aléatoire <span class="sr-only">(current)</span></a></li>
 						<li><a href="#">Recherche</a></li>
 						<li><a href="#">Contact</a></li>
 						<li><a href="#">Photos des membres</a></li>
-						<li><a href="#">Se connecter</a></li>
-						<li><a href="#">S'enregistrer</a></li>
+						{if !empty($user) && User::isLogged()}
+							{t}Logged as{/t} {$user->firstname}
+							<li><a href="{$HTTP_ROOT}logout" class="blog-nav-item{if $current_page == 'user/logout/'} active{/if}">{t}Logout{/t}</a></li>
+						{else}
+							<li{if $current_page == 'user/login/'} class="active"{/if}><a href="{$HTTP_ROOT}login" class="blog-nav-item">{t}Login{/t}</a></li>
+							<li{if $current_page == 'user/register/'} class="active"{/if}><a href="{$HTTP_ROOT}register" class="blog-nav-item">{t}Register{/t}</a></li>
+						{/if}
 					</ul>
 
 					<ul class="nav navbar-nav navbar-right">

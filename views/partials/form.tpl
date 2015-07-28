@@ -51,7 +51,7 @@
 				    </div>
 					{/if}
 
-					{if !empty($isSubmit) && !empty($fields[key]->error)}
+					{if !empty($isSubmit) && !empty($fields[key]->error) && $fields[key]->error !== true}
 					<label class="col-sm-2"></label>
 					<div class="col-sm-10 error" role="alert">
 						<span class="glyphicon glyphicon-warning-sign"></span> {$fields[key]->error}
@@ -64,7 +64,7 @@
 
 			<div class="form-group">
 				<div class="col-sm-offset-2 col-sm-10">
-					<button type="submit" class="btn btn-default">Envoyer</button>
+					<button type="submit" class="btn btn-default">{t}Send{/t}</button>
 				</div>
 			</div>
 
