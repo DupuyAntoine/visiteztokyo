@@ -8,7 +8,7 @@ class User extends Model {
 	protected $email;
 	protected $password;
 	protected $status;
-	protected $newsletter;
+	// protected $newsletter;
 	protected $cgu;
 	protected $register_date;
 
@@ -42,9 +42,11 @@ class User extends Model {
 	public function getStatus() {
 		return $this->status;
 	}
+	/*
 	public function getNewsletter() {
 		return $this->newsletter;
 	}
+	*/
 	public function getCgu() {
 		return $this->cgu;
 	}
@@ -86,9 +88,11 @@ class User extends Model {
 	public function setStatus($status) {
 		$this->status = $status;
 	}
+	/*
 	public function setNewsletter($newsletter) {
 		$this->newsletter = $newsletter;
 	}
+	*/
 	public function setCgu($cgu) {
 		if (empty($cgu)) {
 			throw new Exception('Vous devez accepter les CGU');
@@ -184,7 +188,7 @@ class User extends Model {
 		$form->addField('confirm_email', Lang::_('Confirm email'), 'email', '', true, '', @$errors['confirm_email']);
 		$form->addField('password', Lang::_('Password'), 'password', $this->password, true, '', @$errors['password']);
 		$form->addField('confirm_password', Lang::_('Confirm password'), 'password', '', true, '', @$errors['confirm_password']);
-		$form->addField('newsletter', Lang::_('Newsletter'), 'checkbox', $this->newsletter, false, '');
+		// $form->addField('newsletter', Lang::_('Newsletter'), 'checkbox', $this->newsletter, false, '');
 		$form->addField('cgu', Lang::_('Accept the CGU'), 'checkbox', $this->cgu, true, '', @$errors['cgu']);
 
 		return $form;
@@ -199,7 +203,7 @@ class User extends Model {
 				'firstname' => $this->firstname,
 				'email' => $this->email,
 				'password' => $this->password,
-				'newsletter' => $this->newsletter,
+				// 'newsletter' => $this->newsletter,
 				'cgu' => $this->cgu
 			)
 		);
