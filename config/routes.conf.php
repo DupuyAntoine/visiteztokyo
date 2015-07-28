@@ -8,6 +8,10 @@ $routes = array(
 		'target' => DEFAULT_CONTROLLER_TARGET,
 		'action' => DEFAULT_CONTROLLER_ACTION
 	),
+	'quarter/([0-9a-zA-Z\-]+)'  => array(
+		'target' => 'quarter',
+		'action' => 'view'
+	),
 	'search' => array(
 		'target' => 'search',
 		'action' => 'results'
