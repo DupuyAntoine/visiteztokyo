@@ -24,11 +24,13 @@ abstract class BaseController extends Controller {
 			'description' => ''
 		);
 
-		$quarters = Db::select('SELECT id, name FROM quarter ORDER BY name ASC');
+		$quarters = Quarter::getList('SELECT id, name FROM quarter ORDER BY name ASC');
+
+		$vars['quarters'] = $quarters;
 
 		$quarter_pages = array();
 		foreach($quarters as $quarter) {
-			$quarter_pages['quarter/'.$quarter['id'].'-'.strtolower($quarter['name'])] = $quarter['name'];
+			$quarter_pages['quarter/'.$quarter->getSlug()] = $quarter->name;
 		}
 
 		$vars['pages'] = array(
@@ -36,7 +38,6 @@ abstract class BaseController extends Controller {
 			'quarter' => array(	Lang::_('Les quartiers'), $quarter_pages),
 			'search' => Lang::_('Search'),
 			'contact' => Lang::_('Contact'),
-			'quarter/info' => Lang::_('Lieu'),
 			'quarter/random' => Lang::_('Quartier aléatoire'),
 			'photo' => Lang::_('Photos des membres'),
 		);
