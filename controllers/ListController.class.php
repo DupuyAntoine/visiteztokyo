@@ -8,6 +8,8 @@ class ListController extends BaseController {
 
 	public function results() {
 
+
+
 		$this->render('list-elements');
 	}
 
