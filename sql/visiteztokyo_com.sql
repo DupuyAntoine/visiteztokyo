@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Mer 29 Juillet 2015 à 16:41
+-- Généré le :  Mer 29 Juillet 2015 à 16:59
 -- Version du serveur :  5.6.24
 -- Version de PHP :  5.6.8
 
@@ -159,7 +159,7 @@ CREATE TABLE IF NOT EXISTS `photo` (
   `src` varchar(100) DEFAULT NULL,
   `info_id` int(11) DEFAULT NULL,
   `user_id` int(11) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2612 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2619 DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `photo`
@@ -468,7 +468,14 @@ INSERT INTO `photo` (`id`, `quarter_id`, `src`, `info_id`, `user_id`) VALUES
 (2608, 4, 'Ueno/restaurant/Yamabe_Uenoten/Yamabe_Uenoten_1.jpg', 31, NULL),
 (2609, 1, 'Akihabara/histoire.jpg', NULL, NULL),
 (2610, 1, 'Akihabara/histoire_1.jpg', NULL, NULL),
-(2611, 1, 'Akihabara/histoire_2.jpg', NULL, NULL);
+(2611, 1, 'Akihabara/histoire_2.jpg', NULL, NULL),
+(2612, 1, 'Akihabara/akihabara.jpg', NULL, NULL),
+(2613, 5, 'Asakusa/asakusa_1.jpg', NULL, NULL),
+(2614, 5, 'Asakusa/asakusa_station_1.jpg', NULL, NULL),
+(2615, 5, 'Asakusa/asakusa_kaminari.jpg', NULL, NULL),
+(2616, 7, 'roppongi/roppongi.jpg', NULL, NULL),
+(2617, 6, 'tsukiji/tsukiji.jpg', NULL, NULL),
+(2618, 4, 'Ueno/ueno.jpg', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1076,7 +1083,7 @@ ALTER TABLE `info`
 -- AUTO_INCREMENT pour la table `photo`
 --
 ALTER TABLE `photo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2612;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2619;
 --
 -- AUTO_INCREMENT pour la table `photo.bkp`
 --
