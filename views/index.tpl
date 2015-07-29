@@ -5,7 +5,7 @@
             {foreach $quarters as $quarter}
             <div class="col-md-4">
                 <div class="thumbnail">
-                        <img src="http://placehold.it/320x200" alt="ALT NAME" class="img-responsive" />
+                        <img src="http://placehold.it/600x200" alt="ALT NAME" class="img-responsive" />
                     <div class="caption homecontent">
                         <h3>{$quarter->name}</h3>
                         <p>{$quarter->type}</p>
