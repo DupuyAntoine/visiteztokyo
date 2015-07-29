@@ -25,9 +25,5 @@ class QuarterController extends BaseController {
 		$this->render('quarter');
 
 	}
-	public function picturePath(
-		
-      $quarter_id = $picture,
-      $quarter_id = '',
-		)
+	
 }
