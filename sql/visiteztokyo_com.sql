@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.3.11
+-- version 4.2.11
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Mer 29 Juillet 2015 à 12:03
--- Version du serveur :  5.6.24
--- Version de PHP :  5.6.8
+-- Généré le :  Mer 29 Juillet 2015 à 14:31
+-- Version du serveur :  5.6.21
+-- Version de PHP :  5.6.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -27,7 +27,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE IF NOT EXISTS `comment` (
-  `id` int(11) NOT NULL,
+`id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `quarter_id` int(11) NOT NULL,
   `content` mediumtext,
@@ -42,7 +42,7 @@ CREATE TABLE IF NOT EXISTS `comment` (
 --
 
 CREATE TABLE IF NOT EXISTS `info` (
-  `id` int(11) NOT NULL,
+`id` int(11) NOT NULL,
   `quarter_id` int(11) NOT NULL,
   `name` varchar(100) NOT NULL,
   `type` tinyint(2) DEFAULT NULL,
@@ -87,9 +87,9 @@ INSERT INTO `info` (`id`, `quarter_id`, `name`, `type`, `description`, `url`, `r
 (28, 5, 'Nakasei', 1, 'Restaurant: Nakasei\r\nAddresse: 1-39-13, Asakusa, Taito-ku, Tokyo \r\nTéléphone: 03-3841-4015\r\nStation la plus proche: Tokyo Metro Ginza Line Asakusa Station No. 1 Exit On foot 7 minute - Métro de Tokyo, ligne Ginza - Gare d''Asakusa Sortie 1, 7 minute à pied\r\nOuverture du lundi au vendredi (sauf mardi) de 11:30 à 15:00 et de 17:00 à 22:00 et samedi, dimanche et les vacances de 11:30 à 20:00\r\nTendon (assortiments de beignets sur du riz) de 2.625 à 4.200 yens, Tempura (beignets préparés) de 7.350 à 14.700 yens\r\nPaiement par carte : VISA MASTER JCB AMEX\r\n60 places assises\r\n \r\nAsakusa est célèbre pour ses Tempura, et regroupe de très bons restaurants dont c''est la spécialité. Fondé en 1870, Nakasei est l''un des plus vieux restaurant d''Asakusa, et c''est l''un des restaurants local favori. Les tempura peuvent revenir assez cher, plus de 10.000 yens le repas, mais les tendon (tempura sur bol de riz), coûte 2.625 yens. N''hésitez pas à tenter l''expérience, pas seulement pour la nourriture, mais également pour l''ambiance offerte par le style japonais du restaurant et son jardin.', NULL, NULL, 'Tempura'),
 (29, 5, 'Toriyoshi', 1, 'Restaurant: Toriyoshi\r\nAddresse: 1-8-2, Asakusa, Taitou-ku, Tokyo, 111-0032\r\nTéléphone: 03-3844-6262\r\nOuverture le midi du lundi au samedi de 11:30 à 14:00 (fin du service à 13:30), pour dîner du lundi au vendredi de 17:00 à 23:00 (fin du service à 22:30), le samedi de 17:00 à 22:30 (fin du service à 22:00).\r\nFermé le dimanche\r\nDéjeuner à 800 yens, dîner de 2.900 yens.\r\nStation la plus proche: Tokyo Metro Ginza Line Asakusa Station No. 1 Exit On foot 5 minute - Métro de Tokyo, ligne Ginza - Gare d''Asakusa Sortie 1, 5 minute à pied\r\nPaiement par carte : VISA, Master, UC, DC, Diners, Amex, JCB, NICOS, MUFG\r\n72 places assises.\r\nMenu en anglais possible.\r\n \r\nCe restaurant est connu pour sa grande qualité gastronomique, ce qui fait que la plupart des locaux en vantent les mérites. Les méthodes de préparations, et leur recettes, feront que vous n''oublierez pas de sitôt les saveurs que vous découvrirez ici. Vous pouvez commencer par un assortiment de 5 brochettes (2.100 yens les 5 brochettes assorties d''une salade et d''une soupe ou de Chazuke, du riz dans une soupe locale). Pour le déjeuner, nous vous conseillons également l''Oyakodon, qui a été choisi pour le grand prix du district pour le meilleur plat du quartier, qui lui vous est offert pour 1.000 yens.', NULL, NULL, 'Traditionnel'),
 (30, 4, 'Hanada Uenoten', 1, 'Restaurant: Hanada Uenoten\r\nTéléphone: 03-3836-0440\r\nAddresse: 6-8-6, Ueno, Taitou-ku, Tokyo Ueno Megane Center Building 1F\r\nStation la plus proche: Gare d''Ueno JR\r\nOuverture du lundi au samedi de 11:00 à 00:00, et le dimanche et les vacances de 11:00 à 22:00\r\nDéjeuner et dîner pour environ 999 yens.\r\nLe paiement par carte de crédit n''est pas renseigné.\r\n\r\nHanada Uenoten est l''un des plus populaire vendeur de ramen d''Ueno spécialisé dans les recettes à base miso. Le prix est très abordable compte tenu de la qualité proposée, d''environ 790 yens.  ', NULL, NULL, 'Ramen'),
-(31, 4, 'Yamabe Uenoten', 1, 'Restaurant: Yamabe Uenoten\r\nTéléphone: 03-5817-7045\r\nAddresse: 4-5-1, Ueno, Taitou-ku, Tokyo\r\nStation la plus proche: JR Ueno Station - Gare d''Ueno JR\r\nOuverture tous les jours de 11:00 à 22:00 (fin du service à 21:30).\r\nPrix d''environ 999 yens.\r\nLe paiement par carte de crédit n''est pas renseigné.\r\n26 places assises\r\n\r\n\r\nYamabe est l''un des plus populaire restaurant spécialisé dans les plats à base de côte de porc, appelé également Tonkatsu dans Ueno. Les plats proposés à déjeuner, appelé Rosu Katsu (longe de porc), sont proposés au prix très abordable de 700 yens pour une très bonne qualité. Nous vous conseillons vivement ce restaurant si vous passez dans Ueno.', NULL, NULL, 'Plats à base de porc'),
-(32, 4, 'Keijouen', 1, 'Restaurant: Keijouen\r\nTéléphone: 03-3831-0654\r\nAddresse: 2-15-7, Higashiueno, Taitou-ku, Tokyo\r\nStation la plus proche: JR Ueno Station - Gare d''Ueno JR\r\nOuverture à partir de 16:00.\r\nFermeture le dimanche de la deuxième et quatrième semaine du mois.\r\nEntre 1.000 et 1.999 yens le déjeuner, et entre 5.000 et 5.999 yens le dîner.\r\nLe paiement par carte de crédit n''est pas renseigné.\r\n\r\nKeijoen est un restaurant retro mettant en scène une ambiance "années 80" à Ueno. Pour un prix raisonnable, vous trouverez ici d''excellent kalbi (ribs marinés au barbecue), rosu (viande et légumes sautés). Le personnel accueillant et la qualité du service, ainsi que des plats, font de ce restaurant une adresse à visiter lors de votre passage à Ueno.', NULL, NULL, 'kalbi rosu');
+(31, 4, 'Yamabe Uenoten', 1, 'Restaurant: Yamabe Uenoten\r\nTéléphone: 03-5817-7045\r\nAddresse: 4-5-1, Ueno, Taitou-ku, Tokyo\r\nStation la plus proche: JR Ueno Station - Gare d''Ueno JR\r\nOuverture tous les jours de 11:00 à 22:00 (fin du service à 21:30).\r\nPrix d''environ 999 yens.\r\nLe paiement par carte de crédit n''est pas renseigné.\r\n26 places assises\r\n\r\n\r\nYamabe est l''un des plus populaire restaurant spécialisé dans les plats à base de côte de porc, appelé également Tonkatsu dans Ueno. Les plats proposés à déjeuner, appelé Rosu Katsu (longe de porc), sont proposés au prix très abordable de 700 yens pour une très bonne qualité. Nous vous conseillons vivement ce restaurant si vous passez dans Ueno.', NULL, NULL, 'Plats à base de porc');
 INSERT INTO `info` (`id`, `quarter_id`, `name`, `type`, `description`, `url`, `rating`, `theme`) VALUES
+(32, 4, 'Keijouen', 1, 'Restaurant: Keijouen\r\nTéléphone: 03-3831-0654\r\nAddresse: 2-15-7, Higashiueno, Taitou-ku, Tokyo\r\nStation la plus proche: JR Ueno Station - Gare d''Ueno JR\r\nOuverture à partir de 16:00.\r\nFermeture le dimanche de la deuxième et quatrième semaine du mois.\r\nEntre 1.000 et 1.999 yens le déjeuner, et entre 5.000 et 5.999 yens le dîner.\r\nLe paiement par carte de crédit n''est pas renseigné.\r\n\r\nKeijoen est un restaurant retro mettant en scène une ambiance "années 80" à Ueno. Pour un prix raisonnable, vous trouverez ici d''excellent kalbi (ribs marinés au barbecue), rosu (viande et légumes sautés). Le personnel accueillant et la qualité du service, ainsi que des plats, font de ce restaurant une adresse à visiter lors de votre passage à Ueno.', NULL, NULL, 'kalbi rosu'),
 (33, 4, 'Historique Ueno', 3, 'Ueno est un des gros quartiers de Tokyo, situé au nord-est du cœur de la ville, dans l''arrondissement de Taito.\r\n\r\nC''est également un point central de la capitale, puisque situé sur des axes ferrés importants. Si vous possédez un JR Pass, et même sans, il y a de fortes chances pour que vous passiez par Ueno pour sortir de Tokyo vers le nord (par exemple Nikko) ou l''est (l''aéroport de Narita).\r\n\r\nPar ce fait, le quartier est souvent considéré comme une zone importante de shitamachi ("la ville du dessous"), la partie plus populaire et peut-être la moins propre de Tokyo. On trouve d''ailleurs à Ueno beaucoup de personnes sans-domicile, de manière assez visible, ce qui tranche avec le reste de la ville.\r\n\r\nIl y a de nombreuses attractions intéressantes à visiter à Ueno, globalement organisées dans et autour du grand parc accessible non loin de la gare. Le quartier parvient à livrer des ambiances très variées et offre, en à peine quelques pas, des transitions entre différents univers fascinants.', NULL, NULL, NULL),
 (34, 4, 'Sutton Place Hotel Ueno ', 2, 'Situé à seulement 100 mètres de la gare JR Ueno, l''élégant hôtel Sutton Palace propose des chambres modernes dotées de parquet, d''une connexion Internet par câble gratuite et d''une télévision à écran plat. Vous pourrez bénéficier de massages et d''une bagagerie à sa réception ouverte 24h/24. L''aéroport de Narita se trouve à 40 minutes de trajet direct via la ligne Keisei Skyliner.\r\n\r\nLes chambres climatisées du Sutton Place Hotel Ueno sont dotées d''un mobilier en bois et de grandes fenêtres. Vous pourrez prendre un bain dans la baignoire ou enfiler vos chaussons et vous détendre devant leur télévision par satellite.\r\n\r\nLe parc d''Ueno se trouve à 500 mètres de l''hôtel. La station de métro Ueno située à 300 mètres permet un accès direct aux quartiers de Ginza, d''Akihabara et de Roppongi. Le quartier d''Asakusa, où se trouvent la porte de Kaminarimon et le temple Sensoji, est accessible en 20 minutes de marche.\r\n\r\nVous trouverez des bornes Internet gratuites dans le hall du 3ème étage et une laverie au 2ème étage.\r\n\r\nCe quartier ( Taito ) est un choix idéal pour les voyageurs qui s''intéressent à ces thèmes : temples, gastronomie et shopping.', 'www.sutton-place-hotel-ueno.tokyohoteltour.com/fr/', NULL, 'Occidental'),
 (35, 4, 'Sakura Ryokan ', 2, 'Situé à proximité des quartiers populaires de Asakusa et Ueno, le Sakura Ryokan propose des chambres abordables décorées dans un style traditionnel, une connexion Wi-Fi gratuite dans les parties communes et des salle de bains communes.\r\n\r\nLes chambres disposent de sols en tatami et d''une literie en futon traditionnelle, ainsi que d''une télévision et de la climatisation.\r\n\r\nVous pourrez prendre votre petit déjeuner dans la salle à manger du Sakura Ryokan. Des lave-linge à pièces sont disponibles.\r\n\r\nLe Sakura Ryokan se trouve à 6 minutes à pied de la station de métro Iriya, permettant d''accéder à Tsukiji et Akihabara\r\n\r\nCe quartier ( Taito ) est un choix idéal pour les voyageurs qui s''intéressent à ces thèmes : temples, gastronomie et shopping.', 'www.sakura-ryokan-tokyo.findhotel.fr/‎', NULL, 'Traditionnel'),
@@ -139,7 +139,521 @@ INSERT INTO `info` (`id`, `quarter_id`, `name`, `type`, `description`, `url`, `r
 --
 
 CREATE TABLE IF NOT EXISTS `photo` (
-  `id` int(11) NOT NULL,
+`id` int(11) NOT NULL,
+  `quarter_id` int(11) NOT NULL,
+  `src` varchar(100) DEFAULT NULL,
+  `info_id` int(11) DEFAULT NULL,
+  `user_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=2609 DEFAULT CHARSET=utf8;
+
+--
+-- Contenu de la table `photo`
+--
+
+INSERT INTO `photo` (`id`, `quarter_id`, `src`, `info_id`, `user_id`) VALUES
+(2309, 1, 'Akihabara/historique akihabara/histoire.jpg', 1, NULL),
+(2310, 1, 'Akihabara/historique akihabara/histoire_1.jpg', 1, NULL),
+(2311, 1, 'Akihabara/historique akihabara/histoire_2.jpg', 1, NULL),
+(2312, 1, 'Akihabara/hotel/Akihabara_Hotel_3000/Akihabara_Hotel_3000.jpeg', 2, NULL),
+(2313, 1, 'Akihabara/hotel/Akihabara_Hotel_3000/Akihabara_Hotel_3000_1.jpg', 2, NULL),
+(2314, 1, 'Akihabara/hotel/Akihabara_Hotel_3000/Akihabara_Hotel_3000_2.jpg', 2, NULL),
+(2315, 1, 'Akihabara/hotel/Akihabara_Hotel_3000/Akihabara_Hotel_3000_3.jpg', 2, NULL),
+(2316, 1, 'Akihabara/hotel/Akihabara_Hotel_3000/Akihabara_Hotel_3000_4.jpg', 2, NULL),
+(2317, 1, 'Akihabara/hotel/Akihabara_Washington_Hotel/Akihabara_Washington_Hotel.jpg', 3, NULL),
+(2318, 1, 'Akihabara/hotel/Akihabara_Washington_Hotel/Akihabara_Washington_Hotel_1.jpg', 3, NULL),
+(2319, 1, 'Akihabara/hotel/Akihabara_Washington_Hotel/Akihabara_Washington_Hotel_2.jpg', 3, NULL),
+(2320, 1, 'Akihabara/hotel/Akihabara_Washington_Hotel/Akihabara_Washington_Hotel_3.jpg', 3, NULL),
+(2321, 1, 'Akihabara/hotel/Akihabara_Washington_Hotel/Akihabara_Washington_Hotel_4.jpg', 3, NULL),
+(2322, 1, 'Akihabara/hotel/capsule/capsule.jpg', 4, NULL),
+(2323, 1, 'Akihabara/hotel/capsule/capsule_1.jpg', 4, NULL),
+(2324, 1, 'Akihabara/hotel/capsule/capsule_10.jpg', 4, NULL),
+(2325, 1, 'Akihabara/hotel/capsule/capsule_11.jpg', 4, NULL),
+(2326, 1, 'Akihabara/hotel/capsule/capsule_12.jpg', 4, NULL),
+(2327, 1, 'Akihabara/hotel/capsule/capsule_13.jpg', 4, NULL),
+(2328, 1, 'Akihabara/hotel/capsule/capsule_14.jpg', 4, NULL),
+(2329, 1, 'Akihabara/hotel/capsule/capsule_2.jpg', 4, NULL),
+(2330, 1, 'Akihabara/hotel/capsule/capsule_3.jpg', 4, NULL),
+(2331, 1, 'Akihabara/hotel/capsule/capsule_4.jpg', 4, NULL),
+(2332, 1, 'Akihabara/hotel/capsule/capsule_5.jpg', 4, NULL),
+(2333, 1, 'Akihabara/hotel/capsule/capsule_6.jpg', 4, NULL),
+(2334, 1, 'Akihabara/hotel/capsule/capsule_7.jpg', 4, NULL),
+(2335, 1, 'Akihabara/hotel/capsule/capsule_8.jpg', 4, NULL),
+(2336, 1, 'Akihabara/hotel/capsule/capsule_9.jpg', 4, NULL),
+(2337, 1, 'Akihabara/hotel/Remm_Akihabara/Remm_Akihabara.jpg', 5, NULL),
+(2338, 1, 'Akihabara/hotel/Remm_Akihabara/Remm_Akihabara_1.jpg', 5, NULL),
+(2339, 1, 'Akihabara/hotel/Remm_Akihabara/Remm_Akihabara_2.jpg', 5, NULL),
+(2340, 1, 'Akihabara/hotel/Remm_Akihabara/Remm_Akihabara_3.jpg', 5, NULL),
+(2341, 1, 'Akihabara/hotel/Remm_Akihabara/Remm_Akihabara_4.jpg', 5, NULL),
+(2342, 1, 'Akihabara/hotel/Remm_Akihabara/Remm_Akihabara_5.jpg', 5, NULL),
+(2343, 1, 'Akihabara/lieux_a_visiter/maid_cafe/maid_cafe.jpg', 6, NULL),
+(2344, 1, 'Akihabara/lieux_a_visiter/maid_cafe/maid_cafe_1.jpg', 6, NULL),
+(2345, 1, 'Akihabara/lieux_a_visiter/maid_cafe/maid_cafe_2.jpg', 6, NULL),
+(2346, 1, 'Akihabara/lieux_visiter/maid_cafe/maid_cafe.jpg', 6, NULL),
+(2347, 1, 'Akihabara/lieux_visiter/maid_cafe/maid_cafe_1.jpg', 6, NULL),
+(2348, 1, 'Akihabara/lieux_visiter/maid_cafe/maid_cafe_2.jpg', 6, NULL),
+(2349, 1, 'Akihabara/lieux_a_visiter/taito_station/taito_station.jpg', 8, NULL),
+(2350, 1, 'Akihabara/lieux_a_visiter/taito_station/taito_station_1.jpg', 8, NULL),
+(2351, 1, 'Akihabara/lieux_a_visiter/taito_station/taito_station_2.jpg', 8, NULL),
+(2352, 1, 'Akihabara/lieux_a_visiter/taito_station/taito_station_3.jpg', 8, NULL),
+(2353, 1, 'Akihabara/lieux_a_visiter/taito_station/taito_station_4.jpg', 8, NULL),
+(2354, 1, 'Akihabara/lieux_a_visiter/taito_station/taito_station_5.jpg', 8, NULL),
+(2355, 1, 'Akihabara/lieux_a_visiter/taito_station/taito_station_6.jpg', 8, NULL),
+(2356, 1, 'Akihabara/lieux_visiter/taito_station/taito_station.jpg', 8, NULL),
+(2357, 1, 'Akihabara/lieux_visiter/taito_station/taito_station_1.jpg', 8, NULL),
+(2358, 1, 'Akihabara/lieux_visiter/taito_station/taito_station_2.jpg', 8, NULL),
+(2359, 1, 'Akihabara/lieux_visiter/taito_station/taito_station_3.jpg', 8, NULL),
+(2360, 1, 'Akihabara/lieux_visiter/taito_station/taito_station_4.jpg', 8, NULL),
+(2361, 1, 'Akihabara/lieux_visiter/taito_station/taito_station_5.jpg', 8, NULL),
+(2362, 1, 'Akihabara/lieux_visiter/taito_station/taito_station_6.jpg', 8, NULL),
+(2363, 1, 'Akihabara/lieux_visiter/super_potato/super_potato_shop.jpg', 7, NULL),
+(2364, 1, 'Akihabara/lieux_visiter/super_potato/super_potato_shop_1.jpg', 7, NULL),
+(2365, 1, 'Akihabara/lieux_visiter/super_potato/super_potato_shop_2.jpg', 7, NULL),
+(2366, 1, 'Akihabara/lieux_visiter/super_potato/super_potato_shop_3.jpg', 7, NULL),
+(2367, 1, 'Akihabara/lieux_visiter/super_potato/super_potato_shop_4.jpg', 7, NULL),
+(2368, 1, 'Akihabara/lieux_visiter/super_potato/super_potato_shop_5.jpg', 7, NULL),
+(2369, 1, 'Akihabara/map_akihabara.jpg', NULL, NULL),
+(2370, 1, 'Akihabara/restaurant/gundam_cafe/gundam_cafe.jpg', 9, NULL),
+(2371, 1, 'Akihabara/restaurant/gundam_cafe/gundam_cafe_1.jpg', 9, NULL),
+(2372, 1, 'Akihabara/restaurant/gundam_cafe/gundam_cafe_10.jpg', 9, NULL),
+(2373, 1, 'Akihabara/restaurant/gundam_cafe/gundam_cafe_2.jpg', 9, NULL),
+(2374, 1, 'Akihabara/restaurant/gundam_cafe/gundam_cafe_3.jpg', 9, NULL),
+(2375, 1, 'Akihabara/restaurant/gundam_cafe/gundam_cafe_4.jpg', 9, NULL),
+(2376, 1, 'Akihabara/restaurant/gundam_cafe/gundam_cafe_5.jpg', 9, NULL),
+(2377, 1, 'Akihabara/restaurant/gundam_cafe/gundam_cafe_6.jpg', 9, NULL),
+(2378, 1, 'Akihabara/restaurant/gundam_cafe/gundam_cafe_7.jpg', 9, NULL),
+(2379, 1, 'Akihabara/restaurant/gundam_cafe/gundam_cafe_8.jpg', 9, NULL),
+(2380, 1, 'Akihabara/restaurant/gundam_cafe/gundam_cafe_9.jpg', 9, NULL),
+(2381, 1, 'Akihabara/restaurant/Kanda_Yabusoba/Kanda_Yabusoba.jpg', 13, NULL),
+(2382, 1, 'Akihabara/restaurant/Kanda_Yabusoba/Kanda_Yabusoba_1.jpg', 13, NULL),
+(2383, 1, 'Akihabara/restaurant/Kanda_Yabusoba/Kanda_Yabusoba_2.jpg', 13, NULL),
+(2384, 1, 'Akihabara/restaurant/Kanda_Yabusoba/Kanda_Yabusoba_3.jpg', 13, NULL),
+(2385, 1, 'Akihabara/restaurant/Kanda_Yabusoba/Kanda_Yabusoba_4.jpg', 13, NULL),
+(2386, 1, 'Akihabara/restaurant/Kanda_Yabusoba/Kanda_Yabusoba_5.jpg', 13, NULL),
+(2387, 1, 'Akihabara/restaurant/Kanda_Yabusoba/Kanda_Yabusoba_6.jpg', 13, NULL),
+(2388, 1, 'Akihabara/restaurant/Kanda_Yabusoba/Kanda_Yabusoba_7.jpg', 13, NULL),
+(2389, 1, 'Akihabara/restaurant/Kanda_Yabusoba/Kanda_Yabusoba_8.jpg', 13, NULL),
+(2390, 1, 'Akihabara/restaurant/Kanda_Yabusoba/Kanda_Yabusoba_9.jpg', 13, NULL),
+(2391, 1, 'Akihabara/restaurant/Menya_Musashi_Bujin/Menya_Musashi_Bujin.jpg', 11, NULL),
+(2392, 1, 'Akihabara/restaurant/Menya_Musashi_Bujin/Menya_Musashi_Bujin_1.jpg', 11, NULL),
+(2393, 1, 'Akihabara/restaurant/Menya_Musashi_Bujin/Menya_Musashi_Bujin_2.jpg', 11, NULL),
+(2394, 1, 'Akihabara/restaurant/Menya_Musashi_Bujin/Menya_Musashi_Bujin_3.jpg', 11, NULL),
+(2395, 1, 'Akihabara/restaurant/Menya_Musashi_Bujin/Menya_Musashi_Bujin_4.jpg', 11, NULL),
+(2396, 1, 'Akihabara/restaurant/Menya_Musashi_Bujin/Menya_Musashi_Bujin_5.jpg', 11, NULL),
+(2397, 5, 'Asakusa/hotel/Dormy_Inn_EXPRESS/Dormy_Inn_EXPRESS.jpg', 44, NULL),
+(2398, 5, 'Asakusa/hotel/Dormy_Inn_EXPRESS/Dormy_Inn_EXPRESS_1.jpg', 44, NULL),
+(2399, 5, 'Asakusa/hotel/Dormy_Inn_EXPRESS/Dormy_Inn_EXPRESS_2.jpg', 44, NULL),
+(2400, 5, 'Asakusa/hotel/Ryokan_Asakusa_Shigetsu/Ryokan_Asakusa_Shigetsu.jpg', 46, NULL),
+(2401, 5, 'Asakusa/hotel/Ryokan_Asakusa_Shigetsu/Ryokan_Asakusa_Shigetsu_1.jpg', 46, NULL),
+(2402, 5, 'Asakusa/hotel/Ryokan_Asakusa_Shigetsu/Ryokan_Asakusa_Shigetsu_2.jpg', 46, NULL),
+(2403, 5, 'Asakusa/hotel/Via_Inn_Asakusa/Via_Inn_Asakusa.jpg', 47, NULL),
+(2404, 5, 'Asakusa/hotel/Via_Inn_Asakusa/Via_Inn_Asakusa_1.jpg', 47, NULL),
+(2405, 5, 'Asakusa/hotel/Via_Inn_Asakusa/Via_Inn_Asakusa_2.jpg', 47, NULL),
+(2406, 5, 'Asakusa/lieux_visiter/Porte_de_Kaminarimon_et_rue_de_Nakamise/Porte_Kaminarimon_Nakamise.jpg', 49, NULL),
+(2407, 5, 'Asakusa/lieux_visiter/Porte_de_Kaminarimon_et_rue_de_Nakamise/Porte_Kaminarimon_Nakamise_1.jpg', 49, NULL),
+(2408, 5, 'Asakusa/lieux_visiter/Porte_de_Kaminarimon_et_rue_de_Nakamise/Porte_Kaminarimon_Nakamise_2.jpg', 49, NULL),
+(2409, 5, 'Asakusa/lieux_visiter/Temple_de_Sensoji/Temple_de_Sensoji.jpg', 50, NULL),
+(2410, 5, 'Asakusa/lieux_visiter/Temple_de_Sensoji/Temple_de_Sensoji_1.jpg', 50, NULL),
+(2411, 5, 'Asakusa/restaurant/Maguro_bito/Maguro_bito.jpg', 27, NULL),
+(2412, 5, 'Asakusa/restaurant/Maguro_bito/Maguro_bito_1.jpg', 27, NULL),
+(2413, 5, 'Asakusa/restaurant/Maguro_bito/Maguro_bito_2.jpg', 27, NULL),
+(2414, 5, 'Asakusa/restaurant/Nakasei/Nakasei.jpg', 28, NULL),
+(2415, 5, 'Asakusa/restaurant/Nakasei/Nakasei_1.jpg', 28, NULL),
+(2416, 5, 'Asakusa/restaurant/Nakasei/Nakasei_2.jpg', 28, NULL),
+(2417, 5, 'Asakusa/restaurant/Toriyoshi/Toriyoshi.jpg', 29, NULL),
+(2418, 5, 'Asakusa/restaurant/Toriyoshi/Toriyoshi_1.jpg', 29, NULL),
+(2419, 5, 'Asakusa/restaurant/Toriyoshi/Toriyoshi_3.jpg', 29, NULL),
+(2420, 3, 'Harajuku/harajuku.jpg.jpg', NULL, NULL),
+(2421, 3, 'Harajuku/harajuku_1.jpg.png', 1, NULL),
+(2422, 3, 'Harajuku/harajuku_2.jpg.jpg', 2, NULL),
+(2423, 3, 'Harajuku/harajuku_3.jpg.jpg', 3, NULL),
+(2424, 3, 'Harajuku/harajuku_4.jpg.jpg', 4, NULL),
+(2425, 3, 'Harajuku/lieux_visiter/pont_des_cosplay/pont_des_cosplay.jpg', 16, NULL),
+(2426, 3, 'Harajuku/lieux_visiter/pont_des_cosplay/pont_des_cosplay_1.jpg', 16, NULL),
+(2427, 3, 'Harajuku/lieux_visiter/pont_des_cosplay/pont_des_cosplay_2.jpg', 16, NULL),
+(2428, 3, 'Harajuku/lieux_visiter/pont_des_cosplay/pont_des_cosplay_4.jpg', 16, NULL),
+(2429, 3, 'Harajuku/lieux_visiter/pont_des_cosplay/pont_des_cosplay_5.jpg', 16, NULL),
+(2430, 3, 'Harajuku/lieux_visiter/pont_des_cosplay/pont_des_cosplay_6.jpg', 16, NULL),
+(2431, 3, 'Harajuku/restaurant/gyoza_rou/gyoza_rou.jpg', 12, NULL),
+(2432, 3, 'Harajuku/restaurant/gyoza_rou/gyoza_rou_1.jpg', 12, NULL),
+(2433, 3, 'Harajuku/restaurant/gyoza_rou/gyoza_rou_2.jpg', 12, NULL),
+(2434, 3, 'Harajuku/restaurant/gyoza_rou/gyoza_rou_3.jpg', 12, NULL),
+(2435, 3, 'Harajuku/restaurant/gyoza_rou/gyoza_rou_4.jpg', 12, NULL),
+(2436, 3, 'Harajuku/restaurant/gyoza_rou/gyoza_rou_5.jpg', 12, NULL),
+(2437, 3, 'Harajuku/restaurant/Kyushu_Jangara/Kyushu_Jangara_2.jpg', 14, NULL),
+(2438, 3, 'Harajuku/restaurant/Kyushu_Jangara/Kyushu_Jangara_4.jpeg', 14, NULL),
+(2439, 3, 'Harajuku/restaurant/Kyushu_Jangara/Kyushu_Jangara_5.jpg', 14, NULL),
+(2440, 3, 'Harajuku/restaurant/Kyushu_Jangara/Kyushu_Jangara_6.jpg', 14, NULL),
+(2441, 3, 'Harajuku/restaurant/Minoringo/Minoringo_1.jpg', 15, NULL),
+(2442, 3, 'Harajuku/restaurant/Minoringo/Minoringo_2.jpg', 15, NULL),
+(2443, 3, 'Harajuku/restaurant/Minoringo/Minoringo_3.jpg', 15, NULL),
+(2444, 2, 'Ikebukuro/hotel/centurion_hotel/centurion_hotel.jpg', 19, NULL),
+(2445, 2, 'Ikebukuro/hotel/centurion_hotel/centurion_hotel_1.jpg', 19, NULL),
+(2446, 2, 'Ikebukuro/hotel/centurion_hotel/centurion_hotel_2.jpg', 19, NULL),
+(2447, 2, 'Ikebukuro/hotel/centurion_hotel/centurion_hotel_3.jpg', 19, NULL),
+(2448, 2, 'Ikebukuro/hotel/centurion_hotel/centurion_hotel_4.jpg', 19, NULL),
+(2449, 2, 'Ikebukuro/hotel/centurion_hotel/centurion_hotel_5.jpg', 19, NULL),
+(2450, 2, 'Ikebukuro/hotel/sakura_hotel/sakura_hotel.jpg', 20, NULL),
+(2451, 2, 'Ikebukuro/hotel/sakura_hotel/sakura_hotel_1.jpg', 20, NULL),
+(2452, 2, 'Ikebukuro/hotel/sakura_hotel/sakura_hotel_2.jpg', 20, NULL),
+(2453, 2, 'Ikebukuro/hotel/Tokyu_Stay_Ikebukuro/Tokyu_Stay_Ikebukuro.jpg', 21, NULL),
+(2454, 2, 'Ikebukuro/hotel/Tokyu_Stay_Ikebukuro/Tokyu_Stay_Ikebukuro_1.jpg', 21, NULL),
+(2455, 2, 'Ikebukuro/hotel/Tokyu_Stay_Ikebukuro/Tokyu_Stay_Ikebukuro_2.jpg', 21, NULL),
+(2456, 2, 'Ikebukuro/hotel/Tokyu_Stay_Ikebukuro/Tokyu_Stay_Ikebukuro_3.jpg', 21, NULL),
+(2457, 2, 'Ikebukuro/ikebukuro.jpg', NULL, NULL),
+(2458, 2, 'Ikebukuro/ikebukuro_1.jpg', 1, NULL),
+(2459, 2, 'Ikebukuro/ikebukuro_2.jpg', 2, NULL),
+(2460, 2, 'Ikebukuro/ikebukuro_3.jpg', 3, NULL),
+(2461, 2, 'Ikebukuro/ikebukuro_4.jpg', 4, NULL),
+(2462, 2, 'Ikebukuro/lieux_visiter/batting_center/batting_center.jpg', 22, NULL),
+(2463, 2, 'Ikebukuro/lieux_visiter/batting_center/batting_center_1.jpg', 22, NULL),
+(2464, 2, 'Ikebukuro/lieux_visiter/batting_center/batting_center_2.jpg', 22, NULL),
+(2465, 2, 'Ikebukuro/lieux_visiter/batting_center/batting_center_3.jpg', 22, NULL),
+(2466, 2, 'Ikebukuro/lieux_visiter/batting_center/batting_center_4.jpg', 22, NULL),
+(2467, 2, 'Ikebukuro/lieux_visiter/bosaikan/bosaikan.jpg.JPG', 23, NULL),
+(2468, 2, 'Ikebukuro/lieux_visiter/bosaikan/bosaikan_1.jpg.jpg', 23, NULL),
+(2469, 2, 'Ikebukuro/lieux_visiter/bosaikan/bosaikan_2.jpg.jpg', 23, NULL),
+(2470, 2, 'Ikebukuro/lieux_visiter/bosaikan/bosaikan_3.jpg.jpg', 23, NULL),
+(2471, 2, 'Ikebukuro/lieux_visiter/bosaikan/bosaikan_4.jpg.jpg', 23, NULL),
+(2472, 2, 'Ikebukuro/lieux_visiter/bosaikan/bosaikan_5.jpg.jpg', 23, NULL),
+(2473, 2, 'Ikebukuro/lieux_visiter/tokyo_dome/tokyo_dome.jpg', 24, NULL),
+(2474, 2, 'Ikebukuro/lieux_visiter/tokyo_dome/tokyo_dome_1.jpg', 24, NULL),
+(2475, 2, 'Ikebukuro/lieux_visiter/tokyo_dome/tokyo_dome_2.jpg', 24, NULL),
+(2476, 2, 'Ikebukuro/lieux_visiter/tokyo_dome/tokyo_dome_3.jpg', 24, NULL),
+(2477, 2, 'Ikebukuro/lieux_visiter/tokyo_dome/tokyo_dome_4.jpg', 24, NULL),
+(2478, 2, 'Ikebukuro/lieux_visiter/tokyo_dome/tokyo_dome_5.jpg', 24, NULL),
+(2479, 2, 'Ikebukuro/restaurant/uchi/uchi.jpg', 25, NULL),
+(2480, 2, 'Ikebukuro/restaurant/uchi/uchi_1.jpg', 25, NULL),
+(2481, 2, 'Ikebukuro/restaurant/uchi/uchi_2.jpg', 25, NULL),
+(2482, 2, 'Ikebukuro/restaurant/uchi/uchi_3.jpg', 25, NULL),
+(2483, 2, 'Ikebukuro/restaurant/uchi/uchi_4.jpg', 25, NULL),
+(2484, 2, 'Ikebukuro/restaurant/uchi/uchi_5.jpg', 25, NULL),
+(2485, 2, 'Ikebukuro/restaurant/Zubora/Zubora.jpg', 26, NULL),
+(2486, 2, 'Ikebukuro/restaurant/Zubora/Zubora8.jpg', 26, NULL),
+(2487, 2, 'Ikebukuro/restaurant/Zubora/Zubora_1.jpg', 26, NULL),
+(2488, 2, 'Ikebukuro/restaurant/Zubora/Zubora_2.jpg', 26, NULL),
+(2489, 2, 'Ikebukuro/restaurant/Zubora/Zubora_3.jpg', 26, NULL),
+(2490, 2, 'Ikebukuro/restaurant/Zubora/Zubora_4.jpg', 26, NULL),
+(2491, 2, 'Ikebukuro/restaurant/Zubora/Zubora_5.jpg', 26, NULL),
+(2492, 2, 'Ikebukuro/restaurant/Zubora/Zubora_6.jpg', 26, NULL),
+(2493, 2, 'Ikebukuro/restaurant/Zubora/Zubora_7.jpg', 26, NULL),
+(2494, 9, 'Shibuya/hotel/Granbell_Hotel/Granbell_Hotel.jpg', 55, NULL),
+(2495, 9, 'Shibuya/hotel/Granbell_Hotel/Granbell_Hotel_1.jpg', 55, NULL),
+(2496, 9, 'Shibuya/hotel/Granbell_Hotel/Granbell_Hotel_2.jpg', 55, NULL),
+(2497, 9, 'Shibuya/hotel/Granbell_Hotel/Granbell_Hotel_3.jpg', 55, NULL),
+(2498, 9, 'Shibuya/hotel/Sakura_Fleur_Aoyama/Sakura_Fleur_Aoyama.jpg', 56, NULL),
+(2499, 9, 'Shibuya/hotel/Sakura_Hotel_Hatagaya/Sakura_Hotel_Hatagaya.jpg', 57, NULL),
+(2500, 9, 'Shibuya/hotel/Sakura_Hotel_Hatagaya/Sakura_Hotel_Hatagaya_1.jpg', 57, NULL),
+(2501, 9, 'Shibuya/hotel/Sakura_Hotel_Hatagaya/Sakura_Hotel_Hatagaya_2.jpg', 57, NULL),
+(2502, 9, 'Shibuya/hotel/Sakura_Hotel_Hatagaya/Sakura_Hotel_Hatagaya_3.jpg', 57, NULL),
+(2503, 9, 'Shibuya/hotel/Sakura_Hotel_Hatagaya/Sakura_Hotel_Hatagaya_4.jpg', 57, NULL),
+(2504, 9, 'Shibuya/hotel/Sakura_Hotel_Hatagaya/Sakura_Hotel_Hatagaya_5.jpg', 57, NULL),
+(2505, 9, 'Shibuya/lieux_visiter/Hachiko/Hachiko.jpg', 52, NULL),
+(2506, 9, 'Shibuya/lieux_visiter/Hachiko/Hachiko_1.jpg', 52, NULL),
+(2507, 9, 'Shibuya/lieux_visiter/Hachiko/Hachiko_2.jpg', 52, NULL),
+(2508, 9, 'Shibuya/lieux_visiter/Hachiko/Hachiko_3.jpg', 52, NULL),
+(2509, 9, 'Shibuya/lieux_visiter/tour_109/tour_109.jpg', 53, NULL),
+(2510, 9, 'Shibuya/lieux_visiter/tour_109/tour_109_1.jpg', 53, NULL),
+(2511, 9, 'Shibuya/lieux_visiter/tour_109/tour_109_2.jpg', 53, NULL),
+(2512, 9, 'Shibuya/lieux_visiter/tour_109/tour_109_3.jpg', 53, NULL),
+(2513, 9, 'Shibuya/lieux_visiter/tour_109/tour_109_4.jpg', 53, NULL),
+(2514, 9, 'Shibuya/restaurant/Gonpachi/Gonpachi.jpg', 58, NULL),
+(2515, 9, 'Shibuya/restaurant/Gonpachi/Gonpachi_1.jpg', 58, NULL),
+(2516, 9, 'Shibuya/restaurant/Gonpachi/Gonpachi_2.jpg', 58, NULL),
+(2517, 9, 'Shibuya/restaurant/Kua_Aina/Kua_Aina.jpg', 59, NULL),
+(2518, 9, 'Shibuya/restaurant/Kua_Aina/Kua_Aina_1.jpg', 59, NULL),
+(2519, 9, 'Shibuya/restaurant/Kua_Aina/Kua_Aina_2.jpg', 59, NULL),
+(2520, 9, 'Shibuya/restaurant/Kua_Aina/Kua_Aina_4.jpg', 59, NULL),
+(2521, 9, 'Shibuya/restaurant/Uobei/Uobei.jpg', 60, NULL),
+(2522, 9, 'Shibuya/restaurant/Uobei/Uobei_1.jpg', 60, NULL),
+(2523, 9, 'Shibuya/restaurant/Uobei/Uobei_2.jpg', 60, NULL),
+(2524, 9, 'Shibuya/shibuya.jpg', NULL, NULL),
+(2525, 9, 'Shibuya/shibuya_1.jpg', 1, NULL),
+(2526, 9, 'Shibuya/shibuya_2.jpg', 2, NULL),
+(2527, 9, 'Shibuya/shibuya_3.jpg', 3, NULL),
+(2528, 8, 'Shinjuku/hotel/Green_Plaza_Shinjuku_Capsule/Green_Plaza_Shinjuku_Capsule.jpg', 65, NULL),
+(2529, 8, 'Shinjuku/hotel/Green_Plaza_Shinjuku_Capsule/Green_Plaza_Shinjuku_Capsule_1.jpg', 65, NULL),
+(2530, 8, 'Shinjuku/hotel/Green_Plaza_Shinjuku_Capsule/Green_Plaza_Shinjuku_Capsule_2.jpg', 65, NULL),
+(2531, 8, 'Shinjuku/hotel/Green_Plaza_Shinjuku_Capsule/Green_Plaza_Shinjuku_Capsule_3.jpg', 65, NULL),
+(2532, 8, 'Shinjuku/hotel/Ibis_tokyo_shinjuku/Ibis_tokyo_shinjuku.jpg', 66, NULL),
+(2533, 8, 'Shinjuku/hotel/Ibis_tokyo_shinjuku/Ibis_tokyo_shinjuku_1.jpg', 66, NULL),
+(2534, 8, 'Shinjuku/hotel/Ibis_tokyo_shinjuku/Ibis_tokyo_shinjuku_2.jpg', 66, NULL),
+(2535, 8, 'Shinjuku/hotel/Ibis_tokyo_shinjuku/Ibis_tokyo_shinjuku_3.jpg', 66, NULL),
+(2536, 8, 'Shinjuku/hotel/Ibis_tokyo_shinjuku/Ibis_tokyo_shinjuku_4.jpg', 66, NULL),
+(2537, 8, 'Shinjuku/hotel/Rose_Garden/Rose_Garden_1.jpg', 67, NULL),
+(2538, 8, 'Shinjuku/hotel/Rose_Garden/Rose_Garden_2.jpg', 67, NULL),
+(2539, 8, 'Shinjuku/hotel/Rose_Garden/Rose_Garden_3..jpg', 67, NULL),
+(2540, 8, 'Shinjuku/hotel/Rose_Garden/Rose_Garden_4.jpg', 67, NULL),
+(2541, 8, 'Shinjuku/lieux_visiter/Golden_Gai/Golden_Gai.jpg', 61, NULL),
+(2542, 8, 'Shinjuku/lieux_visiter/Golden_Gai/Golden_Gai_1.jpg', 61, NULL),
+(2543, 8, 'Shinjuku/lieux_visiter/Golden_Gai/Golden_Gai_2.jpg', 61, NULL),
+(2544, 8, 'Shinjuku/lieux_visiter/Golden_Gai/Golden_Gai_3.jpg', 61, NULL),
+(2545, 8, 'Shinjuku/lieux_visiter/Golden_Gai/Golden_Gai_4.jpg', 61, NULL),
+(2546, 8, 'Shinjuku/lieux_visiter/Golden_Gai/Golden_Gai_5.jpg', 61, NULL),
+(2547, 8, 'Shinjuku/lieux_visiter/Jardin_Imperial/Jardin_Imperial.jpg', 62, NULL),
+(2548, 8, 'Shinjuku/lieux_visiter/Jardin_Imperial/Jardin_Imperial_1.jpg', 62, NULL),
+(2549, 8, 'Shinjuku/lieux_visiter/Jardin_Imperial/Jardin_Imperial_2.jpg', 62, NULL),
+(2550, 8, 'Shinjuku/restaurant/Ishikawa/Ishikawa_1.jpg', 68, NULL),
+(2551, 8, 'Shinjuku/restaurant/Ishikawa/Ishikawa_2.jpg', 68, NULL),
+(2552, 8, 'Shinjuku/restaurant/Ishikawa/Ishikawa_3.jpg', 68, NULL),
+(2553, 8, 'Shinjuku/restaurant/Ishikawa/Ishikawa_4.jpg', 68, NULL),
+(2554, 8, 'Shinjuku/shinjuku.jpg', NULL, NULL),
+(2555, 8, 'Shinjuku/shinjuku_1.jpg', 1, NULL),
+(2556, 6, 'Tsukiji/hotel/APA_Hotel_Tsukiji_eki_Minami/APA_Hotel_Tsukiji_eki_Minami.jpg', 71, NULL),
+(2557, 6, 'Tsukiji/hotel/APA_Hotel_Tsukiji_eki_Minami/APA_Hotel_Tsukiji_eki_Minami_1.jpg', 71, NULL),
+(2558, 6, 'Tsukiji/hotel/APA_Hotel_Tsukiji_eki_Minami/APA_Hotel_Tsukiji_eki_Minami_2.jpg', 71, NULL),
+(2559, 6, 'Tsukiji/hotel/APA_Hotel_Tsukiji_eki_Minami/APA_Hotel_Tsukiji_eki_Minami_3.jpg', 71, NULL),
+(2560, 6, 'Tsukiji/hotel/APA_Hotel_Tsukiji_eki_Minami/APA_Hotel_Tsukiji_eki_Minami_4.jpg', 71, NULL),
+(2561, 6, 'Tsukiji/hotel/APA_Hotel_Tsukiji_eki_Minami/APA_Hotel_Tsukiji_eki_Minami_5.jpg', 71, NULL),
+(2562, 6, 'Tsukiji/hotel/APA_Hotel_Tsukiji_eki_Minami/APA_Hotel_Tsukiji_eki_Minami_6.jpg', 71, NULL),
+(2563, 6, 'Tsukiji/hotel/APA_Hotel_Tsukiji_eki_Minami/APA_Hotel_Tsukiji_eki_Minami_7.jpg', 71, NULL),
+(2564, 6, 'Tsukiji/hotel/APA_Hotel_Tsukiji_eki_Minami/APA_Hotel_Tsukiji_eki_Minami_8.jpg', 71, NULL),
+(2565, 6, 'Tsukiji/hotel/APA_Hotel_Tsukiji_eki_Minami/APA_Hotel_Tsukiji_eki_Minami_9.jpg', 71, NULL),
+(2566, 6, 'Tsukiji/hotel/first_cabin/first_cabin.jpg', 72, NULL),
+(2567, 6, 'Tsukiji/hotel/first_cabin/first_cabin_1.jpg', 72, NULL),
+(2568, 6, 'Tsukiji/hotel/first_cabin/first_cabin_2.jpg', 72, NULL),
+(2569, 6, 'Tsukiji/hotel/first_cabin/first_cabin_3.jpg', 72, NULL),
+(2570, 6, 'Tsukiji/hotel/first_cabin/first_cabin_4.jpg', 72, NULL),
+(2571, 6, 'Tsukiji/hotel/Tsukiji_Business_Hotel_Ban/Tsukiji_Business_Hotel_Ban.jpg', 73, NULL),
+(2572, 6, 'Tsukiji/hotel/Tsukiji_Business_Hotel_Ban/Tsukiji_Business_Hotel_Ban_1.jpg', 73, NULL),
+(2573, 6, 'Tsukiji/hotel/Tsukiji_Business_Hotel_Ban/Tsukiji_Business_Hotel_Ban_2.jpg', 73, NULL),
+(2574, 6, 'Tsukiji/hotel/Tsukiji_Business_Hotel_Ban/Tsukiji_Business_Hotel_Ban_3.jpg', 73, NULL),
+(2575, 6, 'Tsukiji/hotel/Tsukiji_Business_Hotel_Ban/Tsukiji_Business_Hotel_Ban_4.jpg', 73, NULL),
+(2576, 6, 'Tsukiji/lieux_visiter/jardin_Hama_Rikyu/jardin Hama-Riky', 74, NULL),
+(2577, 6, 'Tsukiji/lieux_visiter/jardin_Hama_Rikyu/jardin Hama-Riky', 74, NULL),
+(2578, 6, 'Tsukiji/lieux_visiter/jardin_Hama_Rikyu/jardin Hama-Riky', 74, NULL),
+(2579, 6, 'Tsukiji/lieux_visiter/jardin_Hama_Rikyu/jardin Hama-Riky', 74, NULL),
+(2580, 6, 'Tsukiji/lieux_visiter/jardin_Hama_Rikyu/jardin Hama-Riky', 74, NULL),
+(2581, 6, 'Tsukiji/lieux_visiter/jardin_Hama_Rikyu/jardin Hama-Riky', 74, NULL),
+(2582, 6, 'Tsukiji/lieux_visiter/jardin_Hama_Rikyu/jardin Hama-Riky', 74, NULL),
+(2583, 4, 'Ueno/hotel/Mitsui_Garden_Hotel_Ueno/Mitsui_Garden_Hotel_Ueno.jpg', 36, NULL),
+(2584, 4, 'Ueno/hotel/Mitsui_Garden_Hotel_Ueno/Mitsui_Garden_Hotel_Ueno_1.jpg', 36, NULL),
+(2585, 4, 'Ueno/hotel/Mitsui_Garden_Hotel_Ueno/Mitsui_Garden_Hotel_Ueno_2.jpg', 36, NULL),
+(2586, 4, 'Ueno/hotel/Sakura_Ryokan/Sakura_Ryokan.jpg', 35, NULL),
+(2587, 4, 'Ueno/hotel/Sakura_Ryokan/Sakura_Ryokan_1.jpg', 35, NULL),
+(2588, 4, 'Ueno/hotel/Sakura_Ryokan/Sakura_Ryokan_3.jpg', 35, NULL),
+(2589, 4, 'Ueno/hotel/Sutton_Place_Hotel_Ueno/Sutton_Place_Hotel_Ueno.jpeg', 34, NULL),
+(2590, 4, 'Ueno/hotel/Sutton_Place_Hotel_Ueno/Sutton_Place_Hotel_Ueno_1.jpg', 34, NULL),
+(2591, 4, 'Ueno/hotel/Sutton_Place_Hotel_Ueno/Sutton_Place_Hotel_Ueno_2.jpg', 34, NULL),
+(2592, 4, 'Ueno/lieux_visiter/Musee_national_de_Tokyo/Musee_national_Tokyo.jpg', 40, NULL),
+(2593, 4, 'Ueno/lieux_visiter/Musee_national_de_Tokyo/Musee_national_Tokyo_1.jpg', 40, NULL),
+(2594, 4, 'Ueno/lieux_visiter/Musee_national_de_Tokyo/Musee_national_Tokyo_2.jpg', 40, NULL),
+(2595, 4, 'Ueno/lieux_visiter/Parc_de_Ueno/Parc_Ueno.jpg', 37, NULL),
+(2596, 4, 'Ueno/lieux_visiter/Parc_de_Ueno/Parc_Ueno_1.jpg', 37, NULL),
+(2597, 4, 'Ueno/lieux_visiter/Parc_de_Ueno/Parc_Ueno_2.jpg', 37, NULL),
+(2598, 4, 'Ueno/lieux_visiter/Sanctuaire_Toshogu/Sanctuaire_Toshogu.jpg', 42, NULL),
+(2599, 4, 'Ueno/lieux_visiter/Sanctuaire_Toshogu/Sanctuaire_Toshogu_1.jpg', 42, NULL),
+(2600, 4, 'Ueno/lieux_visiter/Sanctuaire_Toshogu/Sanctuaire_Toshogu_2.jpg', 42, NULL),
+(2601, 4, 'Ueno/lieux_visiter/Temple_Kan_eiji/Temple_Kan_eiji.jpg', 39, NULL),
+(2602, 4, 'Ueno/lieux_visiter/Temple_Kan_eiji/Temple_Kan_eiji_2.jpg', 39, NULL),
+(2603, 4, 'Ueno/restaurant/Hanada_Uenoten/Hanada_Uenoten.jpg', 30, NULL),
+(2604, 4, 'Ueno/restaurant/Hanada_Uenoten/Hanada_Uenoten_1.jpg', 30, NULL),
+(2605, 4, 'Ueno/restaurant/Keijouen/Keijouen.jpg', 32, NULL),
+(2606, 4, 'Ueno/restaurant/Keijouen/Keijouen_1.jpg', 32, NULL),
+(2607, 4, 'Ueno/restaurant/Yamabe_Uenoten/Yamabe_Uenoten.jpg', 31, NULL),
+(2608, 4, 'Ueno/restaurant/Yamabe_Uenoten/Yamabe_Uenoten_1.jpg', 31, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `photo.bkp`
+--
+
+CREATE TABLE IF NOT EXISTS `photo.bkp` (
+`id` int(11) NOT NULL,
+  `quarter_id` int(11) NOT NULL,
+  `src` varchar(100) DEFAULT NULL,
+  `info_id` int(11) DEFAULT NULL,
+  `user_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=181 DEFAULT CHARSET=utf8;
+
+--
+-- Contenu de la table `photo.bkp`
+--
+
+INSERT INTO `photo.bkp` (`id`, `quarter_id`, `src`, `info_id`, `user_id`) VALUES
+(1, 1, '\\img\\Akihabara\\histoire\\histoire.jpg', 1, NULL),
+(2, 1, '\\img\\Akihabara\\histoire\\histoire_1.jpg', 1, NULL),
+(3, 1, '\\img\\Akihabara\\histoire\\histoire_2.jpg', 1, NULL),
+(4, 1, '\\img\\Akihabara\\hotel\\Akihabara_Hotel_3000\\Akihabara_Hotel_3000.jpg', 2, NULL),
+(5, 1, '\\img\\Akihabara\\hotel\\Akihabara_Hotel_3000\\Akihabara_Hotel_3000_4.jpg', 2, NULL),
+(6, 1, '\\img\\Akihabara\\hotel\\Akihabara_Hotel_3000\\Akihabara_Hotel_3000_3.jpg', 2, NULL),
+(7, 1, '\\img\\Akihabara\\hotel\\Akihabara_Hotel_3000\\Akihabara_Hotel_3000_2.jpg', 2, NULL),
+(8, 1, '\\img\\Akihabara\\hotel\\Akihabara_Hotel_3000\\Akihabara_Hotel_3000_1.jpg', 2, NULL),
+(9, 1, '\\img\\Akihabara\\hotel\\Akihabara_Washington_Hotel\\Akihabara_Washington_Hotel.jpg', 3, NULL),
+(10, 1, '\\img\\Akihabara\\hotel\\Akihabara_Washington_Hotel\\Akihabara_Washington_Hotel_1.jpg', 3, NULL),
+(11, 1, '\\img\\Akihabara\\hotel\\Akihabara_Washington_Hotel\\Akihabara_Washington_Hotel_2.jpg', 3, NULL),
+(12, 1, '\\img\\Akihabara\\hotel\\Akihabara_Washington_Hotel\\Akihabara_Washington_Hotel_3.jpg', 3, NULL),
+(13, 1, '\\img\\Akihabara\\hotel\\Akihabara_Washington_Hotel\\Akihabara_Washington_Hotel_4.jpg', 3, NULL),
+(14, 1, '\\img\\Akihabara\\hotel\\capsule\\capsule_14.jpg', 4, NULL),
+(15, 1, '\\img\\Akihabara\\hotel\\capsule\\capsule.jpg', 4, NULL),
+(16, 1, '\\img\\Akihabara\\hotel\\capsule\\capsule_1.jpg', 4, NULL),
+(17, 1, '\\img\\Akihabara\\hotel\\capsule\\capsule_2.jpg', 4, NULL),
+(18, 1, '\\img\\Akihabara\\hotel\\capsule\\capsule_3.jpg', 4, NULL),
+(19, 1, '\\img\\Akihabara\\hotel\\capsule\\capsule_4.jpg', 4, NULL),
+(20, 1, '\\img\\Akihabara\\hotel\\capsule\\capsule_5.jpg', 4, NULL),
+(21, 1, '\\img\\Akihabara\\hotel\\capsule\\capsule_6.jpg', 4, NULL),
+(22, 1, '\\img\\Akihabara\\hotel\\capsule\\capsule_7.jpg', 4, NULL),
+(23, 1, '\\img\\Akihabara\\hotel\\capsule\\capsule_8.jpg', 4, NULL),
+(24, 1, '\\img\\Akihabara\\hotel\\capsule\\capsule_9.jpg', 4, NULL),
+(25, 1, '\\img\\Akihabara\\hotel\\capsule\\capsule_10.jpg', 4, NULL),
+(26, 1, '\\img\\Akihabara\\hotel\\capsule\\capsule_11.jpg', 4, NULL),
+(27, 1, '\\img\\Akihabara\\hotel\\capsule\\capsule_12.jpg', 4, NULL),
+(28, 1, '\\img\\Akihabara\\hotel\\capsule\\capsule_13.jpg', 4, NULL),
+(29, 1, '\\img\\Akihabara\\hotel\\Remm_Akihabara\\Remm_Akihabara.jpg', 5, NULL),
+(30, 1, '\\img\\Akihabara\\hotel\\Remm_Akihabara\\Remm_Akihabara_1.jpg', 5, NULL),
+(31, 1, '\\img\\Akihabara\\hotel\\Remm_Akihabara\\Remm_Akihabara_2.jpg', 5, NULL),
+(32, 1, '\\img\\Akihabara\\hotel\\Remm_Akihabara\\Remm_Akihabara_3.jpg', 5, NULL),
+(33, 1, '\\img\\Akihabara\\hotel\\Remm_Akihabara\\Remm_Akihabara_4.jpg', 5, NULL),
+(34, 1, '\\img\\Akihabara\\hotel\\Remm_Akihabara\\Remm_Akihabara_5.jpg', 5, NULL),
+(35, 1, '\\img\\Akihabara\\lieux_a_visiter\\maid_cafe\\maid_cafe.jpg', 6, NULL),
+(36, 1, '\\img\\Akihabara\\lieux_a_visiter\\maid_cafe\\maid_cafe_1.jpg', 6, NULL),
+(37, 1, '\\img\\Akihabara\\lieux_a_visiter\\maid_cafe\\maid_cafe_2.jpg', 6, NULL),
+(38, 1, '\\img\\Akihabara\\lieux_a_visiter\\super_potato_shop\\super_potato_shop.jpg', 7, NULL),
+(39, 1, '\\img\\Akihabara\\lieux_a_visiter\\super_potato_shop\\super_potato_shop_1.jpg', 7, NULL),
+(40, 1, '\\img\\Akihabara\\lieux_a_visiter\\super_potato_shop\\super_potato_shop_2.jpg', 7, NULL),
+(41, 1, '\\img\\Akihabara\\lieux_a_visiter\\super_potato_shop\\super_potato_shop_3.jpg', 7, NULL),
+(42, 1, '\\img\\Akihabara\\lieux_a_visiter\\super_potato_shop\\super_potato_shop_4.jpg', 7, NULL),
+(43, 1, '\\img\\Akihabara\\lieux_a_visiter\\super_potato_shop\\super_potato_shop_5.jpg', 7, NULL),
+(44, 1, '\\img\\Akihabara\\lieux_a_visiter\\taito_station\\taito_station.jpg', 8, NULL),
+(45, 1, '\\img\\Akihabara\\lieux_a_visiter\\taito_station\\taito_station_1.jpg', 8, NULL),
+(46, 1, '\\img\\Akihabara\\lieux_a_visiter\\taito_station\\taito_station_2.jpg', 8, NULL),
+(47, 1, '\\img\\Akihabara\\lieux_a_visiter\\taito_station\\taito_station_3.jpg', 8, NULL),
+(48, 1, '\\img\\Akihabara\\lieux_a_visiter\\taito_station\\taito_station_4.jpg', 8, NULL),
+(49, 1, '\\img\\Akihabara\\lieux_a_visiter\\taito_station\\taito_station_5.jpg', 8, NULL),
+(50, 1, '\\img\\Akihabara\\lieux_a_visiter\\taito_station\\taito_station_6.jpg', 8, NULL),
+(51, 1, '\\img\\Akihabara\\restaurant\\gundam_cafe\\gundam_cafe.jpg', 9, NULL),
+(52, 1, '\\img\\Akihabara\\restaurant\\gundam_cafe\\gundam_cafe_1.jpg', 9, NULL),
+(53, 1, '\\img\\Akihabara\\restaurant\\gundam_cafe\\gundam_cafe_2.jpg', 9, NULL),
+(54, 1, '\\img\\Akihabara\\restaurant\\gundam_cafe\\gundam_cafe_3.jpg', 9, NULL),
+(55, 1, '\\img\\Akihabara\\restaurant\\gundam_cafe\\gundam_cafe_4.jpg', 9, NULL),
+(56, 1, '\\img\\Akihabara\\restaurant\\gundam_cafe\\gundam_cafe_5.jpg', 9, NULL),
+(57, 1, '\\img\\Akihabara\\restaurant\\gundam_cafe\\gundam_cafe_6.jpg', 9, NULL),
+(58, 1, '\\img\\Akihabara\\restaurant\\gundam_cafe\\gundam_cafe_7.jpg', 9, NULL),
+(59, 1, '\\img\\Akihabara\\restaurant\\gundam_cafe\\gundam_cafe_8.jpg', 9, NULL),
+(60, 1, '\\img\\Akihabara\\restaurant\\gundam_cafe\\gundam_cafe_9.jpg', 9, NULL),
+(61, 1, '\\img\\Akihabara\\restaurant\\gundam_cafe\\gundam_cafe_10.jpg', 9, NULL),
+(62, 1, '\\img\\Akihabara\\restaurant\\Kanda_Yabusoba\\Kanda_Yabusoba.jpg', 10, NULL),
+(63, 1, '\\img\\Akihabara\\restaurant\\Kanda_Yabusoba\\Kanda_Yabusoba_1.jpg', 10, NULL),
+(64, 1, '\\img\\Akihabara\\restaurant\\Kanda_Yabusoba\\Kanda_Yabusoba_2.jpg', 10, NULL),
+(65, 1, '\\img\\Akihabara\\restaurant\\Kanda_Yabusoba\\Kanda_Yabusoba_3.jpg', 10, NULL),
+(66, 1, '\\img\\Akihabara\\restaurant\\Kanda_Yabusoba\\Kanda_Yabusoba_4.jpg', 10, NULL),
+(67, 1, '\\img\\Akihabara\\restaurant\\Kanda_Yabusoba\\Kanda_Yabusoba_5.jpg', 10, NULL),
+(68, 1, '\\img\\Akihabara\\restaurant\\Kanda_Yabusoba\\Kanda_Yabusoba_6.jpg', 10, NULL),
+(69, 1, '\\img\\Akihabara\\restaurant\\Kanda_Yabusoba\\Kanda_Yabusoba_7.jpg', 10, NULL),
+(70, 1, '\\img\\Akihabara\\restaurant\\Kanda_Yabusoba\\Kanda_Yabusoba_8.jpg', 10, NULL),
+(71, 1, '\\img\\Akihabara\\restaurant\\Kanda_Yabusoba\\Kanda_Yabusoba_9.jpg', 10, NULL),
+(72, 1, '\\img\\Akihabara\\restaurant\\Menya_Musashi_Bujin\\Menya_Musashi_Bujin.jpg', 11, NULL),
+(73, 1, '\\img\\Akihabara\\restaurant\\Menya_Musashi_Bujin\\Menya_Musashi_Bujin_1.jpg', 11, NULL),
+(74, 1, '\\img\\Akihabara\\restaurant\\Menya_Musashi_Bujin\\Menya_Musashi_Bujin_2.jpg', 11, NULL),
+(75, 1, '\\img\\Akihabara\\restaurant\\Menya_Musashi_Bujin\\Menya_Musashi_Bujin_3.jpg', 11, NULL),
+(76, 1, '\\img\\Akihabara\\restaurant\\Menya_Musashi_Bujin\\Menya_Musashi_Bujin_4.jpg', 11, NULL),
+(77, 1, '\\img\\Akihabara\\restaurant\\Menya_Musashi_Bujin\\Menya_Musashi_Bujin_5.jpg', 11, NULL),
+(78, 1, '\\img\\Akihabara\\map_akihabara.jpg', NULL, NULL),
+(79, 3, '\\img\\harajuku\\harajuku.jpg', NULL, NULL),
+(80, 3, '\\img\\harajuku\\harajuku_1.jpg', NULL, NULL),
+(81, 3, '\\img\\harajuku\\harajuku_2.jpg', NULL, NULL),
+(82, 3, '\\img\\harajuku\\harajuku_3.jpg', NULL, NULL),
+(83, 3, '\\img\\harajuku\\harajuku_4.jpg', NULL, NULL),
+(84, 3, '\\img\\harajuku\\lieux_visiter\\pont_des_cosplay\\pont_des_cosplay.jpg', 16, NULL),
+(85, 3, '\\img\\harajuku\\lieux_visiter\\pont_des_cosplay\\pont_des_cosplay_1.jpg', 16, NULL),
+(86, 3, '\\img\\harajuku\\lieux_visiter\\pont_des_cosplay\\pont_des_cosplay_2.jpg', 16, NULL),
+(87, 3, '\\img\\harajuku\\lieux_visiter\\pont_des_cosplay\\pont_des_cosplay_4.jpg', 16, NULL),
+(88, 3, '\\img\\harajuku\\lieux_visiter\\pont_des_cosplay\\pont_des_cosplay_5.jpg', 16, NULL),
+(89, 3, '\\img\\harajuku\\lieux_visiter\\pont_des_cosplay\\pont_des_cosplay_6.jpg', 16, NULL),
+(90, 3, '\\img\\harajuku\\lieux_visiter\\temple_meiji\\temple_meiji.jpg', 18, NULL),
+(91, 3, '\\img\\harajuku\\lieux_visiter\\temple_meiji\\temple_meiji_2.jpg', 18, NULL),
+(92, 3, '\\img\\harajuku\\lieux_visiter\\temple_meiji\\temple_meiji_3.jpg', 18, NULL),
+(93, 3, '\\img\\harajuku\\lieux_visiter\\temple_meiji\\temple_meiji_4.jpg', 18, NULL),
+(94, 3, '\\img\\harajuku\\lieux_visiter\\temple_meiji\\temple_meiji_6.jpg', 18, NULL),
+(95, 3, '\\img\\harajuku\\lieux_visiter\\temple_meiji\\temple_meiji_7.jpg', 18, NULL),
+(96, 3, '\\img\\harajuku\\restaurant\\gyoza_rou\\gyoza_rou.jpg', 12, NULL),
+(97, 3, '\\img\\harajuku\\restaurant\\gyoza_rou\\gyoza_rou_1.jpg', 12, NULL),
+(98, 3, '\\img\\harajuku\\restaurant\\gyoza_rou\\gyoza_rou_2.jpg', 12, NULL),
+(99, 3, '\\img\\harajuku\\restaurant\\gyoza_rou\\gyoza_rou_3.jpg', 12, NULL),
+(100, 3, '\\img\\harajuku\\restaurant\\gyoza_rou\\gyoza_rou_4.jpg', 12, NULL),
+(101, 3, '\\img\\harajuku\\restaurant\\gyoza_rou\\gyoza_rou_5.jpg', 12, NULL),
+(102, 3, '\\img\\harajuku\\restaurant\\Kyushu_Jangara\\Kyushu_Jangara.JPG', 14, NULL),
+(103, 3, '\\img\\harajuku\\restaurant\\Kyushu_Jangara\\Kyushu_Jangara_2.jpg', 14, NULL),
+(104, 3, '\\img\\harajuku\\restaurant\\Kyushu_Jangara\\Kyushu_Jangara_3.JPG', 14, NULL),
+(105, 3, '\\img\\harajuku\\restaurant\\Kyushu_Jangara\\Kyushu_Jangara_4.jpeg', 14, NULL),
+(106, 3, '\\img\\harajuku\\restaurant\\Kyushu_Jangara\\Kyushu_Jangara_5.jpg', 14, NULL),
+(107, 3, '\\img\\harajuku\\restaurant\\Kyushu_Jangara\\Kyushu_Jangara_6.jpg', 14, NULL),
+(108, 3, '\\img\\harajuku\\restaurant\\Minoringo\\Minoringo.JPG', 15, NULL),
+(109, 3, '\\img\\harajuku\\restaurant\\Minoringo\\Minoringo_1.jpg', 15, NULL),
+(110, 3, '\\img\\harajuku\\restaurant\\Minoringo\\Minoringo_3.jpg', 15, NULL),
+(111, 3, '\\img\\harajuku\\restaurant\\Minoringo\\Minoringo_2.jpg', 15, NULL),
+(112, 2, '\\img\\Ikebukuro\\hotel\\centurion_hotel\\centurion_hotel.jpg', 19, NULL),
+(113, 2, '\\img\\Ikebukuro\\hotel\\centurion_hotel\\centurion_hotel_1.jpg', 19, NULL),
+(114, 2, '\\img\\Ikebukuro\\hotel\\centurion_hotel\\centurion_hotel_2.jpg', 19, NULL),
+(115, 2, '\\img\\Ikebukuro\\hotel\\centurion_hotel\\centurion_hotel_3.jpg', 19, NULL),
+(116, 2, '\\img\\Ikebukuro\\hotel\\centurion_hotel\\centurion_hotel_4.jpg', 19, NULL),
+(117, 2, '\\img\\Ikebukuro\\hotel\\centurion_hotel\\centurion_hotel_5.jpg', 19, NULL),
+(118, 2, '\\img\\Ikebukuro\\hotel\\sakura_hotel\\sakura_hotel.jpg', 20, NULL),
+(119, 2, '\\img\\Ikebukuro\\hotel\\sakura_hotel\\sakura_hotel_1.jpg', 20, NULL),
+(120, 2, '\\img\\Ikebukuro\\hotel\\sakura_hotel\\sakura_hotel_2.jpg', 20, NULL),
+(121, 2, '\\img\\Ikebukuro\\hotel\\Tokyu_Stay_Ikebukuro\\Tokyu_Stay_Ikebukuro.jpg', 21, NULL),
+(122, 2, '\\img\\Ikebukuro\\hotel\\Tokyu_Stay_Ikebukuro\\Tokyu_Stay_Ikebukuro_1.jpg', 21, NULL),
+(123, 2, '\\img\\Ikebukuro\\hotel\\Tokyu_Stay_Ikebukuro\\Tokyu_Stay_Ikebukuro_2.jpg', 21, NULL),
+(124, 2, '\\img\\Ikebukuro\\hotel\\Tokyu_Stay_Ikebukuro\\Tokyu_Stay_Ikebukuro_3.jpg', 21, NULL),
+(125, 2, '\\img\\Ikebukuro\\lieux_visiter\\batting_center\\batting_center.jpg', 22, NULL),
+(126, 2, '\\img\\Ikebukuro\\lieux_visiter\\batting_center\\batting_center_1.jpg', 22, NULL),
+(127, 2, '\\img\\Ikebukuro\\lieux_visiter\\batting_center\\batting_center_2.jpg', 22, NULL),
+(128, 2, '\\img\\Ikebukuro\\lieux_visiter\\batting_center\\batting_center_3.jpg', 22, NULL),
+(129, 2, '\\img\\Ikebukuro\\lieux_visiter\\batting_center\\batting_center_4.jpg', 22, NULL),
+(130, 2, '\\img\\Ikebukuro\\lieux_visiter\\bosaikan\\bosaikan.jpg', 23, NULL),
+(131, 2, '\\img\\Ikebukuro\\lieux_visiter\\bosaikan\\bosaikan_1.jpg', 23, NULL),
+(132, 2, '\\img\\Ikebukuro\\lieux_visiter\\bosaikan\\bosaikan_2.jpg', 23, NULL),
+(133, 2, '\\img\\Ikebukuro\\lieux_visiter\\bosaikan\\bosaikan_3.jpg', 23, NULL),
+(134, 2, '\\img\\Ikebukuro\\lieux_visiter\\bosaikan\\bosaikan_4.jpg', 23, NULL),
+(135, 2, '\\img\\Ikebukuro\\lieux_visiter\\bosaikan\\bosaikan_5.jpg', 23, NULL),
+(136, 2, '\\img\\Ikebukuro\\lieux_visiter\\tokyo_dome\\tokyo_dome.jpg', 24, NULL),
+(137, 2, '\\img\\Ikebukuro\\lieux_visiter\\tokyo_dome\\tokyo_dome_1.jpg', 24, NULL),
+(138, 2, '\\img\\Ikebukuro\\lieux_visiter\\tokyo_dome\\tokyo_dome_2.jpg', 24, NULL),
+(139, 2, '\\img\\Ikebukuro\\lieux_visiter\\tokyo_dome\\tokyo_dome_3.jpg', 24, NULL),
+(140, 2, '\\img\\Ikebukuro\\lieux_visiter\\tokyo_dome\\tokyo_dome_4.jpg', 24, NULL),
+(141, 2, '\\img\\Ikebukuro\\lieux_visiter\\tokyo_dome\\tokyo_dome_5.jpg', 24, NULL),
+(148, 2, '\\img\\Ikebukuro\\restaurant\\uchi\\uchi.jpg', 25, NULL),
+(149, 2, '\\img\\Ikebukuro\\restaurant\\uchi\\uchi_1.jpg', 25, NULL),
+(150, 2, '\\img\\Ikebukuro\\restaurant\\uchi\\uchi_2.jpg', 25, NULL),
+(151, 2, '\\img\\Ikebukuro\\restaurant\\uchi\\uchi_3.jpg', 25, NULL),
+(152, 2, '\\img\\Ikebukuro\\restaurant\\uchi\\uchi_4.jpg', 25, NULL),
+(153, 2, '\\img\\Ikebukuro\\restaurant\\uchi\\uchi_5.jpg', 25, NULL),
+(154, 2, '\\img\\Ikebukuro\\restaurant\\Zubora\\Zubora.jpg', 26, NULL),
+(155, 2, '\\img\\Ikebukuro\\restaurant\\Zubora\\Zubora_1.jpg', 26, NULL),
+(156, 2, '\\img\\Ikebukuro\\restaurant\\Zubora\\Zubora_2.jpg', 26, NULL),
+(157, 2, '\\img\\Ikebukuro\\restaurant\\Zubora\\Zubora_3.jpg', 26, NULL),
+(158, 2, '\\img\\Ikebukuro\\restaurant\\Zubora\\Zubora_4.jpg', 26, NULL),
+(159, 2, '\\img\\Ikebukuro\\restaurant\\Zubora\\Zubora_5.jpg', 26, NULL),
+(160, 2, '\\img\\Ikebukuro\\restaurant\\Zubora\\Zubora_6.jpg', 26, NULL),
+(161, 2, '\\img\\Ikebukuro\\restaurant\\Zubora\\Zubora_7.jpg', 26, NULL),
+(162, 2, '\\img\\Ikebukuro\\restaurant\\Zubora\\Zubora_8.jpg', 26, NULL),
+(163, 5, 'img\\Asakusa\\hotel\\Dormy_Inn_EXPRESS\\Dormy_Inn_EXPRESS.jpg', 44, NULL),
+(164, 5, 'img\\Asakusa\\hotel\\Dormy_Inn_EXPRESS\\Dormy_Inn_EXPRESS_1.jpg', 44, NULL),
+(165, 5, 'img\\Asakusa\\hotel\\Dormy_Inn_EXPRESS\\Dormy_Inn_EXPRESS_2.jpg', 44, NULL),
+(166, 5, '\\img\\Asakusa\\hotel\\Ryokan_Asakusa_Shigetsu\\Ryokan_Asakusa_Shigetsu.jpg', 46, NULL),
+(167, 5, '\\img\\Asakusa\\hotel\\Ryokan_Asakusa_Shigetsu\\Ryokan_Asakusa_Shigetsu_1.jpg', 46, NULL),
+(168, 5, '\\img\\Asakusa\\hotel\\Ryokan_Asakusa_Shigetsu\\Ryokan_Asakusa_Shigetsu_2.jpg', 46, NULL),
+(169, 5, '\\img\\Asakusa\\restaurant\\Maguro_bito\\Maguro_bito.jpg', 27, NULL),
+(170, 5, '\\img\\Asakusa\\restaurant\\Maguro_bito\\Maguro_bito_1.jpg', 27, NULL),
+(171, 5, '\\img\\Asakusa\\restaurant\\Maguro_bito\\Maguro_bito_2.jpg', 27, NULL),
+(172, 5, '\\img\\Asakusa\\restaurant\\Nakasei\\Nakasei.jpg', 28, NULL),
+(173, 5, '\\img\\Asakusa\\restaurant\\Nakasei\\Nakasei_1.jpg', 28, NULL),
+(174, 5, '\\img\\Asakusa\\restaurant\\Nakasei\\Nakasei_2.jpg', 28, NULL),
+(175, 5, '\\img\\Asakusa\\restaurant\\Toriyoshi\\Toriyoshi.jpg', 29, NULL),
+(176, 5, '\\img\\Asakusa\\restaurant\\Toriyoshi\\Toriyoshi_1.jpg', 29, NULL),
+(177, 5, '\\img\\Asakusa\\restaurant\\Toriyoshi\\Toriyoshi_3.jpg', 29, NULL),
+(178, 5, '\\img\\Asakusa\\hotel\\Dormy_Inn_EXPRESS_Dormy_Inn_EXPRESS.jpg', 44, NULL),
+(179, 5, '\\img\\Asakusa\\hotel\\Dormy_Inn_EXPRESS_Dormy_Inn_EXPRESS_1.jpg', 44, NULL),
+(180, 5, '\\img\\Asakusa\\hotel\\Dormy_Inn_EXPRESS_Dormy_Inn_EXPRESS_2.jpg', 44, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `photo.bkp2`
+--
+
+CREATE TABLE IF NOT EXISTS `photo.bkp2` (
+`id` int(11) NOT NULL,
   `quarter_id` int(11) NOT NULL,
   `src` varchar(100) DEFAULT NULL,
   `info_id` int(11) DEFAULT NULL,
@@ -147,10 +661,10 @@ CREATE TABLE IF NOT EXISTS `photo` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2057 DEFAULT CHARSET=utf8;
 
 --
--- Contenu de la table `photo`
+-- Contenu de la table `photo.bkp2`
 --
 
-INSERT INTO `photo` (`id`, `quarter_id`, `src`, `info_id`, `user_id`) VALUES
+INSERT INTO `photo.bkp2` (`id`, `quarter_id`, `src`, `info_id`, `user_id`) VALUES
 (1770, 1, 'Akihabara/historique akihabara/histoire.jpg', 1, NULL),
 (1771, 1, 'Akihabara/historique akihabara/histoire_1.jpg', 1, NULL),
 (1772, 1, 'Akihabara/historique akihabara/histoire_2.jpg', 1, NULL),
@@ -442,205 +956,11 @@ INSERT INTO `photo` (`id`, `quarter_id`, `src`, `info_id`, `user_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `photo.bkp`
---
-
-CREATE TABLE IF NOT EXISTS `photo.bkp` (
-  `id` int(11) NOT NULL,
-  `quarter_id` int(11) NOT NULL,
-  `src` varchar(100) DEFAULT NULL,
-  `info_id` int(11) DEFAULT NULL,
-  `user_id` int(11) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=181 DEFAULT CHARSET=utf8;
-
---
--- Contenu de la table `photo.bkp`
---
-
-INSERT INTO `photo.bkp` (`id`, `quarter_id`, `src`, `info_id`, `user_id`) VALUES
-(1, 1, '\\img\\Akihabara\\histoire\\histoire.jpg', 1, NULL),
-(2, 1, '\\img\\Akihabara\\histoire\\histoire_1.jpg', 1, NULL),
-(3, 1, '\\img\\Akihabara\\histoire\\histoire_2.jpg', 1, NULL),
-(4, 1, '\\img\\Akihabara\\hotel\\Akihabara_Hotel_3000\\Akihabara_Hotel_3000.jpg', 2, NULL),
-(5, 1, '\\img\\Akihabara\\hotel\\Akihabara_Hotel_3000\\Akihabara_Hotel_3000_4.jpg', 2, NULL),
-(6, 1, '\\img\\Akihabara\\hotel\\Akihabara_Hotel_3000\\Akihabara_Hotel_3000_3.jpg', 2, NULL),
-(7, 1, '\\img\\Akihabara\\hotel\\Akihabara_Hotel_3000\\Akihabara_Hotel_3000_2.jpg', 2, NULL),
-(8, 1, '\\img\\Akihabara\\hotel\\Akihabara_Hotel_3000\\Akihabara_Hotel_3000_1.jpg', 2, NULL),
-(9, 1, '\\img\\Akihabara\\hotel\\Akihabara_Washington_Hotel\\Akihabara_Washington_Hotel.jpg', 3, NULL),
-(10, 1, '\\img\\Akihabara\\hotel\\Akihabara_Washington_Hotel\\Akihabara_Washington_Hotel_1.jpg', 3, NULL),
-(11, 1, '\\img\\Akihabara\\hotel\\Akihabara_Washington_Hotel\\Akihabara_Washington_Hotel_2.jpg', 3, NULL),
-(12, 1, '\\img\\Akihabara\\hotel\\Akihabara_Washington_Hotel\\Akihabara_Washington_Hotel_3.jpg', 3, NULL),
-(13, 1, '\\img\\Akihabara\\hotel\\Akihabara_Washington_Hotel\\Akihabara_Washington_Hotel_4.jpg', 3, NULL),
-(14, 1, '\\img\\Akihabara\\hotel\\capsule\\capsule_14.jpg', 4, NULL),
-(15, 1, '\\img\\Akihabara\\hotel\\capsule\\capsule.jpg', 4, NULL),
-(16, 1, '\\img\\Akihabara\\hotel\\capsule\\capsule_1.jpg', 4, NULL),
-(17, 1, '\\img\\Akihabara\\hotel\\capsule\\capsule_2.jpg', 4, NULL),
-(18, 1, '\\img\\Akihabara\\hotel\\capsule\\capsule_3.jpg', 4, NULL),
-(19, 1, '\\img\\Akihabara\\hotel\\capsule\\capsule_4.jpg', 4, NULL),
-(20, 1, '\\img\\Akihabara\\hotel\\capsule\\capsule_5.jpg', 4, NULL),
-(21, 1, '\\img\\Akihabara\\hotel\\capsule\\capsule_6.jpg', 4, NULL),
-(22, 1, '\\img\\Akihabara\\hotel\\capsule\\capsule_7.jpg', 4, NULL),
-(23, 1, '\\img\\Akihabara\\hotel\\capsule\\capsule_8.jpg', 4, NULL),
-(24, 1, '\\img\\Akihabara\\hotel\\capsule\\capsule_9.jpg', 4, NULL),
-(25, 1, '\\img\\Akihabara\\hotel\\capsule\\capsule_10.jpg', 4, NULL),
-(26, 1, '\\img\\Akihabara\\hotel\\capsule\\capsule_11.jpg', 4, NULL),
-(27, 1, '\\img\\Akihabara\\hotel\\capsule\\capsule_12.jpg', 4, NULL),
-(28, 1, '\\img\\Akihabara\\hotel\\capsule\\capsule_13.jpg', 4, NULL),
-(29, 1, '\\img\\Akihabara\\hotel\\Remm_Akihabara\\Remm_Akihabara.jpg', 5, NULL),
-(30, 1, '\\img\\Akihabara\\hotel\\Remm_Akihabara\\Remm_Akihabara_1.jpg', 5, NULL),
-(31, 1, '\\img\\Akihabara\\hotel\\Remm_Akihabara\\Remm_Akihabara_2.jpg', 5, NULL),
-(32, 1, '\\img\\Akihabara\\hotel\\Remm_Akihabara\\Remm_Akihabara_3.jpg', 5, NULL),
-(33, 1, '\\img\\Akihabara\\hotel\\Remm_Akihabara\\Remm_Akihabara_4.jpg', 5, NULL),
-(34, 1, '\\img\\Akihabara\\hotel\\Remm_Akihabara\\Remm_Akihabara_5.jpg', 5, NULL),
-(35, 1, '\\img\\Akihabara\\lieux_a_visiter\\maid_cafe\\maid_cafe.jpg', 6, NULL),
-(36, 1, '\\img\\Akihabara\\lieux_a_visiter\\maid_cafe\\maid_cafe_1.jpg', 6, NULL),
-(37, 1, '\\img\\Akihabara\\lieux_a_visiter\\maid_cafe\\maid_cafe_2.jpg', 6, NULL),
-(38, 1, '\\img\\Akihabara\\lieux_a_visiter\\super_potato_shop\\super_potato_shop.jpg', 7, NULL),
-(39, 1, '\\img\\Akihabara\\lieux_a_visiter\\super_potato_shop\\super_potato_shop_1.jpg', 7, NULL),
-(40, 1, '\\img\\Akihabara\\lieux_a_visiter\\super_potato_shop\\super_potato_shop_2.jpg', 7, NULL),
-(41, 1, '\\img\\Akihabara\\lieux_a_visiter\\super_potato_shop\\super_potato_shop_3.jpg', 7, NULL),
-(42, 1, '\\img\\Akihabara\\lieux_a_visiter\\super_potato_shop\\super_potato_shop_4.jpg', 7, NULL),
-(43, 1, '\\img\\Akihabara\\lieux_a_visiter\\super_potato_shop\\super_potato_shop_5.jpg', 7, NULL),
-(44, 1, '\\img\\Akihabara\\lieux_a_visiter\\taito_station\\taito_station.jpg', 8, NULL),
-(45, 1, '\\img\\Akihabara\\lieux_a_visiter\\taito_station\\taito_station_1.jpg', 8, NULL),
-(46, 1, '\\img\\Akihabara\\lieux_a_visiter\\taito_station\\taito_station_2.jpg', 8, NULL),
-(47, 1, '\\img\\Akihabara\\lieux_a_visiter\\taito_station\\taito_station_3.jpg', 8, NULL),
-(48, 1, '\\img\\Akihabara\\lieux_a_visiter\\taito_station\\taito_station_4.jpg', 8, NULL),
-(49, 1, '\\img\\Akihabara\\lieux_a_visiter\\taito_station\\taito_station_5.jpg', 8, NULL),
-(50, 1, '\\img\\Akihabara\\lieux_a_visiter\\taito_station\\taito_station_6.jpg', 8, NULL),
-(51, 1, '\\img\\Akihabara\\restaurant\\gundam_cafe\\gundam_cafe.jpg', 9, NULL),
-(52, 1, '\\img\\Akihabara\\restaurant\\gundam_cafe\\gundam_cafe_1.jpg', 9, NULL),
-(53, 1, '\\img\\Akihabara\\restaurant\\gundam_cafe\\gundam_cafe_2.jpg', 9, NULL),
-(54, 1, '\\img\\Akihabara\\restaurant\\gundam_cafe\\gundam_cafe_3.jpg', 9, NULL),
-(55, 1, '\\img\\Akihabara\\restaurant\\gundam_cafe\\gundam_cafe_4.jpg', 9, NULL),
-(56, 1, '\\img\\Akihabara\\restaurant\\gundam_cafe\\gundam_cafe_5.jpg', 9, NULL),
-(57, 1, '\\img\\Akihabara\\restaurant\\gundam_cafe\\gundam_cafe_6.jpg', 9, NULL),
-(58, 1, '\\img\\Akihabara\\restaurant\\gundam_cafe\\gundam_cafe_7.jpg', 9, NULL),
-(59, 1, '\\img\\Akihabara\\restaurant\\gundam_cafe\\gundam_cafe_8.jpg', 9, NULL),
-(60, 1, '\\img\\Akihabara\\restaurant\\gundam_cafe\\gundam_cafe_9.jpg', 9, NULL),
-(61, 1, '\\img\\Akihabara\\restaurant\\gundam_cafe\\gundam_cafe_10.jpg', 9, NULL),
-(62, 1, '\\img\\Akihabara\\restaurant\\Kanda_Yabusoba\\Kanda_Yabusoba.jpg', 10, NULL),
-(63, 1, '\\img\\Akihabara\\restaurant\\Kanda_Yabusoba\\Kanda_Yabusoba_1.jpg', 10, NULL),
-(64, 1, '\\img\\Akihabara\\restaurant\\Kanda_Yabusoba\\Kanda_Yabusoba_2.jpg', 10, NULL),
-(65, 1, '\\img\\Akihabara\\restaurant\\Kanda_Yabusoba\\Kanda_Yabusoba_3.jpg', 10, NULL),
-(66, 1, '\\img\\Akihabara\\restaurant\\Kanda_Yabusoba\\Kanda_Yabusoba_4.jpg', 10, NULL),
-(67, 1, '\\img\\Akihabara\\restaurant\\Kanda_Yabusoba\\Kanda_Yabusoba_5.jpg', 10, NULL),
-(68, 1, '\\img\\Akihabara\\restaurant\\Kanda_Yabusoba\\Kanda_Yabusoba_6.jpg', 10, NULL),
-(69, 1, '\\img\\Akihabara\\restaurant\\Kanda_Yabusoba\\Kanda_Yabusoba_7.jpg', 10, NULL),
-(70, 1, '\\img\\Akihabara\\restaurant\\Kanda_Yabusoba\\Kanda_Yabusoba_8.jpg', 10, NULL),
-(71, 1, '\\img\\Akihabara\\restaurant\\Kanda_Yabusoba\\Kanda_Yabusoba_9.jpg', 10, NULL),
-(72, 1, '\\img\\Akihabara\\restaurant\\Menya_Musashi_Bujin\\Menya_Musashi_Bujin.jpg', 11, NULL),
-(73, 1, '\\img\\Akihabara\\restaurant\\Menya_Musashi_Bujin\\Menya_Musashi_Bujin_1.jpg', 11, NULL),
-(74, 1, '\\img\\Akihabara\\restaurant\\Menya_Musashi_Bujin\\Menya_Musashi_Bujin_2.jpg', 11, NULL),
-(75, 1, '\\img\\Akihabara\\restaurant\\Menya_Musashi_Bujin\\Menya_Musashi_Bujin_3.jpg', 11, NULL),
-(76, 1, '\\img\\Akihabara\\restaurant\\Menya_Musashi_Bujin\\Menya_Musashi_Bujin_4.jpg', 11, NULL),
-(77, 1, '\\img\\Akihabara\\restaurant\\Menya_Musashi_Bujin\\Menya_Musashi_Bujin_5.jpg', 11, NULL),
-(78, 1, '\\img\\Akihabara\\map_akihabara.jpg', NULL, NULL),
-(79, 3, '\\img\\harajuku\\harajuku.jpg', NULL, NULL),
-(80, 3, '\\img\\harajuku\\harajuku_1.jpg', NULL, NULL),
-(81, 3, '\\img\\harajuku\\harajuku_2.jpg', NULL, NULL),
-(82, 3, '\\img\\harajuku\\harajuku_3.jpg', NULL, NULL),
-(83, 3, '\\img\\harajuku\\harajuku_4.jpg', NULL, NULL),
-(84, 3, '\\img\\harajuku\\lieux_visiter\\pont_des_cosplay\\pont_des_cosplay.jpg', 16, NULL),
-(85, 3, '\\img\\harajuku\\lieux_visiter\\pont_des_cosplay\\pont_des_cosplay_1.jpg', 16, NULL),
-(86, 3, '\\img\\harajuku\\lieux_visiter\\pont_des_cosplay\\pont_des_cosplay_2.jpg', 16, NULL),
-(87, 3, '\\img\\harajuku\\lieux_visiter\\pont_des_cosplay\\pont_des_cosplay_4.jpg', 16, NULL),
-(88, 3, '\\img\\harajuku\\lieux_visiter\\pont_des_cosplay\\pont_des_cosplay_5.jpg', 16, NULL),
-(89, 3, '\\img\\harajuku\\lieux_visiter\\pont_des_cosplay\\pont_des_cosplay_6.jpg', 16, NULL),
-(90, 3, '\\img\\harajuku\\lieux_visiter\\temple_meiji\\temple_meiji.jpg', 18, NULL),
-(91, 3, '\\img\\harajuku\\lieux_visiter\\temple_meiji\\temple_meiji_2.jpg', 18, NULL),
-(92, 3, '\\img\\harajuku\\lieux_visiter\\temple_meiji\\temple_meiji_3.jpg', 18, NULL),
-(93, 3, '\\img\\harajuku\\lieux_visiter\\temple_meiji\\temple_meiji_4.jpg', 18, NULL),
-(94, 3, '\\img\\harajuku\\lieux_visiter\\temple_meiji\\temple_meiji_6.jpg', 18, NULL),
-(95, 3, '\\img\\harajuku\\lieux_visiter\\temple_meiji\\temple_meiji_7.jpg', 18, NULL),
-(96, 3, '\\img\\harajuku\\restaurant\\gyoza_rou\\gyoza_rou.jpg', 12, NULL),
-(97, 3, '\\img\\harajuku\\restaurant\\gyoza_rou\\gyoza_rou_1.jpg', 12, NULL),
-(98, 3, '\\img\\harajuku\\restaurant\\gyoza_rou\\gyoza_rou_2.jpg', 12, NULL),
-(99, 3, '\\img\\harajuku\\restaurant\\gyoza_rou\\gyoza_rou_3.jpg', 12, NULL),
-(100, 3, '\\img\\harajuku\\restaurant\\gyoza_rou\\gyoza_rou_4.jpg', 12, NULL),
-(101, 3, '\\img\\harajuku\\restaurant\\gyoza_rou\\gyoza_rou_5.jpg', 12, NULL),
-(102, 3, '\\img\\harajuku\\restaurant\\Kyushu_Jangara\\Kyushu_Jangara.JPG', 14, NULL),
-(103, 3, '\\img\\harajuku\\restaurant\\Kyushu_Jangara\\Kyushu_Jangara_2.jpg', 14, NULL),
-(104, 3, '\\img\\harajuku\\restaurant\\Kyushu_Jangara\\Kyushu_Jangara_3.JPG', 14, NULL),
-(105, 3, '\\img\\harajuku\\restaurant\\Kyushu_Jangara\\Kyushu_Jangara_4.jpeg', 14, NULL),
-(106, 3, '\\img\\harajuku\\restaurant\\Kyushu_Jangara\\Kyushu_Jangara_5.jpg', 14, NULL),
-(107, 3, '\\img\\harajuku\\restaurant\\Kyushu_Jangara\\Kyushu_Jangara_6.jpg', 14, NULL),
-(108, 3, '\\img\\harajuku\\restaurant\\Minoringo\\Minoringo.JPG', 15, NULL),
-(109, 3, '\\img\\harajuku\\restaurant\\Minoringo\\Minoringo_1.jpg', 15, NULL),
-(110, 3, '\\img\\harajuku\\restaurant\\Minoringo\\Minoringo_3.jpg', 15, NULL),
-(111, 3, '\\img\\harajuku\\restaurant\\Minoringo\\Minoringo_2.jpg', 15, NULL),
-(112, 2, '\\img\\Ikebukuro\\hotel\\centurion_hotel\\centurion_hotel.jpg', 19, NULL),
-(113, 2, '\\img\\Ikebukuro\\hotel\\centurion_hotel\\centurion_hotel_1.jpg', 19, NULL),
-(114, 2, '\\img\\Ikebukuro\\hotel\\centurion_hotel\\centurion_hotel_2.jpg', 19, NULL),
-(115, 2, '\\img\\Ikebukuro\\hotel\\centurion_hotel\\centurion_hotel_3.jpg', 19, NULL),
-(116, 2, '\\img\\Ikebukuro\\hotel\\centurion_hotel\\centurion_hotel_4.jpg', 19, NULL),
-(117, 2, '\\img\\Ikebukuro\\hotel\\centurion_hotel\\centurion_hotel_5.jpg', 19, NULL),
-(118, 2, '\\img\\Ikebukuro\\hotel\\sakura_hotel\\sakura_hotel.jpg', 20, NULL),
-(119, 2, '\\img\\Ikebukuro\\hotel\\sakura_hotel\\sakura_hotel_1.jpg', 20, NULL),
-(120, 2, '\\img\\Ikebukuro\\hotel\\sakura_hotel\\sakura_hotel_2.jpg', 20, NULL),
-(121, 2, '\\img\\Ikebukuro\\hotel\\Tokyu_Stay_Ikebukuro\\Tokyu_Stay_Ikebukuro.jpg', 21, NULL),
-(122, 2, '\\img\\Ikebukuro\\hotel\\Tokyu_Stay_Ikebukuro\\Tokyu_Stay_Ikebukuro_1.jpg', 21, NULL),
-(123, 2, '\\img\\Ikebukuro\\hotel\\Tokyu_Stay_Ikebukuro\\Tokyu_Stay_Ikebukuro_2.jpg', 21, NULL),
-(124, 2, '\\img\\Ikebukuro\\hotel\\Tokyu_Stay_Ikebukuro\\Tokyu_Stay_Ikebukuro_3.jpg', 21, NULL),
-(125, 2, '\\img\\Ikebukuro\\lieux_visiter\\batting_center\\batting_center.jpg', 22, NULL),
-(126, 2, '\\img\\Ikebukuro\\lieux_visiter\\batting_center\\batting_center_1.jpg', 22, NULL),
-(127, 2, '\\img\\Ikebukuro\\lieux_visiter\\batting_center\\batting_center_2.jpg', 22, NULL),
-(128, 2, '\\img\\Ikebukuro\\lieux_visiter\\batting_center\\batting_center_3.jpg', 22, NULL),
-(129, 2, '\\img\\Ikebukuro\\lieux_visiter\\batting_center\\batting_center_4.jpg', 22, NULL),
-(130, 2, '\\img\\Ikebukuro\\lieux_visiter\\bosaikan\\bosaikan.jpg', 23, NULL),
-(131, 2, '\\img\\Ikebukuro\\lieux_visiter\\bosaikan\\bosaikan_1.jpg', 23, NULL),
-(132, 2, '\\img\\Ikebukuro\\lieux_visiter\\bosaikan\\bosaikan_2.jpg', 23, NULL),
-(133, 2, '\\img\\Ikebukuro\\lieux_visiter\\bosaikan\\bosaikan_3.jpg', 23, NULL),
-(134, 2, '\\img\\Ikebukuro\\lieux_visiter\\bosaikan\\bosaikan_4.jpg', 23, NULL),
-(135, 2, '\\img\\Ikebukuro\\lieux_visiter\\bosaikan\\bosaikan_5.jpg', 23, NULL),
-(136, 2, '\\img\\Ikebukuro\\lieux_visiter\\tokyo_dome\\tokyo_dome.jpg', 24, NULL),
-(137, 2, '\\img\\Ikebukuro\\lieux_visiter\\tokyo_dome\\tokyo_dome_1.jpg', 24, NULL),
-(138, 2, '\\img\\Ikebukuro\\lieux_visiter\\tokyo_dome\\tokyo_dome_2.jpg', 24, NULL),
-(139, 2, '\\img\\Ikebukuro\\lieux_visiter\\tokyo_dome\\tokyo_dome_3.jpg', 24, NULL),
-(140, 2, '\\img\\Ikebukuro\\lieux_visiter\\tokyo_dome\\tokyo_dome_4.jpg', 24, NULL),
-(141, 2, '\\img\\Ikebukuro\\lieux_visiter\\tokyo_dome\\tokyo_dome_5.jpg', 24, NULL),
-(148, 2, '\\img\\Ikebukuro\\restaurant\\uchi\\uchi.jpg', 25, NULL),
-(149, 2, '\\img\\Ikebukuro\\restaurant\\uchi\\uchi_1.jpg', 25, NULL),
-(150, 2, '\\img\\Ikebukuro\\restaurant\\uchi\\uchi_2.jpg', 25, NULL),
-(151, 2, '\\img\\Ikebukuro\\restaurant\\uchi\\uchi_3.jpg', 25, NULL),
-(152, 2, '\\img\\Ikebukuro\\restaurant\\uchi\\uchi_4.jpg', 25, NULL),
-(153, 2, '\\img\\Ikebukuro\\restaurant\\uchi\\uchi_5.jpg', 25, NULL),
-(154, 2, '\\img\\Ikebukuro\\restaurant\\Zubora\\Zubora.jpg', 26, NULL),
-(155, 2, '\\img\\Ikebukuro\\restaurant\\Zubora\\Zubora_1.jpg', 26, NULL),
-(156, 2, '\\img\\Ikebukuro\\restaurant\\Zubora\\Zubora_2.jpg', 26, NULL),
-(157, 2, '\\img\\Ikebukuro\\restaurant\\Zubora\\Zubora_3.jpg', 26, NULL),
-(158, 2, '\\img\\Ikebukuro\\restaurant\\Zubora\\Zubora_4.jpg', 26, NULL),
-(159, 2, '\\img\\Ikebukuro\\restaurant\\Zubora\\Zubora_5.jpg', 26, NULL),
-(160, 2, '\\img\\Ikebukuro\\restaurant\\Zubora\\Zubora_6.jpg', 26, NULL),
-(161, 2, '\\img\\Ikebukuro\\restaurant\\Zubora\\Zubora_7.jpg', 26, NULL),
-(162, 2, '\\img\\Ikebukuro\\restaurant\\Zubora\\Zubora_8.jpg', 26, NULL),
-(163, 5, 'img\\Asakusa\\hotel\\Dormy_Inn_EXPRESS\\Dormy_Inn_EXPRESS.jpg', 44, NULL),
-(164, 5, 'img\\Asakusa\\hotel\\Dormy_Inn_EXPRESS\\Dormy_Inn_EXPRESS_1.jpg', 44, NULL),
-(165, 5, 'img\\Asakusa\\hotel\\Dormy_Inn_EXPRESS\\Dormy_Inn_EXPRESS_2.jpg', 44, NULL),
-(166, 5, '\\img\\Asakusa\\hotel\\Ryokan_Asakusa_Shigetsu\\Ryokan_Asakusa_Shigetsu.jpg', 46, NULL),
-(167, 5, '\\img\\Asakusa\\hotel\\Ryokan_Asakusa_Shigetsu\\Ryokan_Asakusa_Shigetsu_1.jpg', 46, NULL),
-(168, 5, '\\img\\Asakusa\\hotel\\Ryokan_Asakusa_Shigetsu\\Ryokan_Asakusa_Shigetsu_2.jpg', 46, NULL),
-(169, 5, '\\img\\Asakusa\\restaurant\\Maguro_bito\\Maguro_bito.jpg', 27, NULL),
-(170, 5, '\\img\\Asakusa\\restaurant\\Maguro_bito\\Maguro_bito_1.jpg', 27, NULL),
-(171, 5, '\\img\\Asakusa\\restaurant\\Maguro_bito\\Maguro_bito_2.jpg', 27, NULL),
-(172, 5, '\\img\\Asakusa\\restaurant\\Nakasei\\Nakasei.jpg', 28, NULL),
-(173, 5, '\\img\\Asakusa\\restaurant\\Nakasei\\Nakasei_1.jpg', 28, NULL),
-(174, 5, '\\img\\Asakusa\\restaurant\\Nakasei\\Nakasei_2.jpg', 28, NULL),
-(175, 5, '\\img\\Asakusa\\restaurant\\Toriyoshi\\Toriyoshi.jpg', 29, NULL),
-(176, 5, '\\img\\Asakusa\\restaurant\\Toriyoshi\\Toriyoshi_1.jpg', 29, NULL),
-(177, 5, '\\img\\Asakusa\\restaurant\\Toriyoshi\\Toriyoshi_3.jpg', 29, NULL),
-(178, 5, '\\img\\Asakusa\\hotel\\Dormy_Inn_EXPRESS_Dormy_Inn_EXPRESS.jpg', 44, NULL),
-(179, 5, '\\img\\Asakusa\\hotel\\Dormy_Inn_EXPRESS_Dormy_Inn_EXPRESS_1.jpg', 44, NULL),
-(180, 5, '\\img\\Asakusa\\hotel\\Dormy_Inn_EXPRESS_Dormy_Inn_EXPRESS_2.jpg', 44, NULL);
-
--- --------------------------------------------------------
-
---
 -- Structure de la table `quarter`
 --
 
 CREATE TABLE IF NOT EXISTS `quarter` (
-  `id` int(11) NOT NULL,
+`id` int(11) NOT NULL,
   `name` varchar(100) DEFAULT NULL,
   `type` varchar(50) DEFAULT NULL,
   `description` mediumtext
@@ -668,7 +988,7 @@ INSERT INTO `quarter` (`id`, `name`, `type`, `description`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `user` (
-  `id` int(11) NOT NULL,
+`id` int(11) NOT NULL,
   `pseudo` varchar(100) DEFAULT NULL,
   `email` varchar(100) DEFAULT NULL,
   `password` varchar(60) DEFAULT NULL
@@ -682,37 +1002,43 @@ CREATE TABLE IF NOT EXISTS `user` (
 -- Index pour la table `comment`
 --
 ALTER TABLE `comment`
-  ADD PRIMARY KEY (`id`), ADD KEY `fk_comment_quarter1_idx` (`quarter_id`), ADD KEY `fk_comment_info1_idx` (`info_id`), ADD KEY `fk_comment_user1_idx` (`user_id`), ADD KEY `fk_comment_photo1_idx` (`photo_id`);
+ ADD PRIMARY KEY (`id`), ADD KEY `fk_comment_quarter1_idx` (`quarter_id`), ADD KEY `fk_comment_info1_idx` (`info_id`), ADD KEY `fk_comment_user1_idx` (`user_id`), ADD KEY `fk_comment_photo1_idx` (`photo_id`);
 
 --
 -- Index pour la table `info`
 --
 ALTER TABLE `info`
-  ADD PRIMARY KEY (`id`), ADD KEY `fk_info_quarter_idx` (`quarter_id`);
+ ADD PRIMARY KEY (`id`), ADD KEY `fk_info_quarter_idx` (`quarter_id`);
 
 --
 -- Index pour la table `photo`
 --
 ALTER TABLE `photo`
-  ADD PRIMARY KEY (`id`), ADD KEY `fk_photo_info1_idx` (`info_id`), ADD KEY `fk_photo_quarter1_idx` (`quarter_id`), ADD KEY `fk_photo_user1_idx` (`user_id`);
+ ADD PRIMARY KEY (`id`), ADD KEY `fk_photo_info1_idx` (`info_id`), ADD KEY `fk_photo_quarter1_idx` (`quarter_id`), ADD KEY `fk_photo_user1_idx` (`user_id`);
 
 --
 -- Index pour la table `photo.bkp`
 --
 ALTER TABLE `photo.bkp`
-  ADD PRIMARY KEY (`id`), ADD KEY `fk_photo_info1_idx` (`info_id`), ADD KEY `fk_photo_quarter1_idx` (`quarter_id`), ADD KEY `fk_photo_user1_idx` (`user_id`);
+ ADD PRIMARY KEY (`id`), ADD KEY `fk_photo_info1_idx` (`info_id`), ADD KEY `fk_photo_quarter1_idx` (`quarter_id`), ADD KEY `fk_photo_user1_idx` (`user_id`);
+
+--
+-- Index pour la table `photo.bkp2`
+--
+ALTER TABLE `photo.bkp2`
+ ADD PRIMARY KEY (`id`), ADD KEY `fk_photo_info1_idx` (`info_id`), ADD KEY `fk_photo_quarter1_idx` (`quarter_id`), ADD KEY `fk_photo_user1_idx` (`user_id`);
 
 --
 -- Index pour la table `quarter`
 --
 ALTER TABLE `quarter`
-  ADD PRIMARY KEY (`id`);
+ ADD PRIMARY KEY (`id`);
 
 --
 -- Index pour la table `user`
 --
 ALTER TABLE `user`
-  ADD PRIMARY KEY (`id`);
+ ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT pour les tables exportées
@@ -722,32 +1048,37 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT pour la table `comment`
 --
 ALTER TABLE `comment`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT pour la table `info`
 --
 ALTER TABLE `info`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=75;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=75;
 --
 -- AUTO_INCREMENT pour la table `photo`
 --
 ALTER TABLE `photo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2057;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2609;
 --
 -- AUTO_INCREMENT pour la table `photo.bkp`
 --
 ALTER TABLE `photo.bkp`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=181;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=181;
+--
+-- AUTO_INCREMENT pour la table `photo.bkp2`
+--
+ALTER TABLE `photo.bkp2`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2057;
 --
 -- AUTO_INCREMENT pour la table `quarter`
 --
 ALTER TABLE `quarter`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT pour la table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- Contraintes pour les tables exportées
 --
