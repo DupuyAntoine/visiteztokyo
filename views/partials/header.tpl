@@ -14,9 +14,8 @@
 	<link rel="stylesheet" href="{$CSS_ROOT}styles.css">
 </head>
 <body>
-	<header>
-		<a href="#"><img src="http://lorempixel.com/400/200" alt="logo" /></a>
-		<h1 style ="text-align : center">{$website_title}</h1>
+	<header style="text-align : center" >
+		<a href="{$HTTP_ROOT}home/index"><img src="{$IMG_ROOT}logo.jpg" alt="logo"/></a>
 
 		{include file="partials/navbar.tpl"}
 
