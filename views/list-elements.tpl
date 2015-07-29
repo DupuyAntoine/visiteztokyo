@@ -56,176 +56,176 @@
 				<h4 class="text-center"><a href="#">Nom élément</a></h4>
 				<p>Type</p>
 				<p>Description<p>
-					<p>Rating</p>
-				</div>
+				<p>Rating</p>
 			</div>
-
-		</div>
-
-		<div class="col-sm-6 col-md-4 col-lg-3">
-
-			<div class="thumbnail">
-				<img src="http://placehold.it/162x100" alt="nom" class="img-responsive">
-				<div class="caption">
-					<h4 class="text-center"><a href="#">Nom élément</a></h4>
-					<p>Type</p>
-					<p>Description<p>
-					<p>Rating</p>
-				</div>
-			</div>
-
-		</div>
-
-		<div class="col-sm-6 col-md-4 col-lg-3">
-
-			<div class="thumbnail">
-				<img src="http://placehold.it/162x100" alt="nom" class="img-responsive">
-				<div class="caption">
-					<h4 class="text-center"><a href="#">Nom élément</a></h4>
-					<p>Type</p>
-					<p>Description<p>
-					<p>Rating</p>
-				</div>
-			</div>
-
-		</div>
-
-		<div class="col-sm-6 col-md-4 col-lg-3">
-
-			<div class="thumbnail">
-				<img src="http://placehold.it/162x100" alt="nom" class="img-responsive">
-				<div class="caption">
-					<h4 class="text-center"><a href="#">Nom élément</a></h4>
-					<p>Type</p>
-					<p>Description<p>
-					<p>Rating</p>
-				</div>
-			</div>
-
 		</div>
 
 	</div>
 
-	<div class="row">
+	<div class="col-sm-6 col-md-4 col-lg-3">
 
-		<div class="col-sm-6 col-md-4 col-lg-3">
-
-			<div class="thumbnail">
-				<img src="http://placehold.it/162x100" alt="nom" class="img-responsive">
-				<div class="caption">
-					<h4 class="text-center"><a href="#">Nom élément</a></h4>
-					<p>Type</p>
-					<p>Description<p>
-					<p>Rating</p>
-				</div>
+		<div class="thumbnail">
+			<img src="http://placehold.it/162x100" alt="nom" class="img-responsive">
+			<div class="caption">
+				<h4 class="text-center"><a href="#">Nom élément</a></h4>
+				<p>Type</p>
+				<p>Description<p>
+				<p>Rating</p>
 			</div>
-
-		</div>
-
-		<div class="col-sm-6 col-md-4 col-lg-3">
-
-			<div class="thumbnail">
-				<img src="http://placehold.it/162x100" alt="nom" class="img-responsive">
-				<div class="caption">
-					<h4 class="text-center"><a href="#">Nom élément</a></h4>
-					<p>Type</p>
-					<p>Description<p>
-					<p>Rating</p>
-				</div>
-			</div>
-
-		</div>
-
-		<div class="col-sm-6 col-md-4 col-lg-3">
-
-			<div class="thumbnail">
-				<img src="http://placehold.it/162x100" alt="nom" class="img-responsive">
-				<div class="caption">
-					<h4 class="text-center"><a href="#">Nom élément</a></h4>
-					<p>Type</p>
-					<p>Description<p>
-					<p>Rating</p>
-				</div>
-			</div>
-
-		</div>
-
-		<div class="col-sm-6 col-md-4 col-lg-3">
-
-			<div class="thumbnail">
-				<img src="http://placehold.it/162x100" alt="nom" class="img-responsive">
-				<div class="caption">
-					<h4 class="text-center"><a href="#">Nom élément</a></h4>
-					<p>Type</p>
-					<p>Description<p>
-					<p>Rating</p>
-				</div>
-			</div>
-
 		</div>
 
 	</div>
 
-	<div class="row">
+	<div class="col-sm-6 col-md-4 col-lg-3">
 
-		<div class="col-sm-6 col-md-4 col-lg-3">
-
-			<div class="thumbnail">
-				<img src="http://placehold.it/162x100" alt="nom" class="img-responsive">
-				<div class="caption">
-					<h4 class="text-center"><a href="#">Nom élément</a></h4>
-					<p>Type</p>
-					<p>Description<p>
-					<p>Rating</p>
-				</div>
+		<div class="thumbnail">
+			<img src="http://placehold.it/162x100" alt="nom" class="img-responsive">
+			<div class="caption">
+				<h4 class="text-center"><a href="#">Nom élément</a></h4>
+				<p>Type</p>
+				<p>Description<p>
+				<p>Rating</p>
 			</div>
-
-		</div>
-
-		<div class="col-sm-6 col-md-4 col-lg-3">
-
-			<div class="thumbnail">
-				<img src="http://placehold.it/162x100" alt="nom" class="img-responsive">
-				<div class="caption">
-					<h4 class="text-center"><a href="#">Nom élément</a></h4>
-					<p>Type</p>
-					<p>Description<p>
-					<p>Rating</p>
-				</div>
-			</div>
-
-		</div>
-
-		<div class="col-sm-6 col-md-4 col-lg-3">
-
-			<div class="thumbnail">
-				<img src="http://placehold.it/162x100" alt="nom" class="img-responsive">
-				<div class="caption">
-					<h4 class="text-center"><a href="#">Nom élément</a></h4>
-					<p>Type</p>
-					<p>Description<p>
-					<p>Rating</p>
-				</div>
-			</div>
-
-		</div>
-
-		<div class="col-sm-6 col-md-4 col-lg-3">
-
-			<div class="thumbnail">
-				<img src="http://placehold.it/162x100" alt="nom" class="img-responsive">
-				<div class="caption">
-					<h4 class="text-center"><a href="#">Nom élément</a></h4>
-					<p>Type</p>
-					<p>Description<p>
-					<p>Rating</p>
-				</div>
-			</div>
-
 		</div>
 
 	</div>
 
-	<br>
+	<div class="col-sm-6 col-md-4 col-lg-3">
 
-	{include file="partials/footer.tpl"}
+		<div class="thumbnail">
+			<img src="http://placehold.it/162x100" alt="nom" class="img-responsive">
+			<div class="caption">
+				<h4 class="text-center"><a href="#">Nom élément</a></h4>
+				<p>Type</p>
+				<p>Description<p>
+				<p>Rating</p>
+			</div>
+		</div>
+
+	</div>
+
+</div>
+
+<div class="row">
+
+	<div class="col-sm-6 col-md-4 col-lg-3">
+
+		<div class="thumbnail">
+			<img src="http://placehold.it/162x100" alt="nom" class="img-responsive">
+			<div class="caption">
+				<h4 class="text-center"><a href="#">Nom élément</a></h4>
+				<p>Type</p>
+				<p>Description<p>
+				<p>Rating</p>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="col-sm-6 col-md-4 col-lg-3">
+
+		<div class="thumbnail">
+			<img src="http://placehold.it/162x100" alt="nom" class="img-responsive">
+			<div class="caption">
+				<h4 class="text-center"><a href="#">Nom élément</a></h4>
+				<p>Type</p>
+				<p>Description<p>
+				<p>Rating</p>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="col-sm-6 col-md-4 col-lg-3">
+
+		<div class="thumbnail">
+			<img src="http://placehold.it/162x100" alt="nom" class="img-responsive">
+			<div class="caption">
+				<h4 class="text-center"><a href="#">Nom élément</a></h4>
+				<p>Type</p>
+				<p>Description<p>
+				<p>Rating</p>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="col-sm-6 col-md-4 col-lg-3">
+
+		<div class="thumbnail">
+			<img src="http://placehold.it/162x100" alt="nom" class="img-responsive">
+			<div class="caption">
+				<h4 class="text-center"><a href="#">Nom élément</a></h4>
+				<p>Type</p>
+				<p>Description<p>
+				<p>Rating</p>
+			</div>
+		</div>
+
+	</div>
+
+</div>
+
+<div class="row">
+
+	<div class="col-sm-6 col-md-4 col-lg-3">
+
+		<div class="thumbnail">
+			<img src="http://placehold.it/162x100" alt="nom" class="img-responsive">
+			<div class="caption">
+				<h4 class="text-center"><a href="#">Nom élément</a></h4>
+				<p>Type</p>
+				<p>Description<p>
+				<p>Rating</p>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="col-sm-6 col-md-4 col-lg-3">
+
+		<div class="thumbnail">
+			<img src="http://placehold.it/162x100" alt="nom" class="img-responsive">
+			<div class="caption">
+				<h4 class="text-center"><a href="#">Nom élément</a></h4>
+				<p>Type</p>
+				<p>Description<p>
+				<p>Rating</p>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="col-sm-6 col-md-4 col-lg-3">
+
+		<div class="thumbnail">
+			<img src="http://placehold.it/162x100" alt="nom" class="img-responsive">
+			<div class="caption">
+				<h4 class="text-center"><a href="#">Nom élément</a></h4>
+				<p>Type</p>
+				<p>Description<p>
+				<p>Rating</p>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="col-sm-6 col-md-4 col-lg-3">
+
+		<div class="thumbnail">
+			<img src="http://placehold.it/162x100" alt="nom" class="img-responsive">
+			<div class="caption">
+				<h4 class="text-center"><a href="#">Nom élément</a></h4>
+				<p>Type</p>
+				<p>Description<p>
+				<p>Rating</p>
+			</div>
+		</div>
+
+	</div>
+
+</div>
+
+<br>
+
+{include file="partials/footer.tpl"}
