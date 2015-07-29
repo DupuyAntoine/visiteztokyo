@@ -17,6 +17,13 @@ class QuarterController extends BaseController {
 		if (!empty($quarter_param)) {
 			list($quarter_id, $quarter_name) = explode('-', $quarter_param);
 		}
+     
+
+
+
+
+     $this->render('quarter');
+	}
 
 
 	public function random() {
