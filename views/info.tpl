@@ -10,13 +10,21 @@
 <hr>
 
 <div class="button-center">
-	<a href="#" role="button" class="btn btn-danger">Photo des membres</a>
+	<a href="{$HTTP_ROOT}wall" role="button" class="btn btn-danger">Photo des membres</a>
 </div>
 
 <hr>
 
-<div>
-	<a href="#"></a>
+<div class="col-sm-6 col-md-4 col-lg-3">
+	<div class="thumbnail">
+		<img src="http://placehold.it/162x100" alt="nom" class="img-responsive">
+		<div class="caption">
+			<h4 class="text-center"><a href="#">Nom élément</a></h4>
+			<p>Type</p>
+			<p>Description<p>
+			<p>Rating</p>
+		</div>
+	</div>
 </div>
 
 {include file="partials/comments.tpl"}

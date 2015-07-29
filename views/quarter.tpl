@@ -10,21 +10,24 @@
 <hr>
 
 <div class="button-center">
-	<a href="#" role="button" class="btn btn-danger">Photo des membres</a>
+	<a href="{$HTTP_ROOT}wall" role="button" class="btn btn-danger">Photo des membres</a>
 </div>
 
 <hr>
 
-<div>
-	<div>
-		<img src="#">
-		<!-- balise <a> ci-dessous pour tests de vincent -->
-		<a href="{$HTTP_ROOT}list-elements">test vincent</a>
-	</div>
-	<div>
-		<p></p>
+<div class="col-sm-6 col-md-4 col-lg-3">
+	<div class="thumbnail">
+		<img src="http://placehold.it/162x100" alt="nom" class="img-responsive">
+		<div class="caption">
+			<h4 class="text-center"><a href="{$HTTP_ROOT}list-elements">Nom élément</a></h4>
+			<p>Type</p>
+			<p>Description<p>
+			<p>Rating</p>
+		</div>
 	</div>
 </div>
+
+<div class="clearfix"></div>
 
 {include file="partials/comments.tpl"}
 
