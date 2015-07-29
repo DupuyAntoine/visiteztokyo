@@ -1,6 +1,6 @@
 <?php
 
-class WallController extends BaseController {
+class ListController extends BaseController {
 
 	public function index() {
 		return $this->results();
@@ -8,7 +8,7 @@ class WallController extends BaseController {
 
 	public function results() {
 
-		$this->render('wall');
+		$this->render('list-elements');
 	}
 
 }

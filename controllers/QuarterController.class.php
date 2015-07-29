@@ -25,6 +25,4 @@ class QuarterController extends BaseController {
 		$this->render('quarter');
 
 	}
-
-
 }

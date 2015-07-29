@@ -3,7 +3,9 @@
 global $routes;
 
 $routes = array(
-	/* Front */
+
+	#### Front ####
+
 	'/' => array(
 		'target' => DEFAULT_CONTROLLER_TARGET,
 		'action' => DEFAULT_CONTROLLER_ACTION
@@ -29,14 +31,17 @@ $routes = array(
 		'action' => 'logout'
 	),
 
+	##### Backoffice ####
 
-	/* Backoffice */
-	'admin/contact/edit/([0-9\-]+)' => array(
+	/* Contact */
+	'admin/contact/([a-zA-Z-_]+)/?([0-9]*)' => array(
 		'target' => 'admin',
-		'action' => 'contact_edit'
+		'action' => 'contact_action'
 	),
-	'admin/contact/delete/([0-9\-]+)' => array(
+
+	/* Post */
+	'admin/post/([a-zA-Z-_]+)/?([0-9]*)' => array(
 		'target' => 'admin',
-		'action' => 'contact_delete'
+		'action' => 'post_action'
 	)
 );
