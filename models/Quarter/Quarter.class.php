@@ -36,5 +36,21 @@ class Quarter extends Model {
 		$this->description = $description;
 	}
 
+	public function getPictures() {
+		return Picture::getList('SELECT id, quarter_id, src, info_id, user_id FROM photo WHERE quarter_id = :quarter_id ORDER BY id ASC', array('quarter_id' => $this->id));
+	}
+	public function getPicture() {
+		$pictures = array();
+		foreach($this->getPictures() as $picture) {
+			if (empty($picture->getInfoId()) && empty($picture->getUserId())) {
+				$pictures[] = $picture;
+			}
+		}
 
-}	
+		if (empty($pictures)) {
+			return 'http://placehold.it/320x200';
+		}
+		return $pictures[array_rand($pictures)]->src;
+	}
+
+}
