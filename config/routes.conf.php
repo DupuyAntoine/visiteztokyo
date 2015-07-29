@@ -30,6 +30,10 @@ $routes = array(
 		'target' => 'user',
 		'action' => 'logout'
 	),
+	'info' => array(
+		'target' => 'info',
+		'action' => 'view'
+	),
 
 	##### Backoffice ####
 
