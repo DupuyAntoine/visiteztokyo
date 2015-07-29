@@ -50,7 +50,7 @@ class Quarter extends Model {
 		if (empty($pictures)) {
 			return 'http://placehold.it/320x200';
 		}
-		return $pictures[array_rand($pictures)]->src;
+		return IMG_HTTP.$pictures[array_rand($pictures)]->src;
 	}
 
 }
