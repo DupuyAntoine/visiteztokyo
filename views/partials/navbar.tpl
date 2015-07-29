@@ -15,6 +15,7 @@
 					<ul class="nav navbar-nav">
 						{foreach $pages as $page_url => $page}
 							{if !is_array($page)}
+
 							<li{if $page_url == $current_page || $page_url == $target || $page_url == "$target/$action"} class="active"{/if}><a href="{$HTTP_ROOT}{$page_url}">{$page}</a></li>
 							{else}
 							<li class="dropdown{if $page_url == $current_page || $page_url == $target || $page_url == "$target/$action"} active{/if}">
