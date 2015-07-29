@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Mer 29 Juillet 2015 à 16:04
+-- Généré le :  Mer 29 Juillet 2015 à 16:41
 -- Version du serveur :  5.6.24
 -- Version de PHP :  5.6.8
 
@@ -466,9 +466,9 @@ INSERT INTO `photo` (`id`, `quarter_id`, `src`, `info_id`, `user_id`) VALUES
 (2606, 4, 'Ueno/restaurant/Keijouen/Keijouen_1.jpg', 32, NULL),
 (2607, 4, 'Ueno/restaurant/Yamabe_Uenoten/Yamabe_Uenoten.jpg', 31, NULL),
 (2608, 4, 'Ueno/restaurant/Yamabe_Uenoten/Yamabe_Uenoten_1.jpg', 31, NULL),
-(2609, 1, 'Akihabara\\histoire.jpg', NULL, NULL),
-(2610, 1, 'Akihabara\\histoire_1.jpg', NULL, NULL),
-(2611, 1, 'Akihabara\\histoire_2.jpg', NULL, NULL);
+(2609, 1, 'Akihabara/histoire.jpg', NULL, NULL),
+(2610, 1, 'Akihabara/histoire_1.jpg', NULL, NULL),
+(2611, 1, 'Akihabara/histoire_2.jpg', NULL, NULL);
 
 -- --------------------------------------------------------
 
