@@ -61,5 +61,6 @@ abstract class BaseController extends Controller {
 
 		$this->response->addVars($vars);
 	}
+	
 
 }
