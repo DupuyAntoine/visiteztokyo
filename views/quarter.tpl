@@ -9,6 +9,8 @@
 <div>
 	<div>
 		<img src="#">
+		<!-- balise <a> ci-dessous pour tests de vincent -->
+		<a href="{$HTTP_ROOT}list-elements">test vincent</a>
 	</div>
 	<div>
 		<p></p>
