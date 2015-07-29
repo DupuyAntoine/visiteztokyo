@@ -26,10 +26,10 @@ abstract class BaseController extends Controller {
 
 		$quarters = Quarter::getList('SELECT id, name, type FROM quarter ORDER BY name ASC');
 		//$pictures = Picture::getList('SELECT id, quarter_id, src, info_id, user_id FROM photo ORDER BY id ASC');
-        $infos = Info::getList('SELECT id, quarter_id, name, type, description, url, rating, theme FROM info ORDER BY id ASC');
+        //$infos = Info::getList('SELECT id, quarter_id, name, type, description, url, rating, theme FROM info ORDER BY id ASC');
 
 		$vars['quarters'] = $quarters;
-		$vars['infos'] = $infos;
+		//$vars['infos'] = $infos;
 		// $vars['pictures'] = $pictures;
 
 		$quarter_pages = array();
