@@ -6,9 +6,9 @@
             <div class="col-md-4">
                 <div class="thumbnail">
                         <img src="http://placehold.it/320x200" alt="ALT NAME" class="img-responsive" />
-                    <div class="caption">
+                    <div class="caption homecontent">
                         <h3>{$quarter->name}</h3>
-                        <p>Description</p>
+                        <p>{$quarter->type}</p>
 						<a href="{$HTTP_ROOT}quarter/{$quarter->getSlug()}">Voir le quartier</a>
                     </div>
                 </div>

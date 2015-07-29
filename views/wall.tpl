@@ -1,5 +1,7 @@
 {include file="partials/header.tpl"}
 
+<br>
+
 <div id="main_area">
 	<!-- Slider -->
 	<div class="row">
@@ -160,5 +162,7 @@
 	</div>
 
 </div>
+
+<br>
 
 {include file="partials/footer.tpl"}

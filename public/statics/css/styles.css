@@ -192,3 +192,11 @@ h6, .h6 {
 .carousel-inner>.item>img, .carousel-inner>.item>a>img {
 	width: 100%;
 }
+
+.homecontent{
+	text-align: center;
+}
+
+.button-center {
+	text-align: center;
+}

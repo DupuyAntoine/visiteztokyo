@@ -48,7 +48,7 @@
 
 <div class="row">
 
-	<div class="col-sm-6 col-md-3 col-lg-3">
+	<div class="col-sm-6 col-md-4 col-lg-3">
 
 		<div class="thumbnail">
 			<img src="http://placehold.it/162x100" alt="nom" class="img-responsive">
@@ -57,12 +57,12 @@
 				<p>Type</p>
 				<p>Description<p>
 					<p>Rating</p>
-				</div>	
+				</div>
 			</div>
 
 		</div>
 
-		<div class="col-sm-6 col-md-3 col-lg-3">
+		<div class="col-sm-6 col-md-4 col-lg-3">
 
 			<div class="thumbnail">
 				<img src="http://placehold.it/162x100" alt="nom" class="img-responsive">
@@ -71,12 +71,12 @@
 					<p>Type</p>
 					<p>Description<p>
 					<p>Rating</p>
-				</div>	
+				</div>
 			</div>
 
 		</div>
 
-		<div class="col-sm-6 col-md-3 col-lg-3">
+		<div class="col-sm-6 col-md-4 col-lg-3">
 
 			<div class="thumbnail">
 				<img src="http://placehold.it/162x100" alt="nom" class="img-responsive">
@@ -85,12 +85,12 @@
 					<p>Type</p>
 					<p>Description<p>
 					<p>Rating</p>
-				</div>	
+				</div>
 			</div>
 
 		</div>
 
-		<div class="col-sm-6 col-md-3 col-lg-3">
+		<div class="col-sm-6 col-md-4 col-lg-3">
 
 			<div class="thumbnail">
 				<img src="http://placehold.it/162x100" alt="nom" class="img-responsive">
@@ -99,7 +99,7 @@
 					<p>Type</p>
 					<p>Description<p>
 					<p>Rating</p>
-				</div>	
+				</div>
 			</div>
 
 		</div>
@@ -108,7 +108,7 @@
 
 	<div class="row">
 
-		<div class="col-sm-6 col-md-3 col-lg-3">
+		<div class="col-sm-6 col-md-4 col-lg-3">
 
 			<div class="thumbnail">
 				<img src="http://placehold.it/162x100" alt="nom" class="img-responsive">
@@ -117,12 +117,12 @@
 					<p>Type</p>
 					<p>Description<p>
 					<p>Rating</p>
-				</div>	
+				</div>
 			</div>
 
 		</div>
 
-		<div class="col-sm-6 col-md-3 col-lg-3">
+		<div class="col-sm-6 col-md-4 col-lg-3">
 
 			<div class="thumbnail">
 				<img src="http://placehold.it/162x100" alt="nom" class="img-responsive">
@@ -131,12 +131,12 @@
 					<p>Type</p>
 					<p>Description<p>
 					<p>Rating</p>
-				</div>	
+				</div>
 			</div>
 
 		</div>
 
-		<div class="col-sm-6 col-md-3 col-lg-3">
+		<div class="col-sm-6 col-md-4 col-lg-3">
 
 			<div class="thumbnail">
 				<img src="http://placehold.it/162x100" alt="nom" class="img-responsive">
@@ -145,12 +145,12 @@
 					<p>Type</p>
 					<p>Description<p>
 					<p>Rating</p>
-				</div>	
+				</div>
 			</div>
 
 		</div>
 
-		<div class="col-sm-6 col-md-3 col-lg-3">
+		<div class="col-sm-6 col-md-4 col-lg-3">
 
 			<div class="thumbnail">
 				<img src="http://placehold.it/162x100" alt="nom" class="img-responsive">
@@ -159,7 +159,7 @@
 					<p>Type</p>
 					<p>Description<p>
 					<p>Rating</p>
-				</div>	
+				</div>
 			</div>
 
 		</div>
@@ -168,7 +168,7 @@
 
 	<div class="row">
 
-		<div class="col-sm-6 col-md-3 col-lg-3">
+		<div class="col-sm-6 col-md-4 col-lg-3">
 
 			<div class="thumbnail">
 				<img src="http://placehold.it/162x100" alt="nom" class="img-responsive">
@@ -177,12 +177,12 @@
 					<p>Type</p>
 					<p>Description<p>
 					<p>Rating</p>
-				</div>	
+				</div>
 			</div>
 
 		</div>
 
-		<div class="col-sm-6 col-md-3 col-lg-3">
+		<div class="col-sm-6 col-md-4 col-lg-3">
 
 			<div class="thumbnail">
 				<img src="http://placehold.it/162x100" alt="nom" class="img-responsive">
@@ -191,12 +191,12 @@
 					<p>Type</p>
 					<p>Description<p>
 					<p>Rating</p>
-				</div>	
+				</div>
 			</div>
 
 		</div>
 
-		<div class="col-sm-6 col-md-3 col-lg-3">
+		<div class="col-sm-6 col-md-4 col-lg-3">
 
 			<div class="thumbnail">
 				<img src="http://placehold.it/162x100" alt="nom" class="img-responsive">
@@ -205,12 +205,12 @@
 					<p>Type</p>
 					<p>Description<p>
 					<p>Rating</p>
-				</div>	
+				</div>
 			</div>
 
 		</div>
 
-		<div class="col-sm-6 col-md-3 col-lg-3">
+		<div class="col-sm-6 col-md-4 col-lg-3">
 
 			<div class="thumbnail">
 				<img src="http://placehold.it/162x100" alt="nom" class="img-responsive">
@@ -219,11 +219,13 @@
 					<p>Type</p>
 					<p>Description<p>
 					<p>Rating</p>
-				</div>	
+				</div>
 			</div>
 
 		</div>
 
 	</div>
+
+	<br>
 
 	{include file="partials/footer.tpl"}
