@@ -14,12 +14,12 @@
 	<link rel="stylesheet" href="{$CSS_ROOT}styles.css">
 </head>
 <body>
-	<header> 
-		<a href="#"><img src="http://lorempixel.com/400/200" alt="logo" /></a> 
+	<header>
+		<a href="#"><img src="http://lorempixel.com/400/200" alt="logo" /></a>
 		<h1 style ="text-align : center">{$website_title}</h1>
-		
+
 		{include file="partials/navbar.tpl"}
-	
+
 	</header>
-	
+
 	<div class="container-fluid">
