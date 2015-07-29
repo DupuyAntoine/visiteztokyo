@@ -18,12 +18,18 @@ class QuarterController extends BaseController {
 			list($quarter_id, $quarter_name) = explode('-', $quarter_param);
 		}
 
-		echo $quarter_id;
+
+	public function random() {
+
+		$quarter = Quarter::get('SELECT * FROM quarter ORDER BY RAND() LIMIT 1');
+
+		$vars = array(
+			'quarter' => $quarter,
+		);
 
 		//$quarter = Quarter::get($quarter_id);
 
-		$this->render('quarter');
+		$this->render('quarter', $vars);
 
 	}
-	
 }

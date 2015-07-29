@@ -10,6 +10,10 @@ $routes = array(
 		'target' => DEFAULT_CONTROLLER_TARGET,
 		'action' => DEFAULT_CONTROLLER_ACTION
 	),
+	'quarter/random' => array(
+		'target' => 'quarter',
+		'action' => 'random'
+	),
 	'quarter/([0-9a-zA-Z\-]+)'  => array(
 		'target' => 'quarter',
 		'action' => 'view'
@@ -29,6 +33,10 @@ $routes = array(
 	'logout' => array(
 		'target' => 'user',
 		'action' => 'logout'
+	),
+	'info' => array(
+		'target' => 'info',
+		'action' => 'view'
 	),
 
 	##### Backoffice ####

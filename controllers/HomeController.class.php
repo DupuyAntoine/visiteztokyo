@@ -5,9 +5,7 @@ class HomeController extends BaseController {
 	public function index() {
 
 		$vars = array(
-			'title' => 'Blog',
-			'description' => 'Description',
-			'type' => 'Type'
+			'title' => 'Home',
 		);
 
 		$this->render('index', $vars);
