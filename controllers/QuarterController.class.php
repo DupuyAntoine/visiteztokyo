@@ -25,4 +25,22 @@ class QuarterController extends BaseController {
 		$this->render('quarter');
 
 	}
+
+	public function random() {
+
+		$quarter_param = $this->getParam(0, '');
+
+		$quarter_id = 0;
+		$quarter_name = '';
+		if (!empty($quarter_param)) {
+			list($quarter_id, $quarter_name) = explode('-', $quarter_param);
+		}
+
+		echo $quarter_id;
+
+		//$quarter = Quarter::get($quarter_id);
+
+		$this->render('quarter/random');
+
+	}
 }
