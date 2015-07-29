@@ -12,6 +12,6 @@ class PictureController extends BaseController {
 
 
 
-		$this->render('picture', $vars);
+		$this->render('picture');
 
 	}
