@@ -10,6 +10,10 @@ $routes = array(
 		'target' => DEFAULT_CONTROLLER_TARGET,
 		'action' => DEFAULT_CONTROLLER_ACTION
 	),
+	'quarter/random' => array(
+		'target' => 'quarter',
+		'action' => 'random'
+	),
 	'quarter/([0-9a-zA-Z\-]+)'  => array(
 		'target' => 'quarter',
 		'action' => 'view'
