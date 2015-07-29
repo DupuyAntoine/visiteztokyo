@@ -7,11 +7,11 @@
 	</div>
 	<div class="form-group">
 		<label for="file">Photo à télécharger</label>
-		<input type="file" id="file" class="col-">
+		<input type="file" id="file">
 		<p class="help">Taille limite de 360x360 pixels.</p>
 	</div>
 	<div class="form-group">
-		<label for="rating" class="col-">Notation</label>
+		<label for="rating">Notation</label>
 		<span class="glyphicon glyphicon-star-empty col-"></span>
         <span class="glyphicon glyphicon-star-empty col-"></span>
         <span class="glyphicon glyphicon-star-empty col-"></span>
@@ -19,8 +19,8 @@
         <span class="glyphicon glyphicon-star-empty col-"></span>
 	</div>
 	<div class="form-group">
-		<label for="message" class="col-">
-		<textarea id="message" class="form-control col-"></textarea>
+		<label for="message">
+		<textarea id="message" class="form-control"></textarea>
 	</div>
 	<button type="submit" class="btn btn-default">Submit</button>
 </form>
