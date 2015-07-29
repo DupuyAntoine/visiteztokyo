@@ -1,6 +1,6 @@
 <?php
 
-class List extends Model {
+class Elements extends Model {
 
 	protected $id;
 	protected $quarter_id;
@@ -37,7 +37,7 @@ class List extends Model {
 	}
 
 	public function getSlug() {
-		return $this->id.'-'.strtolower($this->name);
+		return $this->id.'-'.strtolower(Utils::cleanString($this->name));
 	}
 
 	public function setId($id) {
@@ -64,5 +64,15 @@ class List extends Model {
 	public function setTheme() {
 		return $this->theme;
 	}
+
+	public static function getElements($id, $type) {
+		return self::getList('SELECT id, quarter_id, name, type, description, url, rating, theme FROM info WHERE quarter_id = :quarter_id AND type = :type ORDER BY id ASC', array('quarter_id' => $id, 'type' => $type));
+	}
+
+	/*
+	public function getPictures() {
+		return Picture::get('SELECT id, quarter_id, src, info_id, user_id FROM photo WHERE quarter_id = :quarter_id ORDER BY id ASC');
+	}
+	*/
 
 }

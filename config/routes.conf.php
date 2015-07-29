@@ -34,7 +34,7 @@ $routes = array(
 		'target' => 'user',
 		'action' => 'logout'
 	),
-	'info' => array(
+	'info/([0-9]+)-?([a-zA-Z-_]*)' => array(
 		'target' => 'info',
 		'action' => 'view'
 	),

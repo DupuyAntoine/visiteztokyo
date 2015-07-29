@@ -10,15 +10,16 @@ class InfoController extends BaseController {
 
 	public function view() {
 
+		$id = $this->getParam(0, 0);
+
+		if (empty($id)) {
+			exit('Undefined info id');
+		}
+
+		$info = Info::get($id);
+
 		$vars = array(
-			'id' => $id,
-			'quarter_id' => $quarter_id,
-			'name' => $name,
-			'type' => $type,
-			'description' => $description,
-			'url' => $url,
-			'rating' => $rating,
-			'theme' => $theme
+			'info' => $info
 		);
 
 		$this->render('info', $vars);

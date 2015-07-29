@@ -1,7 +1,7 @@
 <?php
 
 class Info extends Model {
-	
+
 	protected $id;
 	protected $quarter_id;
 	protected $name;
@@ -11,6 +11,17 @@ class Info extends Model {
 	protected $rating;
 	protected $theme;
 
+	const INFO_TYPE_RESTAURANT = 1;
+	const INFO_TYPE_HOTEL = 2;
+	const INFO_TYPE_HISTOIRE = 3;
+	const INFO_TYPE_LIEU = 4;
+
+	public static $type_labels = array(
+		self::INFO_TYPE_RESTAURANT => 'Restaurant',
+		self::INFO_TYPE_HOTEL => 'Hotel',
+		self::INFO_TYPE_LIEU => 'Lieu a visiter',
+		self::INFO_TYPE_HISTOIRE => 'Historique'
+	);
 
 	public function getId() {
 		return $this->id;
@@ -19,13 +30,13 @@ class Info extends Model {
 		return $this->quarter_id;
 	}
 	public function getName() {
-		return $this->name;
+		return ucfirst($this->name);
 	}
 	public function getType() {
 		return $this->type;
 	}
 	public function getDescription() {
-		return $this->description;
+		return Utils::linkifyHashtag(nl2br($this->description));
 	}
 	public function getUrl() {
 		return $this->url;
@@ -37,7 +48,7 @@ class Info extends Model {
 		return $this->theme;
 	}
 	public function getSlug() {
-		return $this->id.'-'.strtolower($this->name);
+		return $this->id.'-'.strtolower(Utils::cleanString($this->name));
 	}
 
 
@@ -64,5 +75,12 @@ class Info extends Model {
 	}
 	public function setTheme($theme) {
 		$this->theme = $theme;
+	}
+
+	public static function getTypeLabel($type) {
+		if (!empty(self::$type_labels[$type])) {
+			return self::$type_labels[$type];
+		}
+		return '';
 	}
 }

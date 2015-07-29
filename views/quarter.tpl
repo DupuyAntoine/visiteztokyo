@@ -19,7 +19,7 @@
 	<div class="thumbnail">
 		<img src="http://placehold.it/162x100" alt="nom" class="img-responsive">
 		<div class="caption">
-			<h4 class="text-center"><a href="{$HTTP_ROOT}list-elements">Nom élément</a></h4>
+			<h4 class="text-center"><a href="{$HTTP_ROOT}elements">Nom élément</a></h4>
 			<p>Type</p>
 			<p>Description<p>
 			<p>Rating</p>
