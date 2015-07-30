@@ -53,7 +53,7 @@
 	<div class="col-sm-6 col-md-4 col-lg-3">
 
 		<div class="thumbnail">
-			<img src="{$infos->getPicture()}" alt="image" class="img-responsive">
+			<img src="{$info->getPicture()}" alt="image" class="img-responsive">
 			<div class="caption">
 				<h4 class="text-center"><a href="{$HTTP_ROOT}info/{$info->getSlug()}">{$info->name}</a></h4>
 				<p class="text-center">{$info->theme}</p>

@@ -9,7 +9,7 @@ class ElementsController extends BaseController {
 	public function results() {
 
 		$id = 1;
-		$type = 1;
+		$type = 2;
 
 		$infos = Info::getElements($id, $type);
 
