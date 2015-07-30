@@ -14,7 +14,7 @@ $routes = array(
 		'target' => 'quarter',
 		'action' => 'random'
 	),
-	'quarter/([0-9a-zA-Z\-]+)'  => array(
+	'quarter/([0-9]+)-?([a-zA-Z-_]*)'  => array(
 		'target' => 'quarter',
 		'action' => 'view'
 	),
@@ -34,7 +34,7 @@ $routes = array(
 		'target' => 'user',
 		'action' => 'logout'
 	),
-	'info/([0-9]+)-?([a-zA-Z-_]*)' => array(
+	'info/([0-9])-?([0-9a-zA-Z-_]*)' => array(
 		'target' => 'info',
 		'action' => 'view'
 	),

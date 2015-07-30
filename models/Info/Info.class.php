@@ -88,9 +88,18 @@ class Info extends Model {
 		return self::getList('SELECT id, quarter_id, name, type, description, url, rating, theme FROM info WHERE quarter_id = :quarter_id AND type = :type ORDER BY id ASC', array('quarter_id' => $id, 'type' => $type));
 	}
 
-	public function getPicture($id) {
-		$picture = DB::selectOne('SELECT id, quarter_id, src, info_id, user_id FROM photo WHERE info_id = :info_id', array('info_id' => $id));
-		return $picture->src;
+	public function getPictures() {
+		return array($this->getPicture());
+	}
+
+	public function getPicture() {
+		$result = Db::selectOne('SELECT src FROM photo WHERE info_id = :info_id', array('info_id' => $this->id));
+		if (empty($result)) {
+			$picture = new Picture();
+			$picture->src = 'http://placehold.it/320x200';
+			return $picture;
+		}
+		return new Picture($result);
 	}
 	
 

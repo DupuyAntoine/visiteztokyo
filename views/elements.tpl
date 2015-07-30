@@ -5,7 +5,7 @@
 	<div class="col-md-12">
 
 		<br><br>
-		<form class="form-inline" action="" method="GET">
+		<form class="form-inline" action="{$HTTP_ROOT}elements" method="GET">
 
 			<div class="form-group">
 				<label class="sr-only"></label>
@@ -15,22 +15,19 @@
 			<div class="form-group">
 				<label for="title">&nbsp;&nbsp;&nbsp;Type&nbsp;</label>
 				<select id="genre" name="genre" class="form-control">
-					<option value="">Restaurants</option>
-					<option value="">a</option>
-					<option value="">b</option>
-					<option value="">c</option>
-					<option value="">d</option>
+				{foreach $labels as $label}
+					<option value="">{$label}</option>
+				{/foreach}
+
 				</select>
 			</div>
 
 			<div class="form-group">
 				<label for="title">&nbsp;&nbsp;&nbsp;Quartier&nbsp;</label>
 				<select id="genre" name="genre" class="form-control">
-					<option value="">Akihabara</option>
-					<option value="">1</option>
-					<option value="">2</option>
-					<option value="">3</option>
-					<option value="">4</option>
+					{foreach $quarters as $quarter}
+						<option value="">{$quarter->name}</option>
+					{/foreach}
 				</select>
 			</div>
 
@@ -53,7 +50,7 @@
 	<div class="col-sm-6 col-md-4 col-lg-3">
 
 		<div class="thumbnail">
-			<img src="{$info->getPicture()}" alt="image" class="img-responsive">
+			<img src="{$info->getPicture()->src}" alt="image" class="img-responsive" style="width: 100%; max-height: 180px">
 			<div class="caption">
 				<h4 class="text-center"><a href="{$HTTP_ROOT}info/{$info->getSlug()}">{$info->name}</a></h4>
 				<p class="text-center">{$info->theme}</p>
@@ -70,3 +67,4 @@
 <br>
 
 {include file="partials/footer.tpl"}
+<!--style="max-height:150px;margin-left: 0px;margin-right: 0px;width: 100%;"-->
