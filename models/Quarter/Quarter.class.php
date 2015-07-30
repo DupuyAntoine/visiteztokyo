@@ -44,20 +44,19 @@ class Quarter extends Model {
 	}
 
 	public function getPictures() {
-		return Picture::getList('SELECT id, quarter_id, src, info_id, user_id FROM photo WHERE quarter_id = :quarter_id ORDER BY id ASC', array('quarter_id' => $this->id));
+		return Picture::getList('SELECT id, quarter_id, src, info_id, user_id FROM photo WHERE info_id IS NULL AND user_id IS NULL AND quarter_id = :quarter_id ORDER BY id ASC', array('quarter_id' => $this->id));
 	}
 	public function getPicture() {
 		$pictures = array();
 		foreach($this->getPictures() as $picture) {
-			if (empty($picture->getInfoId()) && empty($picture->getUserId())) {
-				$pictures[] = $picture;
-			}
+			$pictures[] = $picture;
 		}
 
 		if (empty($pictures)) {
-			return 'http://placehold.it/320x200';
+			$picture = new Picture();
+			$picture->src = 'http://placehold.it/320x200';
 		}
-		return IMG_HTTP.$pictures[array_rand($pictures)]->src;
+		return $pictures[array_rand($pictures)];
 	}
 
 	public static function getRandom() {
@@ -66,3 +65,4 @@ class Quarter extends Model {
 	
 
 }
+
