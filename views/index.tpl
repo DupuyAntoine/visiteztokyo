@@ -5,7 +5,7 @@
             {foreach $quarters as $quarter}
             <div class="col-md-4">
                 <div class="thumbnail">
-                        <img src="{$quarter->getPicture()}" alt="ALT NAME" class="img-responsive" style="max-height: 300px" />
+                <img src="{$quarter->getPicture()}" alt="ALT NAME" class="img-responsive" style="max-height:250px;margin-left: 0px;margin-right: 0px;width: 100%;"/>
                     <div class="caption homecontent">
                         <h3>{$quarter->name}</h3>
                         <p>{$quarter->type}</p>
@@ -18,4 +18,3 @@
     </div>
 
 {include file="partials/footer.tpl"}
-

@@ -10,5 +10,4 @@ class HomeController extends BaseController {
 
 		$this->render('index', $vars);
 	}
-
 }

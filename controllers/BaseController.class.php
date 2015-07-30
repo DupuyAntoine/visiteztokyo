@@ -24,7 +24,7 @@ abstract class BaseController extends Controller {
 			'description' => ''
 		);
 
-		$quarters = Quarter::getList('SELECT id, name, type FROM quarter ORDER BY name ASC');
+		$quarters = Quarter::getList('SELECT id, name, type, description FROM quarter ORDER BY name ASC');
 		//$pictures = Picture::getList('SELECT id, quarter_id, src, info_id, user_id FROM photo ORDER BY id ASC');
         //$infos = Info::getList('SELECT id, quarter_id, name, type, description, url, rating, theme FROM info ORDER BY id ASC');
 
@@ -63,5 +63,6 @@ abstract class BaseController extends Controller {
 
 		$this->response->addVars($vars);
 	}
+	
 
 }
