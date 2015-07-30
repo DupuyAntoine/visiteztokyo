@@ -1,6 +1,6 @@
 <?php
 
-class Info extends Model {
+class Elements extends Model {
 
 	protected $id;
 	protected $quarter_id;
@@ -11,32 +11,20 @@ class Info extends Model {
 	protected $rating;
 	protected $theme;
 
-	const INFO_TYPE_RESTAURANT = 1;
-	const INFO_TYPE_HOTEL = 2;
-	const INFO_TYPE_HISTOIRE = 3;
-	const INFO_TYPE_LIEU = 4;
-
-	public static $type_labels = array(
-		self::INFO_TYPE_RESTAURANT => 'Restaurant',
-		self::INFO_TYPE_HOTEL => 'Hotel',
-		self::INFO_TYPE_LIEU => 'Lieu a visiter',
-		self::INFO_TYPE_HISTOIRE => 'Historique'
-	);
-
 	public function getId() {
 		return $this->id;
 	}
-	public function getQuarterId() {
+	public function getQId() {
 		return $this->quarter_id;
 	}
 	public function getName() {
-		return ucfirst($this->name);
+		return $this->name;
 	}
 	public function getType() {
 		return $this->type;
 	}
 	public function getDescription() {
-		return Utils::linkifyHashtag(nl2br($this->description));
+		return $this->description;
 	}
 	public function getUrl() {
 		return $this->url;
@@ -47,16 +35,16 @@ class Info extends Model {
 	public function getTheme() {
 		return $this->theme;
 	}
+
 	public function getSlug() {
 		return $this->id.'-'.strtolower(Utils::cleanString($this->name));
 	}
 
-
 	public function setId($id) {
 		$this->id = $id;
 	}
-	public function setQuarterId($quarter_id) {
-		$this->quarter_id = $quarter_id;
+	public function setQId() {
+		return $this->quarter_id;
 	}
 	public function setName($name) {
 		$this->name = $name;
@@ -67,20 +55,24 @@ class Info extends Model {
 	public function setDescription($description) {
 		$this->description = $description;
 	}
-	public function setUrl($url) {
-		$this->url = $url;
+	public function setUrl() {
+		return $this->url;
 	}
-	public function setRating($rating) {
-		$this->rating = $rating;
+	public function setRating() {
+		return $this->rating;
 	}
-	public function setTheme($theme) {
-		$this->theme = $theme;
+	public function setTheme() {
+		return $this->theme;
 	}
 
-	public static function getTypeLabel($type) {
-		if (!empty(self::$type_labels[$type])) {
-			return self::$type_labels[$type];
-		}
-		return '';
+	public static function getElements($id, $type) {
+		return self::getList('SELECT id, quarter_id, name, type, description, url, rating, theme FROM info WHERE quarter_id = :quarter_id AND type = :type ORDER BY id ASC', array('quarter_id' => $id, 'type' => $type));
 	}
+
+	/*
+	public function getPictures() {
+		return Picture::get('SELECT id, quarter_id, src, info_id, user_id FROM photo WHERE quarter_id = :quarter_id ORDER BY id ASC');
+	}
+	*/
+
 }
