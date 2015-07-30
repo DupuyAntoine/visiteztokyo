@@ -34,6 +34,6 @@
 
 <div class="clearfix"></div>
 
-{include file="partials/comments.tpl"}
+{include file="partials/comment.tpl"}
 
 {include file="partials/footer.tpl"}

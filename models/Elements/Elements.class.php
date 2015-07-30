@@ -46,7 +46,7 @@ class Elements extends Model {
 		$this->id = $id;
 	}
 	public function setQId() {
-		return $this->quarter_id;
+		$this->quarter_id;
 	}
 	public function setName($name) {
 		$this->name = $name;

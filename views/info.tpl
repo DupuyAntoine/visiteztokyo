@@ -31,6 +31,6 @@ theme
 
 <hr>
 
-{include file="partials/comments.tpl"}
+{include file="partials/comment.tpl"}
 
 {include file="partials/footer.tpl"}

@@ -5,10 +5,11 @@ class User extends Model {
 	protected $fb_id;
 	protected $firstname;
 	protected $lastname;
+	protected $pseudo;
 	protected $email;
 	protected $password;
 	protected $status;
-	// protected $newsletter;
+	protected $newsletter;
 	protected $cgu;
 	protected $register_date;
 
@@ -33,6 +34,9 @@ class User extends Model {
 	public function getLastname() {
 		return $this->lastname;
 	}
+	public function getPseudo() {
+		return $this->pseudo;
+	}
 	public function getEmail() {
 		return $this->email;
 	}
@@ -42,11 +46,9 @@ class User extends Model {
 	public function getStatus() {
 		return $this->status;
 	}
-	/*
 	public function getNewsletter() {
 		return $this->newsletter;
 	}
-	*/
 	public function getCgu() {
 		return $this->cgu;
 	}
@@ -73,6 +75,12 @@ class User extends Model {
 		}
 		$this->lastname = $lastname;
 	}
+	public function setPseudo($pseudo) {
+		if (empty($pseudo)) {
+			throw new Exception(Lang::_('You must fill your pseudo'));
+		}
+		$this->pseudo = $pseudo;
+	}
 	public function setEmail($email) {
 		if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
 			throw new Exception(Lang::_('You must provide a valid email'));
@@ -88,11 +96,9 @@ class User extends Model {
 	public function setStatus($status) {
 		$this->status = $status;
 	}
-	/*
 	public function setNewsletter($newsletter) {
 		$this->newsletter = $newsletter;
 	}
-	*/
 	public function setCgu($cgu) {
 		if (empty($cgu)) {
 			throw new Exception(Lang::_('You have to accept the terms of service'));
@@ -184,6 +190,7 @@ class User extends Model {
 		$form = new Form('', 'form-register', $action, 'POST', 'form-horizontal', $errors, $isPost);
 		$form->addField('firstname', Lang::_('Firstname'), 'text', $this->_getfieldvalue('firstname', $type, $request), true, '', @$errors['firstname']);
 		$form->addField('lastname', Lang::_('Lastname'), 'text', $this->_getfieldvalue('lastname', $type, $request), true, '', @$errors['lastname']);
+		$form->addField('pseudo', Lang::_('Pseudo'), 'text', $this->_getfieldvalue('pseudo', $type, $request), true, '', @$errors['pseudo']);
 		$form->addField('email', Lang::_('Email'), 'email', $this->_getfieldvalue('email', $type, $request), true, '', @$errors['email']);
 		$form->addField('confirm_email', Lang::_('Confirm email'), 'email', $this->_getfieldvalue('confirm_email', $type, $request), true, '', @$errors['confirm_email']);
 		$form->addField('password', Lang::_('Password'), 'password', '', true, '', @$errors['password']);
@@ -196,14 +203,15 @@ class User extends Model {
 
 	public function register() {
 		return Db::insert(
-		   'INSERT INTO user (lastname, firstname, email, password, newsletter, cgu, register_date)
-			VALUES (:lastname, :firstname, :email, :password, :newsletter, :cgu, NOW())',
+		   'INSERT INTO user (lastname, firstname, pseudo, email, password, newsletter, cgu, register_date)
+			VALUES (:lastname, :firstname, :pseudo, :email, :password, :newsletter, :cgu, NOW())',
 			array(
 				'lastname' => $this->lastname,
 				'firstname' => $this->firstname,
+				'pseudo' => $this->pseudo,
 				'email' => $this->email,
 				'password' => $this->password,
-				// 'newsletter' => $this->newsletter,
+				'newsletter' => $this->newsletter,
 				'cgu' => $this->cgu
 			)
 		);
