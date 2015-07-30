@@ -3,6 +3,11 @@
 {include file="partials/carousel.tpl"}
 
 <div class="col-md-6">
+  {$quarter->map}
+</div>
+
+<div class="col-md-6">
+	<h3>{$quarter->name}</h3>
 	<p>{$quarter->description}</p>
 </div>
 <div class="clearfix"></div>
