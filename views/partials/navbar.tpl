@@ -32,7 +32,7 @@
 
 					<ul class="nav navbar-nav navbar-right">
 						{if !empty($user) && User::isLogged()}
-							{t}Logged as{/t} {$user->firstname}
+							<li><a class="blog-nav-item">{t}Logged as{/t} {$user->pseudo}</a></li>
 							<li><a href="{$HTTP_ROOT}logout" class="blog-nav-item{if $current_page == 'user/logout/'} active{/if}">{t}Logout{/t}</a></li>
 						{else}
 							<li{if $current_page == 'user/login/'} class="active"{/if}><a href="{$HTTP_ROOT}login" class="blog-nav-item">{t}Login{/t}</a></li>
