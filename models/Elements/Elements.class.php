@@ -1,5 +1,7 @@
 <?php
 
+//--- uniquement pour test perso elements
+
 class Elements extends Model {
 
 	protected $id;
@@ -55,24 +57,18 @@ class Elements extends Model {
 	public function setDescription($description) {
 		$this->description = $description;
 	}
-	public function setUrl() {
-		return $this->url;
+	public function setUrl($url) {
+		$this->url = $url;
 	}
-	public function setRating() {
-		return $this->rating;
+	public function setRating($rating) {
+		$this->rating = $rating;
 	}
-	public function setTheme() {
-		return $this->theme;
+	public function setTheme($theme) {
+		$this->theme = $theme;
 	}
 
 	public static function getElements($id, $type) {
 		return self::getList('SELECT id, quarter_id, name, type, description, url, rating, theme FROM info WHERE quarter_id = :quarter_id AND type = :type ORDER BY id ASC', array('quarter_id' => $id, 'type' => $type));
 	}
-
-	/*
-	public function getPictures() {
-		return Picture::get('SELECT id, quarter_id, src, info_id, user_id FROM photo WHERE quarter_id = :quarter_id ORDER BY id ASC');
-	}
-	*/
 
 }

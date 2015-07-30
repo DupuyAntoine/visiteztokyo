@@ -15,7 +15,7 @@
 			<div class="form-group">
 				<label for="title">&nbsp;&nbsp;&nbsp;Type&nbsp;</label>
 				<select id="genre" name="genre" class="form-control">
-					<option value="">...</option>
+					<option value="">Restaurants</option>
 					<option value="">a</option>
 					<option value="">b</option>
 					<option value="">c</option>
@@ -26,7 +26,7 @@
 			<div class="form-group">
 				<label for="title">&nbsp;&nbsp;&nbsp;Quartier&nbsp;</label>
 				<select id="genre" name="genre" class="form-control">
-					<option value="">...</option>
+					<option value="">Akihabara</option>
 					<option value="">1</option>
 					<option value="">2</option>
 					<option value="">3</option>
@@ -53,12 +53,11 @@
 	<div class="col-sm-6 col-md-4 col-lg-3">
 
 		<div class="thumbnail">
-			<img src="http://placehold.it/162x100" alt="nom" class="img-responsive">
+			<img src="{$infos->getPicture()}" alt="image" class="img-responsive">
 			<div class="caption">
 				<h4 class="text-center"><a href="{$HTTP_ROOT}info/{$info->getSlug()}">{$info->name}</a></h4>
-				<p>{Info::getTypeLabel($info->type)}</p>
-				<p>{$info->description}<p>
-				<p>{$info->rating}</p>
+				<p class="text-center">{$info->theme}</p>
+				<p class="text-center">Rating</p>
 			</div>
 		</div>
 
