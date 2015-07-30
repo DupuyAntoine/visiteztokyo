@@ -20,12 +20,12 @@
 
 <hr>
 
-{foreach $infos as $info}
+{foreach $labels as $label}
 <div class="col-sm-6 col-md-6 col-lg-3">
 	<div class="thumbnail">
-		<img src="{$info->getPicture()}" alt="{$info->name}" class="img-responsive">
+		<img src="{$quarter->getPicture()->src}" alt="" class="img-responsive">
 		<div class="caption">
-			<h4 class="text-center"><a href="{$HTTP_ROOT}elements">{$infos->type_label}</a></h4>
+			<h4 class="text-center"><a href="{$HTTP_ROOT}elements">{$label}</a></h4>
 		</div>
 	</div>
 </div>

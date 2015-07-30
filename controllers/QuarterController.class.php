@@ -25,14 +25,14 @@ class QuarterController extends BaseController {
 		}
 
 		$quarter = Quarter::get($id);
+		$labels = Info::$type_labels; 
+
 		$vars = array(
 			'quarter' => $quarter,
-			
+			'labels' => $labels		
 		);
 
 		$this->render('quarter', $vars);
-
-
 	}
 
 
