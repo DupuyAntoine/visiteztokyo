@@ -12,9 +12,11 @@ class ElementsController extends BaseController {
 		$type = 2;
 
 		$infos = Info::getElements($id, $type);
+		$labels = Info::$type_labels;
 
 		$vars = array (
-			'infos' => $infos
+			'infos' => $infos,
+			'labels' => $labels
 		);
 
 		$this->render('elements', $vars);
