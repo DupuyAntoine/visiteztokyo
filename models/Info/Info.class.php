@@ -92,8 +92,6 @@ class Info extends Model {
 		$picture = DB::selectOne('SELECT id, quarter_id, src, info_id, user_id FROM photo WHERE info_id = :info_id', array('info_id' => $id));
 		return $picture->src;
 	}
-	public function getLabels() {
-		return $type_labels;
-	}
+	
 
 }
