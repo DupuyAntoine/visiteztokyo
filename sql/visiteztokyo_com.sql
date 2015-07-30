@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Mer 29 Juillet 2015 à 16:59
+-- Généré le :  Jeu 30 Juillet 2015 à 09:42
 -- Version du serveur :  5.6.24
 -- Version de PHP :  5.6.8
 
@@ -159,7 +159,7 @@ CREATE TABLE IF NOT EXISTS `photo` (
   `src` varchar(100) DEFAULT NULL,
   `info_id` int(11) DEFAULT NULL,
   `user_id` int(11) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2619 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2631 DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `photo`
@@ -475,7 +475,19 @@ INSERT INTO `photo` (`id`, `quarter_id`, `src`, `info_id`, `user_id`) VALUES
 (2615, 5, 'Asakusa/asakusa_kaminari.jpg', NULL, NULL),
 (2616, 7, 'roppongi/roppongi.jpg', NULL, NULL),
 (2617, 6, 'tsukiji/tsukiji.jpg', NULL, NULL),
-(2618, 4, 'Ueno/ueno.jpg', NULL, NULL);
+(2618, 4, 'Ueno/ueno.jpg', NULL, NULL),
+(2619, 3, 'harajuku\\lieux_visiter\\rockeur\\rockeur.jpg', 16, NULL),
+(2620, 3, 'harajuku\\lieux_visiter\\rockeur\\rockeur_1.jpg', 16, NULL),
+(2621, 3, 'harajuku\\lieux_visiter\\pont_des_cosplay\\user\\1910493_1189868873097_688312_n.jpg', 16, 1),
+(2622, 3, 'harajuku\\lieux_visiter\\pont_des_cosplay\\user\\1910493_1189868913098_1155369_n.jpg', 16, 1),
+(2623, 3, 'harajuku\\lieux_visiter\\temple_meiji\\user\\1910493_1189844872497_6680589_n.jpg', 18, 1),
+(2624, 3, 'harajuku\\lieux_visiter\\temple_meiji\\user\\1910493_1189844832496_1493194_n.jpg', 18, 1),
+(2625, 3, 'harajuku\\lieux_visiter\\temple_meiji\\user\\1910493_1189844912498_1452585_n.jpg', 18, 1),
+(2626, 3, 'harajuku\\lieux_visiter\\temple_meiji\\user\\1910493_1189844992500_1491666_n.jpg', 18, 1),
+(2627, 3, 'harajuku\\lieux_visiter\\temple_meiji\\user\\1910493_1189845032501_7975877_n.jpg', 18, 1),
+(2628, 3, 'harajuku\\lieux_visiter\\temple_meiji\\user\\1910493_1189845072502_1190900_n.jpg', 18, 1),
+(2629, 3, 'harajuku\\lieux_visiter\\temple_meiji\\user\\1910493_1189845112503_3142065_n.jpg', 18, 1),
+(2630, 3, 'harajuku\\lieux_visiter\\temple_meiji\\user\\1910493_1189845152504_2811132_n.jpg', 18, 1);
 
 -- --------------------------------------------------------
 
@@ -1017,7 +1029,14 @@ CREATE TABLE IF NOT EXISTS `user` (
   `pseudo` varchar(100) DEFAULT NULL,
   `email` varchar(100) DEFAULT NULL,
   `password` varchar(60) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+--
+-- Contenu de la table `user`
+--
+
+INSERT INTO `user` (`id`, `pseudo`, `email`, `password`) VALUES
+(1, 'Iskandir', 'manalegende2@gmail.com', 'iskandir13');
 
 --
 -- Index pour les tables exportées
@@ -1083,7 +1102,7 @@ ALTER TABLE `info`
 -- AUTO_INCREMENT pour la table `photo`
 --
 ALTER TABLE `photo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2619;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2631;
 --
 -- AUTO_INCREMENT pour la table `photo.bkp`
 --
@@ -1103,7 +1122,7 @@ ALTER TABLE `quarter`
 -- AUTO_INCREMENT pour la table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- Contraintes pour les tables exportées
 --
