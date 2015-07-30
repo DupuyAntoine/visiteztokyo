@@ -1,6 +1,6 @@
 <?php
 class Picture extends Model {
-	
+
 	protected $id;
 	protected $quarter_id;
 	protected $src;
@@ -14,7 +14,7 @@ class Picture extends Model {
 		return $this->quarter_id;
 	}
 	public function getSrc() {
-		return $this->src;
+		return IMG_HTTP.$this->src;
 	}
 	public function getInfoId() {
 		return $this->info_id;

@@ -1,6 +1,6 @@
 {include file="partials/header.tpl"}
 
-{include file="partials/carousel.tpl"}
+{include file="partials/carousel.tpl" entity_name="info"}
 
 {*
 id
