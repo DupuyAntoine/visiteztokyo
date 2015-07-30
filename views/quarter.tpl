@@ -1,6 +1,6 @@
 {include file="partials/header.tpl"}
 
-{include file="partials/carousel.tpl"}
+{include file="partials/carousel.tpl" entity_name="quarter"}
 
 <div class="col-md-6">
   {$quarter->map}
@@ -34,6 +34,6 @@
 
 <div class="clearfix"></div>
 
-{include file="partials/comments.tpl"}
+{include file="partials/comment.tpl"}
 
 {include file="partials/footer.tpl"}

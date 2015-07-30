@@ -1,6 +1,6 @@
 {include file="partials/header.tpl"}
 
-{include file="partials/carousel.tpl"}
+{include file="partials/carousel.tpl" entity_name="info"}
 
 {*
 id
@@ -31,6 +31,6 @@ theme
 
 <hr>
 
-{include file="partials/comments.tpl"}
+{include file="partials/comment.tpl"}
 
 {include file="partials/footer.tpl"}
