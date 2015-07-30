@@ -88,6 +88,10 @@ class Info extends Model {
 		return self::getList('SELECT id, quarter_id, name, type, description, url, rating, theme FROM info WHERE quarter_id = :quarter_id AND type = :type ORDER BY id ASC', array('quarter_id' => $id, 'type' => $type));
 	}
 
+	public function getPictures() {
+		return array($this->getPicture());
+	}
+
 	public function getPicture() {
 		$result = Db::selectOne('SELECT src FROM photo WHERE info_id = :info_id', array('info_id' => $this->id));
 		if (empty($result)) {

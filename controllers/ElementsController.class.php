@@ -8,6 +8,7 @@ class ElementsController extends BaseController {
 
 	public function results() {
 
+		$params = $this->getParams();
 		$id = 1;
 		$type = 2;
 

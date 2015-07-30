@@ -10,7 +10,7 @@ class InfoController extends BaseController {
 
 	public function view() {
 
-		$id = $this->getParam(0, 0);
+		$id = (int) $this->getParam(0, 0);
 
 		if (empty($id)) {
 			exit('Undefined info id');
