@@ -8,10 +8,10 @@ class ElementsController extends BaseController {
 
 	public function results() {
 
-		$id = 2;
-		$type = 4;
+		$id = 1;
+		$type = 2;
 
-		$infos = Elements::getElements($id, $type);
+		$infos = Info::getElements($id, $type);
 
 		$vars = array (
 			'infos' => $infos
