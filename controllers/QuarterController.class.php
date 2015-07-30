@@ -25,20 +25,22 @@ class QuarterController extends BaseController {
 		}
 
 		$quarter = Quarter::get($id);
-
+        $labels = Info::getLabels();
 		$vars = array(
-			'quarter' => $quarter
+			'quarter' => $quarter,
+			'labels' => $labels
 		);
 
 		$this->render('quarter', $vars);
+
 
 	}
 
 
 	public function random() {
-
-		$quarter = Quarter::getList('SELECT * FROM quarter ORDER BY RAND() LIMIT 1');
-
+		
+		$quarter = Quarter::getRandom();		
+		
 		$vars = array(
 			'quarter' => $quarter,
 		);

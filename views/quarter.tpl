@@ -20,17 +20,16 @@
 
 <hr>
 
-<div class="col-sm-6 col-md-4 col-lg-3">
+{foreach $infos as $info}
+<div class="col-sm-6 col-md-6 col-lg-3">
 	<div class="thumbnail">
-		<img src="http://placehold.it/162x100" alt="nom" class="img-responsive">
+		<img src="{$info->getPicture()}" alt="{$info->name}" class="img-responsive">
 		<div class="caption">
-			<h4 class="text-center"><a href="{$HTTP_ROOT}elements">Nom élément</a></h4>
-			<p>Type</p>
-			<p>Description<p>
-			<p>Rating</p>
+			<h4 class="text-center"><a href="{$HTTP_ROOT}elements">{$infos->type_label}</a></h4>
 		</div>
 	</div>
 </div>
+{/foreach}
 
 <div class="clearfix"></div>
 

@@ -60,4 +60,9 @@ class Quarter extends Model {
 		return IMG_HTTP.$pictures[array_rand($pictures)]->src;
 	}
 
+	public static function getRandom() {
+		return new Quarter(Db::selectOne('SELECT * FROM quarter ORDER BY RAND() LIMIT 1'));
+	}
+	
+
 }
