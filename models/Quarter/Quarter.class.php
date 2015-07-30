@@ -6,6 +6,7 @@ class Quarter extends Model {
 	protected $name;
 	protected $type;
 	protected $description;
+	protected $map;
 
 	public function getId() {
 		return $this->id;
@@ -19,6 +20,9 @@ class Quarter extends Model {
 	public function getDescription() {
 		return $this->description;
 	}
+	public function getMap() {
+		return $this->map;
+	}
 	public function getSlug() {
 		return $this->id.'-'.strtolower($this->name);
 	}
@@ -31,6 +35,9 @@ class Quarter extends Model {
 	}
 	public function setType($type) {
 		$this->type = $type;
+	}
+	public function setMap($map) {
+		$this->map = $map;
 	}
 	public function setDescription($description) {
 		$this->description = $description;
