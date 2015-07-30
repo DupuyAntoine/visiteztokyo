@@ -18,11 +18,20 @@ class QuarterController extends BaseController {
 			list($quarter_id, $quarter_name) = explode('-', $quarter_param);
 		}
      
+		$id = $this->getParam(0, 0);
 
+		if (empty($id)) {
+			exit('Undefined info id');
+		}
 
+		$quarter = Quarter::get($id);
 
+		$vars = array(
+			'quarter' => $quarter
+		);
 
-     $this->render('quarter');
+		$this->render('quarter', $vars);
+
 	}
 
 
