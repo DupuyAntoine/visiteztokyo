@@ -89,7 +89,7 @@ class Info extends Model {
 	}
 
 	public function getPictures() {
-		return array($this->getPicture());
+		return Picture::getList('SELECT id, quarter_id, src, info_id, user_id FROM photo WHERE user_id IS NULL AND quarter_id = :quarter_id AND info_id = :info_id ORDER BY id ASC', array('info_id' => $this->id, 'quarter_id' => $this->quarter_id));
 	}
 
 	public function getPicture() {
@@ -101,5 +101,4 @@ class Info extends Model {
 		}
 		return new Picture($result);
 	}
-
 }
