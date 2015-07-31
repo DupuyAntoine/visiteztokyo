@@ -63,6 +63,5 @@ class Quarter extends Model {
 		return new Quarter(Db::selectOne('SELECT * FROM quarter ORDER BY RAND() LIMIT 1'));
 	}
 	
-
 }
 
