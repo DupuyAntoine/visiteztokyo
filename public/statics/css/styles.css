@@ -202,4 +202,16 @@ h6, .h6 {
 	text-align: center;
 }
 
+/*
+* css pour photo de la page index
+*/
+.indexpicture {
+	border-top-right-radius: 51px;
+    border-top-left-radius: 51px;
+}
 
+.indexdivpicture {
+	    border-radius: 50px;
+	    border: 1px solid rgb(191, 191, 191);
+
+}
