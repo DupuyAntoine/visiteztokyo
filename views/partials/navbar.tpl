@@ -38,9 +38,10 @@
 							<li{if $current_page == 'user/login/'} class="active"{/if}><a href="{$HTTP_ROOT}login" class="blog-nav-item">{t}Login{/t}</a></li>
 							<li{if $current_page == 'user/register/'} class="active"{/if}><a href="{$HTTP_ROOT}register" class="blog-nav-item">{t}Register{/t}</a></li>
 						{/if}
-						<form class="navbar-form navbar-left" role="search">
+						<form action="{$HTTP_ROOT}search" class="navbar-form navbar-left" role="search">
+							<input type="hidden" name="qs" value="1">
 							<div class="form-group">
-								<input type="text" class="form-control" placeholder="Search">
+								<input name="q" type="text" class="form-control" placeholder="Search">
 							</div>
 							<button type="submit" class="btn btn-default">Submit</button>
 						</form>

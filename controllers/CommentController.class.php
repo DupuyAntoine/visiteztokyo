@@ -10,7 +10,7 @@ class CommentController extends BaseController {
 
 	public function view() {
 
-		$comments = Info::getList('SELECT * FROM comment WHERE quarter_id = :quarter_id OR info_id = :info_id OR ');
+		$comments = Comment::getList('SELECT * FROM comment WHERE quarter_id = :quarter_id OR info_id = :info_id');
 
 		$vars = array(
 			'comment' => $comment
