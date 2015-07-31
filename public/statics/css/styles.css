@@ -182,9 +182,9 @@ h6, .h6 {
 */
 
 .hide-bullets {
-	list-style:none;
+	list-style: none;
 	margin-left: -40px;
-	margin-top:20px;
+	margin-top: 20px;
 }
 .thumbnail {
 	padding: 0;
@@ -192,14 +192,10 @@ h6, .h6 {
 .carousel-inner>.item>img, .carousel-inner>.item>a>img {
 	width: 100%;
 }
-
 .homecontent{
 	text-align: center;
 }
-
-
 .button-center {
 	text-align: center;
 }
-
 

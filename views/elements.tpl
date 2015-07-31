@@ -6,6 +6,7 @@
 
 		<br><br>
 
+		<!-- construction route/slug dans main.js -->
 		<form id="form-elements" class="form-inline" action="{$HTTP_ROOT}elements" method="POST">
 
 			<div class="form-group">

@@ -1,12 +1,12 @@
 jQuery(document).ready(function($) {
 
 	//
-	// javascript pour le template WALL
+	// template WALL
 	//
 	$('#myCarousel').carousel({
 		interval: 5000
 	});
-	//Handles the carousel thumbnails
+	// Handles the carousel thumbnails
 	$('[id^=carousel-selector-]').click(function () {
 		var id_selector = $(this).attr("id");
 		try {
@@ -20,9 +20,12 @@ jQuery(document).ready(function($) {
 	// When the carousel slides, auto update the text
 	$('#myCarousel').on('slid.bs.carousel', function (e) {
 		var id = $('.item.active').data('slide-number');
-		$('#carousel-text').html($('#slide-content-'+id).html());
+		//$('#carousel-text').html($('#slide-content-'+id).html());
 	});
 
+	//
+	// template elements
+	//
 	$('#form-elements').submit(function() {
 		$(this).attr('action', HTTP_ROOT+'elements/'+$('#quarter', $(this)).val()+'-'+$('#label', $(this)).val());
 		return true;
