@@ -20,17 +20,19 @@
 
 <hr>
 
+{foreach $types as $type_id => $type_label}
 <div class="col-sm-6 col-md-4 col-lg-3">
 	<div class="thumbnail">
 		<img src="http://placehold.it/162x100" alt="nom" class="img-responsive">
 		<div class="caption">
-			<h4 class="text-center"><a href="{$HTTP_ROOT}elements">Nom élément</a></h4>
-			<p>Type</p>
+			<h4 class="text-center"><a href="{$HTTP_ROOT}elements/{$quarter->id}-{Utils::cleanString($type_label)}">{$type_label}</a></h4>
+			<p>{$type_label}</p>
 			<p>Description<p>
 			<p>Rating</p>
 		</div>
 	</div>
 </div>
+{/foreach}
 
 <div class="clearfix"></div>
 

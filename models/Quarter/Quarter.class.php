@@ -23,6 +23,7 @@ class Quarter extends Model {
 	public function getMap() {
 		return $this->map;
 	}
+
 	public function getSlug() {
 		return $this->id.'-'.strtolower($this->name);
 	}

@@ -47,10 +47,10 @@ class Info extends Model {
 	public function getTheme() {
 		return $this->theme;
 	}
+
 	public function getSlug() {
 		return $this->id.'-'.strtolower(Utils::cleanString($this->name));
 	}
-
 
 	public function setId($id) {
 		$this->id = $id;

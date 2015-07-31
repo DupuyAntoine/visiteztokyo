@@ -22,6 +22,10 @@ $routes = array(
 		'target' => 'search',
 		'action' => 'results'
 	),
+	'elements/([0-9]+)-?([a-zA-Z-_]*)' => array(
+		'target' => 'elements',
+		'action' => 'results'
+	),
 	'login' => array(
 		'target' => 'user',
 		'action' => 'login'

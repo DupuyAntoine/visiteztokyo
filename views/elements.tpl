@@ -46,7 +46,6 @@
 <div class="row">
 
 	{foreach $infos as $info}
-
 	<div class="col-sm-6 col-md-4 col-lg-3">
 
 		<div class="thumbnail">
@@ -59,7 +58,6 @@
 		</div>
 
 	</div>
-
 	{/foreach}
 
 </div>
