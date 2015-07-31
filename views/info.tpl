@@ -13,9 +13,6 @@ rating
 theme
 *}
 
-<div class="col-md-6">
-  {$info->map}
-</div>
 
 <div class="col-md-6">
   <h3>{$info->name}</h3>
