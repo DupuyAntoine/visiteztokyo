@@ -1,0 +1,122 @@
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-07-31 16:53:28
+         compiled from "C:\xampp\htdocs\visiteztokyo\views\partials\navbar.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:1072455bb8be8ae23d1-63491437%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    'fb99e0dffdf043b22335e04f6f28072274e065ec' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\visiteztokyo\\views\\partials\\navbar.tpl',
+      1 => 1438336499,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '1072455bb8be8ae23d1-63491437',
+  'function' => 
+  array (
+  ),
+  'variables' => 
+  array (
+    'pages' => 0,
+    'page' => 0,
+    'page_url' => 0,
+    'current_page' => 0,
+    'target' => 0,
+    'HTTP_ROOT' => 0,
+    'subpage_url' => 0,
+    'subpage' => 0,
+    'user' => 0,
+  ),
+  'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.21-dev',
+  'unifunc' => 'content_55bb8be8b38877_87496310',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_55bb8be8b38877_87496310')) {function content_55bb8be8b38877_87496310($_smarty_tpl) {?><?php if (!is_callable('smarty_block_t')) include 'C:\\xampp\\htdocs\\visiteztokyo\\core\\Smarty\\plugins\\block.t.php';
+?>		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<?php  $_smarty_tpl->tpl_vars['page'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['page']->_loop = false;
+ $_smarty_tpl->tpl_vars['page_url'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['pages']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['page']->key => $_smarty_tpl->tpl_vars['page']->value) {
+$_smarty_tpl->tpl_vars['page']->_loop = true;
+ $_smarty_tpl->tpl_vars['page_url']->value = $_smarty_tpl->tpl_vars['page']->key;
+?>
+							<?php if (!is_array($_smarty_tpl->tpl_vars['page']->value)) {?>
+
+							<li<?php if ($_smarty_tpl->tpl_vars['page_url']->value==$_smarty_tpl->tpl_vars['current_page']->value||$_smarty_tpl->tpl_vars['page_url']->value==$_smarty_tpl->tpl_vars['target']->value||$_smarty_tpl->tpl_vars['page_url']->value==((string)$_smarty_tpl->tpl_vars['target']->value)."/".((string)$_smarty_tpl->tpl_vars['action']->value)) {?> class="active"<?php }?>><a href="<?php echo $_smarty_tpl->tpl_vars['HTTP_ROOT']->value;
+echo $_smarty_tpl->tpl_vars['page_url']->value;?>
+"><?php echo $_smarty_tpl->tpl_vars['page']->value;?>
+</a></li>
+							<?php } else { ?>
+							<li class="dropdown<?php if ($_smarty_tpl->tpl_vars['page_url']->value==$_smarty_tpl->tpl_vars['current_page']->value||$_smarty_tpl->tpl_vars['page_url']->value==$_smarty_tpl->tpl_vars['target']->value||$_smarty_tpl->tpl_vars['page_url']->value==((string)$_smarty_tpl->tpl_vars['target']->value)."/".((string)$_smarty_tpl->tpl_vars['action']->value)) {?> active<?php }?>">
+								<a href="<?php echo $_smarty_tpl->tpl_vars['page_url']->value;?>
+" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><?php echo $_smarty_tpl->tpl_vars['page']->value[0];?>
+ <span class="caret"></span></a>
+								<ul class="dropdown-menu" role="menu">
+									<?php  $_smarty_tpl->tpl_vars['subpage'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['subpage']->_loop = false;
+ $_smarty_tpl->tpl_vars['subpage_url'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['page']->value[1]; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['subpage']->key => $_smarty_tpl->tpl_vars['subpage']->value) {
+$_smarty_tpl->tpl_vars['subpage']->_loop = true;
+ $_smarty_tpl->tpl_vars['subpage_url']->value = $_smarty_tpl->tpl_vars['subpage']->key;
+?>
+									<li><a href="<?php echo $_smarty_tpl->tpl_vars['HTTP_ROOT']->value;
+echo $_smarty_tpl->tpl_vars['subpage_url']->value;?>
+"><?php echo $_smarty_tpl->tpl_vars['subpage']->value;?>
+</a></li>
+									<?php } ?>
+								</ul>
+							</li>
+							<?php }?>
+						<?php } ?>
+					</ul>
+
+					<ul class="nav navbar-nav navbar-right">
+						<?php if (!empty($_smarty_tpl->tpl_vars['user']->value)&&User::isLogged()) {?>
+							<li><a class="blog-nav-item"><?php $_smarty_tpl->smarty->_tag_stack[] = array('t', array()); $_block_repeat=true; echo smarty_block_t(array(), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>
+Logged as<?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_block_t(array(), $_block_content, $_smarty_tpl, $_block_repeat);  } array_pop($_smarty_tpl->smarty->_tag_stack);?>
+ <?php echo $_smarty_tpl->tpl_vars['user']->value->pseudo;?>
+</a></li>
+							<li><a href="<?php echo $_smarty_tpl->tpl_vars['HTTP_ROOT']->value;?>
+logout" class="blog-nav-item<?php if ($_smarty_tpl->tpl_vars['current_page']->value=='user/logout/') {?> active<?php }?>"><?php $_smarty_tpl->smarty->_tag_stack[] = array('t', array()); $_block_repeat=true; echo smarty_block_t(array(), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>
+Logout<?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_block_t(array(), $_block_content, $_smarty_tpl, $_block_repeat);  } array_pop($_smarty_tpl->smarty->_tag_stack);?>
+</a></li>
+						<?php } else { ?>
+							<li<?php if ($_smarty_tpl->tpl_vars['current_page']->value=='user/login/') {?> class="active"<?php }?>><a href="<?php echo $_smarty_tpl->tpl_vars['HTTP_ROOT']->value;?>
+login" class="blog-nav-item"><?php $_smarty_tpl->smarty->_tag_stack[] = array('t', array()); $_block_repeat=true; echo smarty_block_t(array(), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>
+Login<?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_block_t(array(), $_block_content, $_smarty_tpl, $_block_repeat);  } array_pop($_smarty_tpl->smarty->_tag_stack);?>
+</a></li>
+							<li<?php if ($_smarty_tpl->tpl_vars['current_page']->value=='user/register/') {?> class="active"<?php }?>><a href="<?php echo $_smarty_tpl->tpl_vars['HTTP_ROOT']->value;?>
+register" class="blog-nav-item"><?php $_smarty_tpl->smarty->_tag_stack[] = array('t', array()); $_block_repeat=true; echo smarty_block_t(array(), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>
+Register<?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_block_t(array(), $_block_content, $_smarty_tpl, $_block_repeat);  } array_pop($_smarty_tpl->smarty->_tag_stack);?>
+</a></li>
+						<?php }?>
+						<form action="<?php echo $_smarty_tpl->tpl_vars['HTTP_ROOT']->value;?>
+search" class="navbar-form navbar-left" role="search">
+							<input type="hidden" name="qs" value="1">
+							<div class="form-group">
+								<input name="q" type="text" class="form-control" placeholder="Search">
+							</div>
+							<button type="submit" class="btn btn-default">Submit</button>
+						</form>
+					</ul>
+				</div><!-- /.navbar-collapse -->
+
+
+
+			</div><!-- /.container-fluid -->
+		</nav>
+<?php }} ?>
