@@ -23,7 +23,9 @@ jQuery(document).ready(function($) {
 		$('#carousel-text').html($('#slide-content-'+id).html());
 	});
 
+	$('#form-elements').submit(function() {
+		$(this).attr('action', HTTP_ROOT+'elements/'+$('#quarter', $(this)).val()+'-'+$('#label', $(this)).val());
+		return true;
+	});
 
-
-	}); // fin document.ready
-
+}); // fin document.ready

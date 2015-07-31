@@ -19,8 +19,8 @@ class Info extends Model {
 	public static $type_labels = array(
 		self::INFO_TYPE_RESTAURANT => 'Restaurant',
 		self::INFO_TYPE_HOTEL => 'Hotel',
-		self::INFO_TYPE_LIEU => 'Lieu a visiter',
 		self::INFO_TYPE_HISTOIRE => 'Historique'
+		self::INFO_TYPE_LIEU => 'Lieu a visiter',
 	);
 
 	public function getId() {
