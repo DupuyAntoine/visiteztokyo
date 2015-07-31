@@ -96,11 +96,11 @@ class Info extends Model {
 		$result = Db::selectOne('SELECT src FROM photo WHERE info_id = :info_id', array('info_id' => $this->id));
 		if (empty($result)) {
 			$picture = new Picture();
-			$picture->src = 'http://placehold.it/320x200';
+			$picture->src = 'defaut320x200.png';
 			return $picture;
 		}
 		return new Picture($result);
 	}
-	
+
 
 }

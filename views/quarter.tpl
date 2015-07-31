@@ -24,7 +24,7 @@
 {foreach $types as $type_id => $type_label}
 <div class="col-sm-6 col-md-4 col-lg-3">
 	<div class="thumbnail">
-		<img src="{$quarter->getPicture()->src}" alt="" class="img-responsive">
+		<img src="{$quarter->getRandomInfoPicture($type_id)->src}" alt="" class="img-responsive">
 		<div class="caption">
 			<h4 class="text-center"><a href="{$HTTP_ROOT}elements/{$quarter->id}-{Utils::cleanString($type_label)}">{$type_label}</a></h4>
 			<p>{$type_label}</p>

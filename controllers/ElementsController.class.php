@@ -20,6 +20,8 @@ class ElementsController extends BaseController {
 		$infos = Info::getElements($id, $type);
 
 		$vars = array (
+			'id' => $id,
+			'type_label' => $type_label,
 			'infos' => $infos,
 			'labels' => $labels
 		);
