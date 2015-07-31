@@ -8,7 +8,13 @@ class WallController extends BaseController {
 
 	public function results() {
 
-		$this->render('wall');
+		$pictures = Picture::getList('SELECT id, quarter_id, src, info_id, user_id FROM photo ORDER BY id DESC');
+
+		$vars = array (
+			'pictures' => $pictures
+		);
+
+		$this->render('wall', $vars);
 	}
 
 }
