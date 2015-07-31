@@ -47,10 +47,10 @@ class Info extends Model {
 	public function getTheme() {
 		return $this->theme;
 	}
+
 	public function getSlug() {
 		return $this->id.'-'.strtolower(Utils::cleanString($this->name));
 	}
-
 
 	public function setId($id) {
 		$this->id = $id;
@@ -96,11 +96,10 @@ class Info extends Model {
 		$result = Db::selectOne('SELECT src FROM photo WHERE info_id = :info_id', array('info_id' => $this->id));
 		if (empty($result)) {
 			$picture = new Picture();
-			$picture->src = 'http://placehold.it/320x200';
+			$picture->src = 'defaut320x200.png';
 			return $picture;
 		}
 		return new Picture($result);
 	}
-
 
 }

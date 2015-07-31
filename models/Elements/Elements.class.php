@@ -39,7 +39,7 @@ class Elements extends Model {
 	}
 
 	public function getSlug() {
-		return $this->id.'-'.strtolower(Utils::cleanString($this->name));
+		return $this->id.'-'.strtolower(Utils::cleanString(Info::getTypeLabel($this->type)));
 	}
 
 	public function setId($id) {

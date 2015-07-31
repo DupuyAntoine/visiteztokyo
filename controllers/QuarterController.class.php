@@ -1,4 +1,4 @@
-<?php
++<?php
 
 class QuarterController extends BaseController {
 
@@ -17,11 +17,12 @@ class QuarterController extends BaseController {
 		}
 
 		$quarter = Quarter::get($id);
-		$labels = Info::$type_labels; 
+
+		$types = Info::$type_labels;
 
 		$vars = array(
 			'quarter' => $quarter,
-			'labels' => $labels		
+			'types' => $types
 		);
 
 		$this->render('quarter', $vars);
@@ -29,9 +30,9 @@ class QuarterController extends BaseController {
 
 
 	public function random() {
-		
-		$quarter = Quarter::getRandom();		
-		
+
+		$quarter = Quarter::getRandom();
+
 		$vars = array(
 			'quarter' => $quarter,
 		);

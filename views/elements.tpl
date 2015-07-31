@@ -16,7 +16,7 @@
 				<label for="title">&nbsp;&nbsp;&nbsp;Type&nbsp;</label>
 				<select id="genre" name="genre" class="form-control">
 				{foreach $labels as $label}
-					<option value="">{$label}</option>
+					<option value="" {if $label == $type_label}selected="selected"{/if}>{$label}</option>
 				{/foreach}
 
 				</select>
@@ -26,7 +26,7 @@
 				<label for="title">&nbsp;&nbsp;&nbsp;Quartier&nbsp;</label>
 				<select id="genre" name="genre" class="form-control">
 					{foreach $quarters as $quarter}
-						<option value="">{$quarter->name}</option>
+						<option value="" {if $quarter->id == $id}selected="selected"{/if}>{$quarter->name}</option>
 					{/foreach}
 				</select>
 			</div>
@@ -46,7 +46,6 @@
 <div class="row">
 
 	{foreach $infos as $info}
-
 	<div class="col-sm-6 col-md-4 col-lg-3">
 
 		<div class="thumbnail">
@@ -59,7 +58,6 @@
 		</div>
 
 	</div>
-
 	{/foreach}
 
 </div>

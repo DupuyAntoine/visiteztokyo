@@ -8,14 +8,20 @@ class ElementsController extends BaseController {
 
 	public function results() {
 
-		$params = $this->getParams();
-		$id = 1;
-		$type = 2;
+		$id = $this->getParam(0, 0);
+		$type_label = $this->getParam(1, '');
 
-		$infos = Info::getElements($id, $type);
 		$labels = Info::$type_labels;
 
+		$type_label = ucfirst(str_replace('-', ' ', $type_label));
+
+		$type = array_search($type_label, $labels);
+
+		$infos = Info::getElements($id, $type);
+
 		$vars = array (
+			'id' => $id,
+			'type_label' => $type_label,
 			'infos' => $infos,
 			'labels' => $labels
 		);
