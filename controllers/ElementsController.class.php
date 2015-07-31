@@ -26,7 +26,7 @@ class ElementsController extends BaseController {
 			'labels' => $labels
 		);
 
-		$this->render('elements', $vars);
-	}
 
+        $this->render('elements', $vars);
+    }
 }

@@ -32,9 +32,12 @@ class QuarterController extends BaseController {
 	public function random() {
 
 		$quarter = Quarter::getRandom();
+		$types = Info::$type_labels;
 
 		$vars = array(
 			'quarter' => $quarter,
+			'types' => $types
+
 		);
 
 		//$quarter = Quarter::get($quarter_id);
