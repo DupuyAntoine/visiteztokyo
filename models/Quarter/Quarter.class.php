@@ -73,9 +73,35 @@ class Quarter extends Model {
 		return $pictures[array_rand($pictures)];
 	}
 
+	public function getComments() {
+
+		if (empty($this->id)) {
+			throw new Exception('getComments error - Undefined comment id');
+		}
+
+		$results = (Object) Db::select('SELECT c.content, c.date, u.pseudo, p.src
+					FROM quarter q 
+					LEFT JOIN comment c ON c.quarter_id = q.id
+					LEFT JOIN user u ON c.user_id = u.id
+					LEFT JOIN photo p ON p.id = c.photo_id
+					WHERE q.id = :quarter_id
+					AND c.info_id IS NULL',
+		array(
+			'quarter_id' => $this->id
+		));
+
+		$comments = array();
+		foreach($results as $result) {
+			$comments[] = (Object) $result;
+		}
+
+		return $comments;
+	}
+
 	public static function getRandom() {
 		return new Quarter(Db::selectOne('SELECT * FROM quarter ORDER BY RAND() LIMIT 1'));
 	}
+
 
 }
 
