@@ -41,7 +41,7 @@
 					{/if}
 
 					{if $fields[key]->type == 'textarea'}
-					<label for="{$fields[key]->name}" class="col-sm-4 control-label">{$fields[key]->label}</label>
+					<label for="{$fields[key]->name}" class="col-sm-2 control-label">{$fields[key]->label}</label>
 					<div class="col-sm-8">
 						<textarea id="{$fields[key]->name}" name="{$fields[key]->name}" class="form-control{if $fields[key]->required} required{/if}{$fields[key]->class}" placeholder="{$fields[key]->label}" col="8" rows="3">{$fields[key]->value}</textarea>
 					</div>
