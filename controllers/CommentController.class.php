@@ -44,3 +44,8 @@ $sql = 'SELECT c.content FROM info i LEFT JOIN comment c ON c.info_id = i.id';
 $sql = 'SELECT u.pseudo FROM comment c LEFT JOIN u.id = c.user_id';
 $sql = 'SELECT p.src FROM info i LEFT JOIN p.info_id = i.id';
 $sql = 'SELECT date FROM comment';
+
+$sql = 'SELECT c.content FROM quarter q LEFT JOIN comment c ON c.quarter_id = i.id';
+$sql = 'SELECT u.pseudo FROM comment c LEFT JOIN u.id = c.user_id';
+$sql = 'SELECT p.src FROM quarter q LEFT JOIN p.quarter_id = i.id';
+$sql = 'SELECT date FROM comment';
