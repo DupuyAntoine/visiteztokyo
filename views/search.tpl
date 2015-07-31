@@ -60,8 +60,15 @@
 				<hr>
 
 				{foreach $infos as $info}
-					{$info->name}
+				<div class="col-12">
+					<img src="#">
+					<span>{$info->name}</span>
+					<br>
+					<span>{$info->description}</span>
+					<br>
+					<span><a href="#"></a></span>
 					<hr>
+				</div>
 				{/foreach}
 
 
