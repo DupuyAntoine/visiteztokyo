@@ -9,7 +9,7 @@ class ElementsController extends BaseController {
 	public function results() {
 
 		$id = $this->getParam(0, 0);
-		$type_label = $this->getParam(1, '');
+		$type_label = $this->getParam(1, 0);
 
 		$labels = Info::$type_labels;
 

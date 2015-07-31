@@ -5,7 +5,8 @@
 	<div class="col-md-12">
 
 		<br><br>
-		<form class="form-inline" action="{$HTTP_ROOT}elements" method="GET">
+
+		<form id="form-elements" class="form-inline" action="{$HTTP_ROOT}elements" method="POST">
 
 			<div class="form-group">
 				<label class="sr-only"></label>
@@ -13,30 +14,32 @@
 			</div>
 
 			<div class="form-group">
-				<label for="title">&nbsp;&nbsp;&nbsp;Type&nbsp;</label>
-				<select id="genre" name="genre" class="form-control">
-				{foreach $labels as $label}
-					<option value="" {if $label == $type_label}selected="selected"{/if}>{$label}</option>
-				{/foreach}
-
-				</select>
-			</div>
-
-			<div class="form-group">
 				<label for="title">&nbsp;&nbsp;&nbsp;Quartier&nbsp;</label>
-				<select id="genre" name="genre" class="form-control">
+				<select id="quarter" name="quarter" type="text" class="form-control" onchange="$('#form-elements').submit();">
 					{foreach $quarters as $quarter}
-						<option value="" {if $quarter->id == $id}selected="selected"{/if}>{$quarter->name}</option>
+						<option value="{$quarter->id}" {if $quarter->id == $id}selected="selected"{/if}>{$quarter->name}</option>
 					{/foreach}
 				</select>
 			</div>
 
 			<div class="form-group">
+				<label for="title">&nbsp;&nbsp;&nbsp;Type&nbsp;</label>
+				<select id="label" name="label" type="text" class="form-control" onchange="$('#form-elements').submit();">
+				{foreach $labels as $label}
+					<option value="{Utils::cleanString($label)}" {if $label == $type_label}selected="selected"{/if}>{$label}</option>
+				{/foreach}
+				</select>
+			</div>
+
+			<!--
+			<div class="form-group">
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				<button type="submit" class="btn btn-default">&nbsp;GO !&nbsp;</button>
 			</div>
+			-->
 
 		</form>
+
 		<br><br>
 
 	</div>

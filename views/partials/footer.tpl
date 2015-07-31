@@ -8,6 +8,7 @@
 
 	<script src="{$JS_ROOT}jquery.min.js"></script>
 	<script src="{$JS_ROOT}bootstrap.min.js"></script>
+	<script>var HTTP_ROOT = '{$HTTP_ROOT}';</script>
 	<script src="{$JS_ROOT}main.js"></script>
 
 	<script>
