@@ -1,5 +1,3 @@
-<hr>
-
 <form>
 	<div class="form-group">
 		<label for="pseudo">Pseudo</label>
@@ -24,7 +22,5 @@
 	</div>
 	<button type="submit" class="btn btn-default">Submit</button>
 </form>
-
-<hr>
 
 {include file="partials/comment-post.tpl"}
