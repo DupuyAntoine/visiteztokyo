@@ -95,7 +95,9 @@ class SearchController extends BaseController {
 			foreach($results as $result) {
 				$infos[] = new Info($result);
 			}
-
+			foreach ($infos as $key => $info) {
+				$info->description=substr($info->description,0, 50);
+			}
 			$vars = array_merge($vars, array(
 				'page' => $page,
 				'count_pages' => $pagination->getPagesCount(),
@@ -104,7 +106,6 @@ class SearchController extends BaseController {
 			));
 
 		}
-
 		$this->render('search', $vars);
 	}
 
