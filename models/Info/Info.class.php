@@ -101,6 +101,6 @@ class Info extends Model {
 		}
 		return new Picture($result);
 	}
-	
+
 
 }
