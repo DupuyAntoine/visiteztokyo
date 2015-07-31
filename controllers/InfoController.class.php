@@ -18,8 +18,11 @@ class InfoController extends BaseController {
 
 		$info = Info::get($id);
 
+		$comments = $info->getComments();
+
 		$vars = array(
-			'info' => $info
+			'info' => $info,
+			'comments' => $comments
 		);
 
 		$this->render('info', $vars);

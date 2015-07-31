@@ -19,8 +19,8 @@ class Info extends Model {
 	public static $type_labels = array(
 		self::INFO_TYPE_RESTAURANT => 'Restaurant',
 		self::INFO_TYPE_HOTEL => 'Hotel',
-		self::INFO_TYPE_HISTOIRE => 'Historique',
-		self::INFO_TYPE_LIEU => 'Lieu a visiter'
+		self::INFO_TYPE_LIEU => 'Lieu a visiter',
+		self::INFO_TYPE_HISTOIRE => 'Historique'
 	);
 
 	public function getId() {
@@ -47,10 +47,10 @@ class Info extends Model {
 	public function getTheme() {
 		return $this->theme;
 	}
-
 	public function getSlug() {
 		return $this->id.'-'.strtolower(Utils::cleanString($this->name));
 	}
+
 
 	public function setId($id) {
 		$this->id = $id;
@@ -84,22 +84,48 @@ class Info extends Model {
 		return '';
 	}
 
-	public static function getElements($id, $type) {
-		return self::getList('SELECT id, quarter_id, name, type, description, url, rating, theme FROM info WHERE quarter_id = :quarter_id AND type = :type ORDER BY id ASC', array('quarter_id' => $id, 'type' => $type));
-	}
-
 	public function getPictures() {
-		return array($this->getPicture());
+		return Picture::getList('SELECT id, quarter_id, src, info_id, user_id FROM photo WHERE user_id IS NULL AND quarter_id = :quarter_id AND info_id = :info_id ORDER BY id ASC', array('info_id' => $this->id, 'quarter_id' => $this->quarter_id));
 	}
 
 	public function getPicture() {
 		$result = Db::selectOne('SELECT src FROM photo WHERE info_id = :info_id', array('info_id' => $this->id));
 		if (empty($result)) {
 			$picture = new Picture();
-			$picture->src = 'defaut320x200.png';
+			$picture->src = 'http://placehold.it/320x200';
 			return $picture;
 		}
 		return new Picture($result);
+	}
+
+	public function getComments() {
+		if (empty($this->id)) {
+			throw new Exception('getComments error - Undefined comment id');
+		}
+
+		$results = (Object) Db::select('SELECT c.content, c.date, u.pseudo, p.src
+					FROM info i 
+					LEFT JOIN comment c ON c.info_id = i.id
+					LEFT JOIN user u ON c.user_id = u.id
+					LEFT JOIN photo p ON p.id = c.photo_id
+					WHERE c.info_id = i.id
+					AND i.id = :info_id
+					AND c.info_id IS NOT NULL',
+		array(
+			'info_id' => $this->id
+		));
+
+		$comments = array();
+		foreach($results as $result) {
+			$comments[] = (Object) $result;
+		}
+
+		return $comments;
+
+	}
+	
+	public static function getElements($id, $type) {
+		return self::getList('SELECT id, quarter_id, name, type, description, url, rating, theme FROM info WHERE quarter_id = :quarter_id AND type = :type ORDER BY id ASC', array('quarter_id' => $id, 'type' => $type));
 	}
 
 }

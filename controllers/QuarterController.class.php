@@ -18,11 +18,14 @@ class QuarterController extends BaseController {
 
 		$quarter = Quarter::get($id);
 
+		$comments = $quarter->getComments();
+
 		$types = Info::$type_labels;
 
 		$vars = array(
 			'quarter' => $quarter,
-			'types' => $types
+			'types' => $types,
+			'comments' => $comments
 		);
 
 		$this->render('quarter', $vars);
@@ -34,10 +37,12 @@ class QuarterController extends BaseController {
 		$quarter = Quarter::getRandom();
 		$types = Info::$type_labels;
 
+		$comments = $quarter->getComments();
+
 		$vars = array(
 			'quarter' => $quarter,
-			'types' => $types
-
+			'types' => $types,
+			'comments' => $comments
 		);
 
 		//$quarter = Quarter::get($quarter_id);
