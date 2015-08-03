@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="{$website_description}">
 	<meta name="author" content="{$author}">
+	<link rel="icon" type="image/png" href="{$IMG_ROOT}favicon.png" />
 
 	<title>{$website_title} - {$title}</title>
 
