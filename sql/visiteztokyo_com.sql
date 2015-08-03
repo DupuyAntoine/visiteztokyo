@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Lun 03 Août 2015 à 20:31
+-- Généré le :  Lun 03 Août 2015 à 21:00
 -- Version du serveur :  5.6.24
 -- Version de PHP :  5.6.8
 
@@ -64,7 +64,7 @@ CREATE TABLE IF NOT EXISTS `info` (
   `adress` varchar(250) DEFAULT NULL,
   `latitude` double DEFAULT NULL,
   `longitude` double DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=93 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=94 DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `info`
@@ -156,7 +156,8 @@ INSERT INTO `info` (`id`, `quarter_id`, `name`, `type`, `description`, `url`, `r
 (86, 7, 'Kiyoyasutei', 1, 'Proche de la gare de Roppongi, Kiyoyasutei vous propose un cadre calme et la qualité du service est très populaire, par exemple à l''occasion de dîner d''affaires ou d''anniversaires. A une minute de marche de la gare de Roppongi, le restaurant fait face à la rue de Roppongi, et permet donc également un accès par voiture. \r\nC''est d''ailleurs difficile d''imaginer que vous vous trouvez à deux pas d''une gare ferroviaire lorsque vous entrez dans ce restaurant typique. Des pièces privées sont mises à votre disposition, pouvant accueillir de 2 à 35 personnes. Les chefs expérimentés de ce restaurant de qualité vous offriront un service irréprochable, que ce soit lors de la préparation de vos plats grills, sashimis, etc.\r\n\r\nLigne Hibiya, gare de Roppongi sortie 6 - 1 minute de marche.\r\nLigne Oedo, gare de Roppongi - 1 minute de marche.\r\n\r\nOuvert tous les midis de 11:30 à 14:00 (fin de service à 13:30)\r\nOuvert tous les soirs de 17:00 à 23:30 (fin de service à 22:30)\r\nFermé tous les dimanches\r\n\r\n03-3408-4889\r\n\r\n11.000 yens le repas en soirée, 1.200 le midi.\r\n\r\nLe menu en anglais est proposé.\r\n\r\n', 'http://r.gnavi.co.jp/g953106/lang/en/', NULL, 'Sashimi', '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.5291815462638!2d139.7332841!3d35.6639699!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b82b633f05d%3A0x83f8bafb5b43f3e7!2z44GN44KI44KE44GZ6YK4!5e0!3m2!1sfr!2sfr!4v1438500872284" width="100%" height="50%" frameborder="0" style="border:0" allowfullscreen></iframe>', 'Tokyo, Minato, Roppongi, 4 Chome−8-6\r\nパシフィックキャピタルプラザビルB１F', 35.6639699, 139.7332841),
 (87, 7, 'Tsurutontan\r\n', 1, 'Le restaurant Tsurutontan propose à sa clientèle une cuisine traditionnelle. Au menu, vous sont proposés de nombreux plats à base de riz (Gyudon, Oyakodon, Tendon, Katsudon, etc.), du Kaiseki (plat traditionnel). Cet établissement est également réputé pour son Udon. Nous vous conseillons l''enseigne !\r\n\r\n3-14-12, Roppongi, Minato-ku, Tokyo, 106-0032\r\n\r\nLigne Oedo, gare de Roppongi à 3 minutes à pied.\r\nLigne Hibiya, gare de Roppongi à 4 minutes à pied.\r\n\r\nOuverture toute la semaine de 11:00 à 20:00 (fin du service à 19:30).\r\n\r\n03-5786-2626\r\n\r\nRepas pour environ 2.000 yens le soir, le midi pour 1.200 yens.\r\nLe menu en anglais est proposé.\r\n\r\n\r\n', 'tsurutontan.co.jp', NULL, 'Traditionnel', '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d481.865121360007!2d139.73418996268117!3d35.66249094355653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0000000000000000%3A0x58c5b9221e6a7f14!2sTsurutontan!5e0!3m2!1sfr!2sfr!4v1438506999082" width="100%" height="50%" frameborder="0" style="border:0" allowfullscreen></iframe>', '〒106-0032 Tokyo, Minato\r\n六本木3−14−12\r\n六本木3丁目ビル', 35.6624909, 139.73419),
 (89, 7, 'UMI', 1, 'L''UMI vous propose en soirée ses plats issus de la cuisine locale et régionale, ainsi qu''un assortiment de sushis. C''est un restaurant luxueux, où vous pourrez déguster d''authentiques mets locaux. Vous sont également proposé des boissons locales (bières, vins, sake, etc).\r\n\r\nSushi, Local / Regional Cuisine (lunch: - -)\r\n\r\nRoyal building 2F, 3-9-3, Roppongi, Minato-ku, Tokyo, 106-0032\r\n\r\nLigne Hibiya, gare de Roppongi - 3 minutes de marche.\r\nLigne Oedo, gare de Roppongi - 3 minutes de marche.\r\n\r\nOuverture du lundi au vendredi de 18:00 à 4:00, le jour suivant (fin de service à 3:30)\r\nOuverture le samedi de 18:00 à 23:00 (fin de service à 22:30)\r\nFermé le dimanche\r\n\r\n03-5414-7758\r\n\r\n13.000 yens le repas.\r\n\r\nMenus en anglais, chinois simplifié, chinois traditionnel, coréen sont proposés.\r\n\r\n\r\n\r\n', 'roppongi-umi.com', NULL, 'Sushi', '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.5353486133954!2d139.73421399999998!3d35.66381800000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b9d2c41f75b%3A0xba615ab6a8a88b1b!2z5YWt5pys5pyoIOWvv-WPuCDnoqfmtbc!5e0!3m2!1sfr!2sfr!4v1438504401176" width="100%" height="50%" frameborder="0" style="border:0" allowfullscreen></iframe>', '〒106-0032 Tokyo, Minato, Roppongi, 3 Chome−9−3\r\n六本木ロイヤルビル2階', 35.663818, 139.734214),
-(92, 3, 'Tokyo Apartment by Mwerk', 2, 'Droit à l''emplacement Centre de Tokyo dans la ♡ du quartier branché de Harajuku et célèbre entre Shibuya et Shinjuku . À distance de marche des principales attractions touristiques telles que le sanctuaire Meiji , Takeshita Dori , Omotesando et Parc Yoyogi. Zone centrale , mais calme avec de nombreux restaurants et cafés . TRANSPORT Courte promenade à quatre lignes de métro, deux lignes de train JR et 4 lignes de bus , à 10 minutes en taxi à l'' aéroport Narita de Shinjuku Express ou Limousine Bus . Lumineux rempli entièrement meublé et bien équipé Studio ~ 27 m² au 2ème étage d''un petit complexe de haute qualité . GRATUIT Internet haute vitesse .', 'http://www.tokyoapartment.mwerk.org/', NULL, 'Appartement', '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25927.99785338156!2d139.71313315!3d35.67700860000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0000000000000000%3A0x609effe3feb4699a!2sTokyo+Apartment+by+Mwerk!5e0!3m2!1sfr!2sfr!4v1438625303761" width="100%" height="50%" frameborder="0" style="border:0" allowfullscreen></iframe>', '〒150-0001 東京都渋谷区\r\n神宮前2-22-2-201', 35.6770086, 139.7131332);
+(92, 3, 'Tokyo Apartment by Mwerk', 2, 'Droit à l''emplacement Centre de Tokyo dans la ♡ du quartier branché de Harajuku et célèbre entre Shibuya et Shinjuku . À distance de marche des principales attractions touristiques telles que le sanctuaire Meiji , Takeshita Dori , Omotesando et Parc Yoyogi. Zone centrale , mais calme avec de nombreux restaurants et cafés . TRANSPORT Courte promenade à quatre lignes de métro, deux lignes de train JR et 4 lignes de bus , à 10 minutes en taxi à l'' aéroport Narita de Shinjuku Express ou Limousine Bus . Lumineux rempli entièrement meublé et bien équipé Studio ~ 27 m² au 2ème étage d''un petit complexe de haute qualité . GRATUIT Internet haute vitesse .', 'http://www.tokyoapartment.mwerk.org/', NULL, 'Appartement', '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25927.99785338156!2d139.71313315!3d35.67700860000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0000000000000000%3A0x609effe3feb4699a!2sTokyo+Apartment+by+Mwerk!5e0!3m2!1sfr!2sfr!4v1438625303761" width="100%" height="50%" frameborder="0" style="border:0" allowfullscreen></iframe>', '〒150-0001 東京都渋谷区\r\n神宮前2-22-2-201', 35.6770086, 139.7131332),
+(93, 3, 'Tokyu Stay Aoyama Premier Hotel', 2, 'Situé à 2 minutes à pied de la station de métro Gaienmae, le Tokyu Stay Aoyama Premier propose des chambres élégantes dotées d''une kitchenette et d''une vue sur la ville. Vous pourrez profiter de la connexion Wi-Fi gratuite dans tout l''établissement ainsi que des boutiques et des restaurants occupant les 2 premiers étages de l''immeuble.\r\n\r\nLes chambres sont réparties entre les étages 14 et 25 et vous pourrez vous détendre en admirant la vue imprenable sur le centre de Tokyo. Vous disposerez de la climatisation, d''une télévision par satellite à écran plat, d''un coffre-fort et d''un lave-linge séchant en chambre. La kitchenette est équipée d''un four micro-ondes, d''un petit réfrigérateur et d''une bouilloire électrique. Des ustensiles de cuisine sont également fournis.\r\n\r\nVous pourrez rejoindre le quartier d''Omotesando en 10 minutes à pied. Shibuya est à seulement 2 arrêts de la station de métro Gaienmae, tandis que Ginza est accessible directement par un trajet de 15 minutes dans la direction opposée.\r\n\r\nLe café Architect propose un petit-déjeuner buffet japonais/occidental entre 7h00 et 10h00. Vous pourrez aussi savourer des cuisines italienne, chinoise et d''ailleurs au centre commercial Passage Aoyama, situé juste au-dessous de l''hôtel. Le café-bar Lounge 13 Premier offre une belle vue sur la ville.\r\n\r\nprix moyen 123€\r\n\r\n+81 3-3497-0109', 'tokyustay.co.jp', NULL, 'Appartement', '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.330852923251!2d139.71690199999998!3d35.6688546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c9c296736c3%3A0x204102d71b1ac63!2sTokyu+Stay+Aoyama+Premier+Hotel!5e0!3m2!1sfr!2sfr!4v1438627664419" width="100%" height="50%" frameborder="0" style="border:0" allowfullscreen></iframe>', '2 Chome-2-27-18 Minamiaoyama\r\nMinato, Tokyo 107-0062', 35.6688546, 139.716902);
 
 -- --------------------------------------------------------
 
@@ -170,7 +171,7 @@ CREATE TABLE IF NOT EXISTS `photo` (
   `src` varchar(100) DEFAULT NULL,
   `info_id` int(11) DEFAULT NULL,
   `user_id` int(11) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2697 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2701 DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `photo`
@@ -548,7 +549,11 @@ INSERT INTO `photo` (`id`, `quarter_id`, `src`, `info_id`, `user_id`) VALUES
 (2693, 6, 'tsukiji\\tsukiji_2.jpg', NULL, NULL),
 (2694, 6, 'tsukiji\\tsukiji_1.jpg', NULL, NULL),
 (2695, 7, 'roppongi\\roppongi_1.jpg', NULL, NULL),
-(2696, 7, 'roppongi\\roppongi_2.jpg', NULL, NULL);
+(2696, 7, 'roppongi\\roppongi_2.jpg', NULL, NULL),
+(2697, 3, 'harajuku\\hotel\\Tokyu_Stay_Aoyama_Premier\\Tokyu_Stay_Aoyama_Premier_3.gif', 93, NULL),
+(2698, 3, 'harajuku\\hotel\\Tokyu_Stay_Aoyama_Premier\\Tokyu_Stay_Aoyama_Premier_1.jpg', 93, NULL),
+(2699, 3, 'harajuku\\hotel\\Tokyu_Stay_Aoyama_Premier\\Tokyu_Stay_Aoyama_Premier_2.jpg', 93, NULL),
+(2700, 3, 'harajuku\\hotel\\Tokyu_Stay_Aoyama_Premier\\Tokyu_Stay_Aoyama_Premier.jpg', 93, NULL);
 
 -- --------------------------------------------------------
 
@@ -1165,12 +1170,12 @@ ALTER TABLE `comment`
 -- AUTO_INCREMENT pour la table `info`
 --
 ALTER TABLE `info`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=93;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=94;
 --
 -- AUTO_INCREMENT pour la table `photo`
 --
 ALTER TABLE `photo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2697;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2701;
 --
 -- AUTO_INCREMENT pour la table `photo.bkp`
 --
