@@ -15,7 +15,10 @@ theme
 
 
 <div class="col-md-6">
-  <h3>{$info->name}</h3>
+	{$info->map}
+	<br>
+  	<h3>{$info->name}</h3>
+  	<br>
 	<p>{$info->description}</p>
 </div>
 <div class="clearfix"></div>
