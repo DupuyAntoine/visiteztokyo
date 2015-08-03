@@ -10,6 +10,7 @@ class Info extends Model {
 	protected $url;
 	protected $rating;
 	protected $theme;
+	protected $map;
 
 	const INFO_TYPE_RESTAURANT = 1;
 	const INFO_TYPE_HOTEL = 2;
@@ -50,7 +51,9 @@ class Info extends Model {
 	public function getSlug() {
 		return $this->id.'-'.strtolower(Utils::cleanString($this->name));
 	}
-
+	public function getMap() {
+		return $this->map;
+	}
 
 	public function setId($id) {
 		$this->id = $id;
@@ -75,6 +78,9 @@ class Info extends Model {
 	}
 	public function setTheme($theme) {
 		$this->theme = $theme;
+	}
+	public function setMap($map) {
+		$this->map = $map;
 	}
 
 	public static function getTypeLabel($type) {
