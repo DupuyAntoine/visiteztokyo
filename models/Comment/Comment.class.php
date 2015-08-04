@@ -13,7 +13,7 @@ class Comment extends Model {
 		return $this->id;
 	}
 	public function getUserId() {
-		return $this->name;
+		return $this->user_id;
 	}
 	public function getQuarterId() {
 		return $this->quarter_id;
