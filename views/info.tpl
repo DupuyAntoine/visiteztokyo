@@ -29,6 +29,6 @@ theme
 	<a href="{$HTTP_ROOT}wall" role="button" class="btn btn-danger">Photo des membres</a>
 </div>
 
-{include file="partials/comment.tpl"}
+{include file="partials/comment.tpl" info_id=$info->id}
 
 {include file="partials/footer.tpl"}
