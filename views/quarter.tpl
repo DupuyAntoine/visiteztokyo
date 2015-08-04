@@ -36,6 +36,6 @@
 
 <div class="clearfix"></div>
 
-{include file="partials/comment.tpl"}
+{include file="partials/comment.tpl" quarter_id=$quarter->id}
 
 {include file="partials/footer.tpl"}
