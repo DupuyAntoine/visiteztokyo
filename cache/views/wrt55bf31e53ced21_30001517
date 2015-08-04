@@ -1,0 +1,49 @@
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-08-03 11:18:29
+         compiled from "C:\xampp\htdocs\visiteztokyo\views\partials\comment-post.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:2758955bf31e53c13c5-63118825%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '0f58ab3826f01b676763973224db447b125216d9' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\visiteztokyo\\views\\partials\\comment-post.tpl',
+      1 => 1438355551,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '2758955bf31e53c13c5-63118825',
+  'function' => 
+  array (
+  ),
+  'variables' => 
+  array (
+    'comments' => 0,
+    'comment' => 0,
+  ),
+  'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.21-dev',
+  'unifunc' => 'content_55bf31e53ce744_18432388',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_55bf31e53ce744_18432388')) {function content_55bf31e53ce744_18432388($_smarty_tpl) {?><?php if (!empty($_smarty_tpl->tpl_vars['comments']->value)) {?>
+<?php  $_smarty_tpl->tpl_vars['comment'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['comment']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['comments']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['comment']->key => $_smarty_tpl->tpl_vars['comment']->value) {
+$_smarty_tpl->tpl_vars['comment']->_loop = true;
+?>
+<hr>
+
+<div class="list-group">
+	<div class="col-md-8">
+		<!-- <a href="#" class="list-group-item"> -->
+		<h4 class="list-group-item-heading"><?php echo $_smarty_tpl->tpl_vars['comment']->value->pseudo;?>
+</h4>
+		<!-- </a> -->
+		<p class="list-group-item-text"><?php echo $_smarty_tpl->tpl_vars['comment']->value->content;?>
+</p>
+	</div>
+	<div class="col-md-4">
+		<img height="60" width="60" src="" align="right">
+	</div>
+</div>
+<?php } ?>
+<?php }?><?php }} ?>

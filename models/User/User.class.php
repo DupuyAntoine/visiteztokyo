@@ -2,12 +2,13 @@
 class User extends Model {
 
 	protected $id;
-	protected $fb_id;
+	protected $pseudo;
 	protected $firstname;
 	protected $lastname;
-	protected $pseudo;
 	protected $email;
+	protected $confirm_email;
 	protected $password;
+	protected $confirm_password;
 	protected $status;
 	protected $newsletter;
 	protected $cgu;
@@ -24,9 +25,9 @@ class User extends Model {
 	/* Getters */
 	public function getId() {
 		return $this->id;
-	}
-	public function getFbId() {
-		return $this->fb_id;
+	}	
+	public function getPseudo() {
+		return $this->pseudo;
 	}
 	public function getFirstname() {
 		return $this->firstname;
@@ -34,14 +35,18 @@ class User extends Model {
 	public function getLastname() {
 		return $this->lastname;
 	}
-	public function getPseudo() {
-		return $this->pseudo;
-	}
+
 	public function getEmail() {
 		return $this->email;
 	}
+	public function getConfirmEmail() {
+		return $this->confirm_email;
+	}
 	public function getPassword() {
 		return $this->password;
+	}
+	public function getConfirmPassword() {
+		return $this->confirm_password;
 	}
 	public function getStatus() {
 		return $this->status;
@@ -60,9 +65,7 @@ class User extends Model {
 	public function setId($id) {
 		$this->id = $id;
 	}
-	public function setFbId($fb_id) {
-		$this->fb_id = $fb_id;
-	}
+
 	public function setFirstname($firstname) {
 		if (empty($firstname)) {
 			throw new Exception(Lang::_('You must fill your firstname'));
@@ -87,11 +90,23 @@ class User extends Model {
 		}
 		$this->email = $email;
 	}
+	public function setConfirmemail($confirm_email) {
+		if (empty($confirm_email) || !filter_var($confirm_email, FILTER_VALIDATE_EMAIL)) {
+			throw new Exception(Lang::_('You must provide a valid email'));
+		}
+		$this->confirm_email = $confirm_email;
+	}
 	public function setPassword($password) {
 		if (strlen($password) < 6) {
 			throw new Exception(Lang::_('You must profide a password with at least 6 chars'));
 		}
 		$this->password = $password;
+	}	
+	public function setConfirmPassword($confirm_password) {
+		if (strlen($confirm_password) < 6) {
+			throw new Exception(Lang::_('You must profide a password with at least 6 chars'));
+		}
+		$this->confirm_password = $confirm_password;
 	}
 	public function setStatus($status) {
 		$this->status = $status;
@@ -200,6 +215,78 @@ class User extends Model {
 
 		return $form;
 	}
+	public function getForm($type, $action, $request, $isPost = false, $errors = array()) {
+
+		$form = new Form($id = 'form-user', $name = 'form-user', $action, 'POST', 'form-horizontal', $isPost);
+		$form->addField('id', Lang::_('Id'), 'text', $this->_getfieldvalue('id', $type, $request), true, '', @$errors['id']);
+		$form->addField('firstname', Lang::_('Firstname'), 'text', $this->_getfieldvalue('firstname', $type, $request), true, '', @$errors['firstname']);
+		$form->addField('lastname', Lang::_('Lastname'), 'text', $this->_getfieldvalue('lastname', $type, $request), true, '', @$errors['lastname']);
+		$form->addField('pseudo', Lang::_('Pseudo'), 'text', $this->_getfieldvalue('pseudo', $type, $request), true, '', @$errors['pseudo']);
+		$form->addField('email', Lang::_('Email'), 'email', $this->_getfieldvalue('email', $type, $request), true, '', @$errors['email']);
+		$form->addField('confirm_email', Lang::_('Confirm email'), 'email', $this->_getfieldvalue('confirm_email', $type, $request), true, '', @$errors['confirm_email']);
+		$form->addField('password', Lang::_('Password'), 'password', '', true, '', @$errors['password']);
+		$form->addField('confirm_password', Lang::_('Confirm password'), 'password', '', true, '', @$errors['confirm_password']);
+		$form->addField('newsletter', Lang::_('Subscribe to the newsletter'), 'checkbox', $this->_getfieldvalue('newsletter', $type, $request), false, '');
+		$form->addField('cgu', Lang::_('Accept the terms of service'), 'checkbox', $this->_getfieldvalue('cgu', $type, $request), true, '', @$errors['cgu']);
+
+		
+		return $form->render();
+	}
+
+	public function insert() {
+
+		return Db::insert(
+			'INSERT INTO user (firstname, lastname, pseudo, email, confirm_email , password , confirm_password , newsletter , cgu)
+		 	 VALUES (:firstname, :lastname, :pseudo, :email, :confirm_email , :password , :confirm_password , :newsletter , :cgu)',
+			array(
+				'id' => (int) $this->id,
+				'firstname' => $this->firstname,
+				'lastname' => $this->lastname,
+				'pseudo' => $this->pseudo,
+				'email' => $this->email,
+				'confirm_email' => $this->confirm_email,
+				'password' => $this->password,
+				'confirm_password' => $this->confirm_password,
+				'newsletter' => (int) $this->newsletter,
+				'cgu' => (int) $this->cgu,
+			)
+		);
+	}
+
+	public function update() {
+
+		if (empty($this->id)) {
+			throw new Exception('Update error - Undefined comment id');
+		}
+
+		return Db::update(
+			'UPDATE user SET id = :id, firstname = :firstname, lastname = :lastname, pseudo = :pseudo, email = :email ,  confirm_email = :confirm_email, password = :password, confirm_password = :confirm_password , newsletter = :newsletter, cgu = :cgu
+		 	 WHERE id = :id',
+			array(
+				'id' => (int) $this->id,
+				'firstname' => $this->firstname,
+				'lastname' => $this->lastname,
+				'pseudo' => $this->pseudo,
+				'email' => $this->email,
+				'confirm_email' => $this->confirm_email,
+				'password' => $this->password,
+				'confirm_password' => $this->confirm_password,
+				'newsletter' => (int) $this->newsletter,
+				'cgu' => (int) $this->cgu,
+			)
+		);
+	}
+
+	public function delete() {
+
+		if (empty($this->id)) {
+			throw new Exception('Delete error - Undefined comment id');
+		}
+
+		return Db::delete('DELETE FROM comment WHERE id = :id', array('id' => $this->id));
+	}
+
+
 
 	public function register() {
 		return Db::insert(

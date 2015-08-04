@@ -17,20 +17,33 @@ class AdminController extends BaseAdminController {
 		$this->render('admin/index', $vars);
 	}
 
-	public function post() {
-		return $this->base_list('post', array('id', 'title', 'author', 'date'));
+	public function quarter() {
+		return $this->base_list('quarter', array('id', 'name', 'type', 'description' , 'map'));
 	}
 
-	public function post_action() {
-		return $this->base_action('post');
+	public function quarter_action() {
+		return $this->base_action('quarter');
+	}
+	public function info() {
+		return $this->base_list('info', array('id', 'quarter_id', 'name',  'type' , 'description' , 'url' , 'rating' , 'theme' , 'map' ));
 	}
 
-	public function contact() {
-		return $this->base_list('contact', array('id', 'firstname', 'lastname', 'message'), 'lastname, firstname');
+	public function info_action() {
+		return $this->base_action('info');
+	}
+	public function comment() {
+		return $this->base_list('comment', array('id', 'user_id' , 'quarter_id' ,  'content' , 'info_id' , 'photo_id'));
 	}
 
-	public function contact_action() {
-		return $this->base_action('contact');
+	public function comment_action() {
+		return $this->base_action('comment');
+	}
+
+	public function user() {
+		return $this->base_list('user', array('id' ,'pseudo' ,'firstname' , 'lastname' , 'email' , 'password' , 'status' , 'newsletter' , 'cgu' , 'register_date' ));
+	}
+	public function user_action() {
+		return $this->base_action('user');
 	}
 
 	public function search() {
@@ -39,4 +52,5 @@ class AdminController extends BaseAdminController {
 
 		$this->render('admin/search', $vars);
 	}
+
 }
