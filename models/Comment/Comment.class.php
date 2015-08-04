@@ -33,29 +33,6 @@ class Comment extends Model {
 		return Picture::get($this->photo_id);
 	}
 
-	public function insert() {
-
-		$vars = array(
-			'id' => (int) $this->id,
-			'user_id' => (int) $this->user_id,
-			'content' => $this->content,			
-			'photo_id' => (int) $this->photo_id,
-		);
-
-		if (!empty($this->quarter_id)) {
-			$vars['quarter_id'] = (int) $this->quarter_id;			
-		}
-		if (!empty($this->info_id)) {
-			$vars['info_id'] = (int) $this->info_id;
-		}
-
-		return Db::insert(
-			'INSERT INTO comment (id, user_id, content, quarter_id, info_id, photo_id, date)
-		 	 VALUES (:id, :user_id, :content, '.(!empty($this->quarter_id) ? ':quarter_id' : 'NULL').', '.(!empty($this->info_id) ? ':info_id' : 'NULL').', :photo_id, NOW())', 
-		 	 $vars			
-		);
-	}
-
 
 	public function setId($id) {
 		$this->id = $id;
