@@ -50,7 +50,7 @@
 <div class="row">
 
 	{foreach $infos as $info}
-	<div class="col-sm-6 col-md-4 col-lg-3">
+	<div class="col-sm-6 col-md-4 col-lg-4">
 
 		<div class="thumbnail">
 			<img src="{$info->getPicture()->src}" alt="image" class="img-responsive" style="width: 100%; max-height: 180px">
