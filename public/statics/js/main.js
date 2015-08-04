@@ -4,7 +4,7 @@ jQuery(document).ready(function($) {
 	// TEMPLATE WALL
 	//
 	$('#myCarousel').carousel({
-		interval: 5000
+		interval: 60000
 	});
 	// Handles the carousel thumbnails
 	$('[id^=carousel-selector-]').click(function () {

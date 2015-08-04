@@ -3,8 +3,8 @@
 <br>
 
 <div id="main_area">
-	<!-- Slider -->
-	<div class="row">
+
+	<div class="row"><!-- Slider -->
 
 		<div class="col-sm-6" id="slider-thumbs">
 			<!-- Bottom switcher of slider -->
@@ -16,7 +16,7 @@
 					<li class="col-sm-3">
 						<a class="thumbnail" id="carousel-selector-{$i}"><img src="{$picture->src}" style="height: 120px"></a>
 					</li>
-					{if $i == 17}
+					{if $i == 19}
 						{break}
 					{/if}
 					{assign var=i value=$i + 1}
@@ -40,7 +40,7 @@
 									<div class="item{if $i == 0} active{/if}" data-slide-number="{$i}">
 										<img src="{$picture->src}" style="height: 700px">
 									</div>
-									{if $i == 17}
+									{if $i == 19}
 										{break}
 									{/if}
 									{assign var=i value=$i + 1}
@@ -59,7 +59,17 @@
 				</div>
 			</div>
 		</div>
-		<!--/Slider-->
+
+	</div><!-- fin row Slider-->
+
+	<div class="row">
+
+		<div class="col-md-12 text-center">
+
+			{include file="partials/pagination.tpl" uri="{$HTTP_ROOT}wall/"}
+
+		</div>
+
 	</div>
 
 </div>

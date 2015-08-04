@@ -26,7 +26,10 @@ $routes = array(
         'target' => 'elements',
         'action' => 'results'
     ),
-
+	'wall/?([0-9]*)' => array(
+        'target' => 'wall',
+        'action' => 'results'
+    ),
 	'login' => array(
 		'target' => 'user',
 		'action' => 'login'
