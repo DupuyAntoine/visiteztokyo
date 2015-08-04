@@ -72,4 +72,5 @@ class Elements extends Model {
 		return self::getList('SELECT id, quarter_id, name, type, description, url, rating, theme FROM info WHERE quarter_id = :quarter_id AND type = :type ORDER BY id ASC', array('quarter_id' => $id, 'type' => $type));
 	}
 
+
 }

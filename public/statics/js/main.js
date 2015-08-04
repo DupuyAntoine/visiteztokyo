@@ -1,7 +1,7 @@
 jQuery(document).ready(function($) {
 
 	//
-	// template WALL
+	// TEMPLATE WALL
 	//
 	$('#myCarousel').carousel({
 		interval: 5000
@@ -24,11 +24,12 @@ jQuery(document).ready(function($) {
 	});
 
 	//
-	// template elements
+	// TEMPLATE ELEMENTS
 	//
 	$('#form-elements').submit(function() {
 		$(this).attr('action', HTTP_ROOT+'elements/'+$('#quarter', $(this)).val()+'-'+$('#label', $(this)).val());
 		return true;
 	});
+
 
 }); // fin document.ready
