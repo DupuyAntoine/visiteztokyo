@@ -13,10 +13,14 @@ class InfoController extends BaseController {
 		$id = (int) $this->getParam(0, 0);
 
 		if (empty($id)) {
-			exit('Undefined info id');
+			throw new Exception('Undefined info id');
 		}
 
 		$info = Info::get($id);
+
+		if (empty($info)) {
+			throw new Exception('Undefined info');			
+		}
 
 		$comments = $info->getComments();
 
