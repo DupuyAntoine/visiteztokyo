@@ -236,17 +236,15 @@ class User extends Model {
 	public function insert() {
 
 		return Db::insert(
-			'INSERT INTO user (firstname, lastname, pseudo, email, confirm_email , password , confirm_password , newsletter , cgu)
-		 	 VALUES (:firstname, :lastname, :pseudo, :email, :confirm_email , :password , :confirm_password , :newsletter , :cgu)',
+			'INSERT INTO user (firstname, lastname, pseudo, email,  password , newsletter , cgu)
+		 	 VALUES (:firstname, :lastname, :pseudo, :email , :password , :newsletter , :cgu)',
 			array(
 				'id' => (int) $this->id,
 				'firstname' => $this->firstname,
 				'lastname' => $this->lastname,
 				'pseudo' => $this->pseudo,
 				'email' => $this->email,
-				'confirm_email' => $this->confirm_email,
 				'password' => $this->password,
-				'confirm_password' => $this->confirm_password,
 				'newsletter' => (int) $this->newsletter,
 				'cgu' => (int) $this->cgu,
 			)
@@ -260,7 +258,7 @@ class User extends Model {
 		}
 
 		return Db::update(
-			'UPDATE user SET id = :id, firstname = :firstname, lastname = :lastname, pseudo = :pseudo, email = :email ,  confirm_email = :confirm_email, password = :password, confirm_password = :confirm_password , newsletter = :newsletter, cgu = :cgu
+			'UPDATE user SET id = :id, firstname = :firstname, lastname = :lastname, pseudo = :pseudo, email = :email , password = :password, newsletter = :newsletter, cgu = :cgu
 		 	 WHERE id = :id',
 			array(
 				'id' => (int) $this->id,
@@ -268,9 +266,7 @@ class User extends Model {
 				'lastname' => $this->lastname,
 				'pseudo' => $this->pseudo,
 				'email' => $this->email,
-				'confirm_email' => $this->confirm_email,
 				'password' => $this->password,
-				'confirm_password' => $this->confirm_password,
 				'newsletter' => (int) $this->newsletter,
 				'cgu' => (int) $this->cgu,
 			)
