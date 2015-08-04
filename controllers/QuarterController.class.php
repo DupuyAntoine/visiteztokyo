@@ -1,4 +1,4 @@
-+<?php
+<?php
 
 class QuarterController extends BaseController {
 

@@ -11,17 +11,17 @@ class Info extends Model {
 	protected $rating;
 	protected $theme;
 	protected $map;
+	protected $longitude;
+	protected $latitude;
 
 	const INFO_TYPE_RESTAURANT = 1;
 	const INFO_TYPE_HOTEL = 2;
-	const INFO_TYPE_HISTOIRE = 3;
 	const INFO_TYPE_LIEU = 4;
 
 	public static $type_labels = array(
 		self::INFO_TYPE_RESTAURANT => 'Restaurant',
 		self::INFO_TYPE_HOTEL => 'Hotel',
-		self::INFO_TYPE_LIEU => 'Lieu a visiter',
-		self::INFO_TYPE_HISTOIRE => 'Historique'
+		self::INFO_TYPE_LIEU => 'Lieu a visiter'
 	);
 
 	public function getId() {
@@ -54,6 +54,12 @@ class Info extends Model {
 	public function getMap() {
 		return $this->map;
 	}
+	public function getLongitude() {
+		return $this->longitude;
+	}
+	public function getLatitude() {
+		return $this->latitude;
+	}
 
 	public function setId($id) {
 		$this->id = $id;
@@ -82,6 +88,12 @@ class Info extends Model {
 	public function setMap($map) {
 		$this->map = $map;
 	}
+	public function setLongitude($longitude) {
+		$this->longitude = $longitude;
+	}
+	public function setLatitude($latitude) {
+		$this->latitude = $latitude;
+	}
 
 	public static function getTypeLabel($type) {
 		if (!empty(self::$type_labels[$type])) {
@@ -98,7 +110,7 @@ class Info extends Model {
 		$result = Db::selectOne('SELECT src FROM photo WHERE info_id = :info_id', array('info_id' => $this->id));
 		if (empty($result)) {
 			$picture = new Picture();
-			$picture->src = 'http://placehold.it/320x200';
+			$picture->src = 'http://placehold.it/60x60';
 			return $picture;
 		}
 		return new Picture($result);

@@ -20,21 +20,22 @@
 
 <hr>
 
+<div class="row col-12" style="text-align : center">
+	{foreach $types as $type_id => $type_label}
+	<div class="col-xs-6 col-md-4 col-lg-4">
+		<div class="thumbnail">
+			<img src="{$quarter->getRandomInfoPicture($type_id)->src}" alt="" class="img-responsive" style="width: 100%; max-height: 180px">
+			<div class="caption">
+				<h4 class="text-center"><a href="{$HTTP_ROOT}elements/{$quarter->id}-{Utils::cleanString($type_label)}">{$type_label}</a></h4>
 
-{foreach $types as $type_id => $type_label}
-<div class="col-sm-6 col-md-4 col-lg-3">
-	<div class="thumbnail">
-		<img src="{$quarter->getRandomInfoPicture($type_id)->src}" alt="" class="img-responsive" style="width: 100%; max-height: 180px">
-		<div class="caption">
-			<h4 class="text-center"><a href="{$HTTP_ROOT}elements/{$quarter->id}-{Utils::cleanString($type_label)}">{$type_label}</a></h4>
-			
+			</div>
 		</div>
 	</div>
+	{/foreach}
 </div>
-{/foreach}
 
 <div class="clearfix"></div>
 
-{include file="partials/comment.tpl"}
+{include file="partials/comment.tpl" quarter_id=$quarter->id}
 
 {include file="partials/footer.tpl"}
