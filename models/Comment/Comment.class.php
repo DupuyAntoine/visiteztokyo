@@ -27,6 +27,10 @@ class Comment extends Model {
 	public function getPhotoId() {
 		return $this->photo_id;
 	}
+	public function getPicture() {
+		$result = Db::selectOne('SELECT src FROM photo WHERE user_id = :user_id', array('user_id' => $this->id));
+		return new Picture($result);
+	}
 
 	public function setId($id) {
 		$this->id = $id;
