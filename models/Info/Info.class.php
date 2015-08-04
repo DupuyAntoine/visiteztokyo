@@ -11,6 +11,8 @@ class Info extends Model {
 	protected $rating;
 	protected $theme;
 	protected $map;
+	protected $longitude;
+	protected $latitude;
 
 	const INFO_TYPE_RESTAURANT = 1;
 	const INFO_TYPE_HOTEL = 2;
@@ -55,6 +57,12 @@ class Info extends Model {
 	public function getMap() {
 		return $this->map;
 	}
+	public function getLongitude() {
+		return $this->longitude;
+	}
+	public function getLatitude() {
+		return $this->latitude;
+	}
 
 	public function setId($id) {
 		$this->id = $id;
@@ -82,6 +90,12 @@ class Info extends Model {
 	}
 	public function setMap($map) {
 		$this->map = $map;
+	}
+	public function setLongitude($longitude) {
+		$this->longitude = $longitude;
+	}
+	public function setLatitude($latitude) {
+		$this->latitude = $latitude;
 	}
 
 	public static function getTypeLabel($type) {

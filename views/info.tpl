@@ -15,7 +15,7 @@ theme
 
 
 <div class="col-md-6">
-	{$info->map}
+	{include file="partials/map.tpl" entity_name="info"}
 	<br>
   	<h3>{$info->name}</h3>
   	<br>
@@ -29,6 +29,6 @@ theme
 	<a href="{$HTTP_ROOT}wall" role="button" class="btn btn-danger">Photo des membres</a>
 </div>
 
-{include file="partials/comment.tpl"}
+{include file="partials/comment.tpl" info_id=$info->id}
 
 {include file="partials/footer.tpl"}
