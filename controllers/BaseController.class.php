@@ -16,6 +16,7 @@ abstract class BaseController extends Controller {
 			'current_page' => $this->route,
 			'target' => $this->target,
 			'action' => $this->action,
+			'params' => $this->getParams(),
 			'lang' => $this->lang->getUserLang(),
 			'website_title' => 'Visitez Tokyo',
 			'website_description' => 'Website Description',
@@ -63,6 +64,6 @@ abstract class BaseController extends Controller {
 
 		$this->response->addVars($vars);
 	}
-	
+
 
 }

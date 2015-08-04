@@ -110,7 +110,7 @@ class Info extends Model {
 		}
 
 		$results = (Object) Db::select('SELECT c.content, c.date, u.pseudo, p.src
-					FROM info i 
+					FROM info i
 					LEFT JOIN comment c ON c.info_id = i.id
 					LEFT JOIN user u ON c.user_id = u.id
 					LEFT JOIN photo p ON p.id = c.photo_id
@@ -129,7 +129,7 @@ class Info extends Model {
 		return $comments;
 
 	}
-	
+
 	public static function getElements($id, $type) {
 		return self::getList('SELECT id, quarter_id, name, type, description, url, rating, theme FROM info WHERE quarter_id = :quarter_id AND type = :type ORDER BY id ASC', array('quarter_id' => $id, 'type' => $type));
 	}

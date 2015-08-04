@@ -7,7 +7,7 @@
 		<br><br>
 
 		<!-- construction route/slug dans main.js -->
-		<form id="form-elements" class="form-inline" action="{$HTTP_ROOT}elements" method="POST">
+		<form id="form-elements" class="form-inline" action="" method="POST">
 
 			<div class="form-group">
 				<label class="sr-only"></label>
@@ -63,6 +63,16 @@
 
 	</div>
 	{/foreach}
+
+</div>
+
+<div class="row">
+
+	<div class="col-md-12 text-center">
+
+		{include file="partials/pagination.tpl" uri="{$HTTP_ROOT}elements/{$id}-{Utils::cleanString($type_label)}/"}
+
+	</div>
 
 </div>
 
