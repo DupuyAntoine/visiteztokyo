@@ -15,7 +15,7 @@ theme
 
 
 <div class="col-md-6">
-	{$info->map}
+	{include file="partials/map.tpl" entity_name="info"}
 	<br>
   	<h3>{$info->name}</h3>
   	<br>

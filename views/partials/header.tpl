@@ -16,7 +16,6 @@
 </head>
 <body>
 	<header style="text-align : center" >
-		<a href="{$HTTP_ROOT}home/index"><img src="{$IMG_ROOT}logo.jpg" alt="logo"/></a>
 
 		{include file="partials/navbar.tpl"}
 
