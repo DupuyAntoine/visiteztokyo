@@ -50,14 +50,31 @@ $routes = array(
 	##### Backoffice ####
 
 	/* Contact */
-	'admin/contact/([a-zA-Z-_]+)/?([0-9]*)' => array(
+	'admin/user/([a-zA-Z-_]+)/?([0-9]*)' => array(
 		'target' => 'admin',
-		'action' => 'contact_action'
+		'action' => 'user_action'
 	),
 
 	/* Post */
 	'admin/post/([a-zA-Z-_]+)/?([0-9]*)' => array(
 		'target' => 'admin',
 		'action' => 'post_action'
-	)
+	),
+
+	'admin/comment/([a-zA-Z-_]+)/?([0-9]*)' => array(
+		'target' => 'admin',
+		'action' => 'comment_action'
+	),
+	'admin/quarter/([a-zA-Z-_]+)/?([0-9]*)' => array(
+		'target' => 'admin',
+		'action' => 'quarter_action'
+	),
+	'admin/user/([a-zA-Z-_]+)/?([0-9]*)' => array(
+		'target' => 'admin',
+		'action' => 'user_action'
+	),
+	'admin/info/([a-zA-Z-_]+)/?([0-9]*)' => array(
+		'target' => 'admin',
+		'action' => 'info_action'
+	),
 );

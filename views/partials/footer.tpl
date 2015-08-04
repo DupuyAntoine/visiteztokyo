@@ -1,6 +1,7 @@
 	</div><!-- /.container -->
 
 	<footer class="blog-footer">
+	
       <p style ="text-align : center">{$website_title} &copy; 2015</p>
     </footer>
 

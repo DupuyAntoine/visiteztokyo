@@ -48,6 +48,9 @@ class Info extends Model {
 	public function getTheme() {
 		return $this->theme;
 	}
+	public function getAdress() {
+		return $this->adress;
+	}
 	public function getSlug() {
 		return $this->id.'-'.strtolower(Utils::cleanString($this->name));
 	}
@@ -145,5 +148,74 @@ class Info extends Model {
 	public static function getElements($id, $type) {
 		return self::getList('SELECT id, quarter_id, name, type, description, url, rating, theme FROM info WHERE quarter_id = :quarter_id AND type = :type ORDER BY id ASC', array('quarter_id' => $id, 'type' => $type));
 	}
+public function getForm($type, $action, $request, $isPost = false, $errors = array()) {
 
+		$form = new Form($id = 'form-user', $name = 'form-user', $action, 'POST', 'form-horizontal', $isPost);
+		$form->addField('id', Lang::_('Id'), 'text', $this->_getfieldvalue('id', $type, $request), true, '', @$errors['id']);
+		$form->addField('quarter_id', Lang::_('Quarter id'), 'text', $this->_getfieldvalue('quarter_id', $type, $request), true, '', @$errors['quarter_id']);
+		$form->addField('name', Lang::_('Name'), 'text', $this->_getfieldvalue('name', $type, $request), true, '', @$errors['name']);
+		$form->addField('type', Lang::_('Type'), 'text', $this->_getfieldvalue('type', $type, $request), true, '', @$errors['type']);
+		$form->addField('description', Lang::_('Content'), 'text', $this->_getfieldvalue('description', $type, $request), true, '', @$errors['description']);
+		$form->addField('url', Lang::_('Url'), 'text', $this->_getfieldvalue('url', $type, $request), true, '', @$errors['url']);
+		$form->addField('rating', Lang::_('Rating'), 'text', '', true, '', @$errors['rating']);
+		$form->addField('theme', Lang::_('Theme'), 'text', $this->_getfieldvalue('theme', $type, $request), true, '', @$errors['theme']);
+		$form->addField('map', Lang::_('Map'), 'text', $this->_getfieldvalue('map', $type, $request), false, '');
+
+		
+		return $form->render();
+	}
+
+	public function insert() {
+
+		return Db::insert(
+			'INSERT INTO info (id, quarter_id , name, type , description , url , rating , theme , map)
+		 	 VALUES (:id, :quarter_id , :name, :type , :description , :url , :rating , :theme , :map)',
+			array(
+				'id' => (int) $this->id,
+                'quarter_id' => $this->quarter_id,
+                'name' => $this->name, 
+                'type' => $this->type,
+                'description' => $this->description,
+                'url' => $this->url,
+                'rating' => $this->rating,
+                'theme' => $this->theme,
+                'map' => $this->map,
+
+
+			)
+		);
+	}
+
+	public function update() {
+
+		if (empty($this->id)) {
+			throw new Exception('Update error - Undefined comment id');
+		}
+
+		return Db::update(
+			'UPDATE info SET id = :id, quarter_id = :quarter_id, name = :name, type = :type, description = :description ,  url = :url, rating = :rating, theme = :theme , map = :map
+		 	 WHERE id = :id',
+			array(
+				'id' => (int) $this->id,
+                'quarter_id' => $this->quarter_id,
+                'name' => $this->name, 
+                'type' => $this->type,
+                'description' => $this->description,
+                'url' => $this->url,
+                'rating' => $this->rating,
+                'theme' => $this->theme,
+                'map' => $this->map,
+
+			)
+		);
+	}
+
+	public function delete() {
+
+		if (empty($this->id)) {
+			throw new Exception('Delete error - Undefined info id');
+		}
+
+		return Db::delete('DELETE FROM info WHERE id = :id', array('id' => $this->id));
+	}
 }

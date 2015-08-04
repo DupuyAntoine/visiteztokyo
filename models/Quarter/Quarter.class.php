@@ -101,7 +101,60 @@ class Quarter extends Model {
 	public static function getRandom() {
 		return new Quarter(Db::selectOne('SELECT * FROM quarter ORDER BY RAND() LIMIT 1'));
 	}
+	public function getForm($type, $action, $request, $isPost = false, $errors = array()) {
 
+		$form = new Form($id = 'form-quarter', $name = 'form-quarter', $action, 'POST', 'form-horizontal', $isPost);
+		$form->addField('id', Lang::_('User Id'), 'text', $this->_getfieldvalue('id', $type, $request), true, '', @$errors['user_id']);
+		$form->addField('name', Lang::_('Name'), 'text', $this->_getfieldvalue('name', $type, $request), false, '', @$errors['quarter_id']);
+		$form->addField('type', Lang::_('Type'), 'text', $this->_getfieldvalue('type', $type, $request), false, '', @$errors['type']);
+		$form->addField('description', Lang::_('Content'), 'text', $this->_getfieldvalue('description', $type, $request), true, '', @$errors['description']);
+		$form->addField('map', Lang::_('Map'), 'text', $this->_getfieldvalue('map', $type, $request), false);
+		
+		return $form->render();
+	}
+
+	public function insert() {
+
+		return Db::insert(
+			'INSERT INTO quarter (id, name, type, description , map)
+		 	 VALUES (:id, :name, :type, :description , :map)',
+			array(
+				'id' => $this->id,
+				'name' => $this->name,
+				'type' => $this->type,
+				'description' => $this->description,
+				'map' => $this->map
+			)
+		);
+	}
+
+	public function update() {
+
+		if (empty($this->id)) {
+			throw new Exception('Update error - Undefined quarter id');
+		}
+
+		return Db::update(
+			'UPDATE quarter SET name = :name, type = :type, description = :description, map = :map
+		 	 WHERE id = :id',
+			array(
+				'name' => $this->name,
+				'type' => $this->type,
+				'description' => $this->description,
+				'map' => $this->map,
+				'id' => (int) $this->id
+			)
+		);
+	}
+
+	public function delete() {
+
+		if (empty($this->id)) {
+			throw new Exception('Delete error - Undefined quarter id');
+		}
+
+		return Db::delete('DELETE FROM quarter WHERE id = :id', array('id' => $this->id));
+	}
 
 }
 
