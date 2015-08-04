@@ -14,14 +14,12 @@ class Info extends Model {
 
 	const INFO_TYPE_RESTAURANT = 1;
 	const INFO_TYPE_HOTEL = 2;
-	const INFO_TYPE_HISTOIRE = 3;
 	const INFO_TYPE_LIEU = 4;
 
 	public static $type_labels = array(
 		self::INFO_TYPE_RESTAURANT => 'Restaurant',
 		self::INFO_TYPE_HOTEL => 'Hotel',
-		self::INFO_TYPE_LIEU => 'Lieu a visiter',
-		self::INFO_TYPE_HISTOIRE => 'Historique'
+		self::INFO_TYPE_LIEU => 'Lieu a visiter'
 	);
 
 	public function getId() {
@@ -110,7 +108,7 @@ class Info extends Model {
 		}
 
 		$results = (Object) Db::select('SELECT c.content, c.date, u.pseudo, p.src
-					FROM info i 
+					FROM info i
 					LEFT JOIN comment c ON c.info_id = i.id
 					LEFT JOIN user u ON c.user_id = u.id
 					LEFT JOIN photo p ON p.id = c.photo_id
@@ -129,7 +127,7 @@ class Info extends Model {
 		return $comments;
 
 	}
-	
+
 	public static function getElements($id, $type) {
 		return self::getList('SELECT id, quarter_id, name, type, description, url, rating, theme FROM info WHERE quarter_id = :quarter_id AND type = :type ORDER BY id ASC', array('quarter_id' => $id, 'type' => $type));
 	}
