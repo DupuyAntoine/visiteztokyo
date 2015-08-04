@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Lun 03 Août 2015 à 21:00
+-- Généré le :  Mar 04 Août 2015 à 09:39
 -- Version du serveur :  5.6.24
 -- Version de PHP :  5.6.8
 
@@ -171,7 +171,7 @@ CREATE TABLE IF NOT EXISTS `photo` (
   `src` varchar(100) DEFAULT NULL,
   `info_id` int(11) DEFAULT NULL,
   `user_id` int(11) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2701 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2712 DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `photo`
@@ -553,7 +553,18 @@ INSERT INTO `photo` (`id`, `quarter_id`, `src`, `info_id`, `user_id`) VALUES
 (2697, 3, 'harajuku\\hotel\\Tokyu_Stay_Aoyama_Premier\\Tokyu_Stay_Aoyama_Premier_3.gif', 93, NULL),
 (2698, 3, 'harajuku\\hotel\\Tokyu_Stay_Aoyama_Premier\\Tokyu_Stay_Aoyama_Premier_1.jpg', 93, NULL),
 (2699, 3, 'harajuku\\hotel\\Tokyu_Stay_Aoyama_Premier\\Tokyu_Stay_Aoyama_Premier_2.jpg', 93, NULL),
-(2700, 3, 'harajuku\\hotel\\Tokyu_Stay_Aoyama_Premier\\Tokyu_Stay_Aoyama_Premier.jpg', 93, NULL);
+(2700, 3, 'harajuku\\hotel\\Tokyu_Stay_Aoyama_Premier\\Tokyu_Stay_Aoyama_Premier.jpg', 93, NULL),
+(2701, 1, 'Akihabara\\restaurant\\Kanda_Yabusoba\\Kanda_Yabusoba.jpg', 10, NULL),
+(2702, 1, 'Akihabara\\restaurant\\Kanda_Yabusoba\\Kanda_Yabusoba_1.jpg', 10, NULL),
+(2703, 1, 'Akihabara\\restaurant\\Kanda_Yabusoba\\Kanda_Yabusoba_2.jpg', 10, NULL),
+(2704, 1, 'Akihabara\\restaurant\\Kanda_Yabusoba\\Kanda_Yabusoba_3.jpg', 10, NULL),
+(2705, 1, 'Akihabara\\restaurant\\Kanda_Yabusoba\\Kanda_Yabusoba_4.jpg', 10, NULL),
+(2706, 1, 'Akihabara\\restaurant\\Kanda_Yabusoba\\Kanda_Yabusoba_5.jpg', 10, NULL),
+(2707, 1, 'Akihabara\\restaurant\\Kanda_Yabusoba\\Kanda_Yabusoba_6.jpg', 10, NULL),
+(2708, 1, 'Akihabara\\restaurant\\Kanda_Yabusoba\\Kanda_Yabusoba_7.jpg', 10, NULL),
+(2709, 1, 'Akihabara\\restaurant\\Kanda_Yabusoba\\Kanda_Yabusoba_8.jpg', 10, NULL),
+(2710, 1, 'Akihabara\\restaurant\\Kanda_Yabusoba\\Kanda_Yabusoba_9.jpg', 10, NULL),
+(2711, 1, 'Akihabara\\restaurant\\Kanda_Yabusoba\\access_image01.gif', 10, NULL);
 
 -- --------------------------------------------------------
 
@@ -1175,7 +1186,7 @@ ALTER TABLE `info`
 -- AUTO_INCREMENT pour la table `photo`
 --
 ALTER TABLE `photo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2701;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2712;
 --
 -- AUTO_INCREMENT pour la table `photo.bkp`
 --
