@@ -56,6 +56,7 @@ class Comment extends Model {
 	public function getForm($type, $action, $request, $isPost = false, $errors = array()) {
 
 		$form = new Form($id = 'form-comment', $name = 'form-comment', $action, 'POST', 'form-horizontal', $isPost);
+		$form->addField('id', Lang::_('Id'), 'text', $this->_getfieldvalue('id', $type, $request), true, '', @$errors['id']);
 		$form->addField('user_id', Lang::_('User Id'), 'text', $this->_getfieldvalue('user_id', $type, $request), true, '', @$errors['user_id']);
 		$form->addField('quarter_id', Lang::_('Quarter Id'), 'text', $this->_getfieldvalue('quarter_id', $type, $request), false, '', @$errors['quarter_id']);
 		$form->addField('info_id', Lang::_('Info Id'), 'text', $this->_getfieldvalue('info_id', $type, $request), false, '', @$errors['info_id']);
@@ -68,15 +69,15 @@ class Comment extends Model {
 	public function insert() {
 
 		return Db::insert(
-			'INSERT INTO comment (user_id, quarter_id, info_id, content, photo_id)
-		 	 VALUES (:user_id, :quarter_id, :info_id, :content, :photo_id,)',
+			'INSERT INTO comment (id , user_id, quarter_id, info_id, content, photo_id)
+		 	 VALUES (:id , :user_id, :quarter_id, :info_id, :content, :photo_id)',
 			array(
 				'id' => (int) $this->id,
 				'user_id' => $this->user_id,
 				'quarter_id' => $this->quarter_id,
 				'info_id' => $this->info_id,
-				'content' => (int) $this->content,
-				'photo_id' => (int) $this->photo_id,
+				'content' =>  $this->content,
+				'photo_id' =>  $this->photo_id
 			)
 		);
 	}
@@ -95,8 +96,8 @@ class Comment extends Model {
 				'user_id' => $this->user_id,
 				'quarter_id' => $this->quarter_id,
 				'info_id' => $this->info_id,
-				'content' => (int) $this->content,
-				'photo_id' => (int) $this->photo_id,
+				'content' =>  $this->content,
+				'photo_id' =>  $this->photo_id
 			)
 		);
 	}
