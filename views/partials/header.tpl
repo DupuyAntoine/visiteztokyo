@@ -32,4 +32,7 @@
 
                 		<div class="col-lg-12">
 
-                				<a href="#menu-toggle" class="btn btn-default" id="menu-toggle"><img src="{$IMG_ROOT}logo.jpg" alt="logo" width="100px"; height="50px"></a>
+                				<a href="#menu-toggle" class="btn btn-default" id="menu-toggle">
+                					<img src="{$IMG_ROOT}mini_logo.png" alt="logo" width="100%" class="logo" hidden>
+                					<span class="glyphicon glyphicon-chevron-left"></span>
+                				</a>

@@ -207,3 +207,17 @@ h6, .h6 {
 
 }
 
+.picture-container {
+	height: 200px;
+	overflow: hidden;
+}
+
+.picture-container img {
+	height: 100%;
+}
+/*
+.thumbnail {
+    width: 30%;
+    margin: 0 10px;
+}
+*/

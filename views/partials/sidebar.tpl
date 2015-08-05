@@ -2,7 +2,7 @@
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
-                    <a href="{$HTTP_ROOT}home/index"><img src="{$IMG_ROOT}logo.jpg" alt="logo" width="100px"; height="50px"></a>
+                    <a href="{$HTTP_ROOT}home/index"><img src="{$IMG_ROOT}logo.jpg" alt="logo" width="80%"></a>
                 </li>
             {foreach $pages as $page_url => $page}
                 {if !is_array($page)}
