@@ -3,9 +3,11 @@
     <div class="row">
         <ul class="thumbnails">
             {foreach $quarters as $quarter}
-            <div class="col-md-4">
+            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
                 <div class="thumbnail indexdivpicture">
-                <img src="{$quarter->getPicture()->src}" alt="{$quarter->name}" class="img-responsive indexpicture" style="max-height:250px;margin-left: 0px;margin-right: 0px;width: 100%;"/>
+                    <div class="picture-container">
+                     <img src="{$quarter->getPicture()->src}" alt="{$quarter->name}" class="img-responsive indexpicture" style="max-height:250px;margin-left: 0px;margin-right: 0px;width: 100%;"/>
+                    </div>
                     <div class="caption homecontent">
                         <h3>{$quarter->name}</h3>
                         <p>{$quarter->type}</p>

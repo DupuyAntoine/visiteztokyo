@@ -41,10 +41,9 @@ abstract class BaseController extends Controller {
 		$vars['pages'] = array(
 			'home/index' => Lang::_('Accueil'),
 			'quarter' => array(	Lang::_('Les quartiers'), $quarter_pages),
-			'search' => Lang::_('Search'),
-			'contact' => Lang::_('Contact'),
 			'quarter/random' => Lang::_('Quartier aléatoire'),
-			'wall' => Lang::_('Photos des membres'),
+			'contact' => Lang::_('Vos suggestions'),
+			'search' => Lang::_('Recherche avancée'),
 		);
 
 		if (User::isLogged()) {
