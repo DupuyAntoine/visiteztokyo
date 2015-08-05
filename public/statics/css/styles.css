@@ -216,3 +216,16 @@ h6, .h6 {
 .rating-up {
 	color: #FFCC00;
 }
+
+/*
+* template multiple : images
+*/
+.picture-container {
+	height: 200px;
+	overflow: hidden;
+}
+
+.picture-container img {
+	height: 100%;
+}
+
