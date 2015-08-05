@@ -62,4 +62,5 @@ class Picture extends Model {
 
 		return $picture;
 	}
+
 }

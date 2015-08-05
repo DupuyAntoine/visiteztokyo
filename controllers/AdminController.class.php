@@ -25,7 +25,7 @@ class AdminController extends BaseAdminController {
 		return $this->base_action('quarter');
 	}
 	public function info() {
-		return $this->base_list('info', array('id', 'quarter_id', 'name',  'type' , 'description' , 'url' , 'rating' , 'theme' , 'map' ));
+		return $this->base_list('info', array('id', 'quarter_id', 'name',  'type' , 'description' , 'url' , 'rating' , 'theme' , 'longitude' , 'latitude' , 'adress' ));
 	}
 
 	public function info_action() {
@@ -45,6 +45,14 @@ class AdminController extends BaseAdminController {
 	public function user_action() {
 		return $this->base_action('user');
 	}
+
+	public function photo() {
+		return $this->base_list('photo', array('id' ,'quarter_id' , array('src', 'picture') , 'info_id' , 'user_id'));
+	}
+	public function photo_action() {
+		return $this->base_action('photo');
+	}
+
 
 	public function search() {
 
