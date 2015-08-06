@@ -52,8 +52,14 @@ class Picture extends Model {
 	public static function getDefault($type = null) {
 		$picture = new Picture();
 		switch($type) {
+			case Info::INFO_TYPE_RESTAURANT:
+				$picture->src = 'defaut-restaurant.jpg';
+			break;
 			case Info::INFO_TYPE_HOTEL:
-				$picture->src = 'http://aixpress-design.fr/wp-content/uploads/2015/05/largshotellogo256.png';
+				$picture->src = 'defaut-hotel.jpg';
+			break;
+			case Info::INFO_TYPE_LIEU:
+				$picture->src = 'defaut-lieu.jpg';
 			break;
 			default:
 				$picture->src = 'http://placehold.it/320x200';
