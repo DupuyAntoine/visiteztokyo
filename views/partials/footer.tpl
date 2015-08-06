@@ -35,7 +35,7 @@
     e.preventDefault();
 		$("#wrapper").toggleClass("toggled");
 		$(".logo").toggle("hidden", false);
-    $(".glyphicon-chevron-left").toggle();
+    $(".glyphicon-menu-hamburger").toggle();
     $(this).toggleClass('open');
   });
 
