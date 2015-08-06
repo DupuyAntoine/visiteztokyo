@@ -2,7 +2,11 @@
 	<thead>
 		<tr>
 			{foreach $table->cols as $col}
+			{if is_array($col)}
+			<th>{$col[0]|ucfirst}</th>
+			{else}
 			<th>{$col|ucfirst}</th>
+			{/if}
 			{/foreach}
 			<th>Actions</th>
 		</tr>
@@ -12,7 +16,18 @@
 	{foreach $table->data as $data}
 		<tr class="{if $i % 2 === 0}odd{else}even{/if}">
 			{foreach $table->cols as $col}
-			<td>{$data->$col}</td>
+			
+			{if is_array($col)}
+				{assign var=type value=$col[1]}
+
+				{if $type == 'picture'}
+				<td><img height="40" src="{$data->$col[0]}"></td>			
+				{/if}
+
+			{else}
+				<td>{$data->$col}</td>			
+			{/if}
+
 			{/foreach}
 			<td class="center">
 				<a href="{$table->edit_url}/{$data->id}"><i class="fa fa-pencil fa-fw"></i></a>

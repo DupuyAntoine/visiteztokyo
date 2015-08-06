@@ -34,7 +34,7 @@ class ElementsController extends BaseController {
 		);
 
 
-		$pagination = new Pagination($sql, $bindings, 4, $page - 1);
+		$pagination = new Pagination($sql, $bindings, 16, $page - 1);
 		$results = $pagination->getResults();
 		foreach($results as $result) {
 			$infos[] = new Info($result);

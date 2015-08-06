@@ -172,7 +172,7 @@ h6, .h6 {
 }
 
 /*
-* css pour le template Wall
+* template wall
 */
 
 .hide-bullets {
@@ -208,6 +208,19 @@ h6, .h6 {
 
 }
 
+/*
+* template elements : rating
+*/
+.rating-back {
+	color: #E8E8E8;
+}
+.rating-up {
+	color: #FFCC00;
+}
+
+/*
+* template multiple : images
+*/
 .picture-container {
 	height: 200px;
 	overflow: hidden;

@@ -77,4 +77,8 @@ $routes = array(
 		'target' => 'admin',
 		'action' => 'info_action'
 	),
+	'admin/photo/([a-zA-Z-_]+)/?([0-9]*)' => array(
+		'target' => 'admin',
+		'action' => 'photo_action'
+	),
 );

@@ -11,6 +11,7 @@ class Info extends Model {
 	protected $rating;
 	protected $theme;
 	protected $map;
+	protected $adress;
 	protected $longitude;
 	protected $latitude;
 
@@ -94,6 +95,9 @@ class Info extends Model {
 	public function setLongitude($longitude) {
 		$this->longitude = $longitude;
 	}
+	public function setAdress($adress) {
+		$this->adress = $adress;
+	}
 	public function setLatitude($latitude) {
 		$this->latitude = $latitude;
 	}
@@ -159,7 +163,9 @@ public function getForm($type, $action, $request, $isPost = false, $errors = arr
 		$form->addField('url', Lang::_('Url'), 'text', $this->_getfieldvalue('url', $type, $request), true, '', @$errors['url']);
 		$form->addField('rating', Lang::_('Rating'), 'text', '', true, '', @$errors['rating']);
 		$form->addField('theme', Lang::_('Theme'), 'text', $this->_getfieldvalue('theme', $type, $request), true, '', @$errors['theme']);
-		$form->addField('map', Lang::_('Map'), 'text', $this->_getfieldvalue('map', $type, $request), false, '');
+		$form->addField('longitude', Lang::_('Longitude'), 'text', $this->_getfieldvalue('longitude', $type, $request), true, '', @$errors['longitude']);
+		$form->addField('latitude', Lang::_('Latitude'), 'text', $this->_getfieldvalue('latitude', $type, $request), true, '', @$errors['latitude']);
+		$form->addField('adress', Lang::_('Adress'), 'text', $this->_getfieldvalue('adress', $type, $request), true, '', @$errors['adress']);
 
 		
 		return $form->render();
@@ -168,8 +174,8 @@ public function getForm($type, $action, $request, $isPost = false, $errors = arr
 	public function insert() {
 
 		return Db::insert(
-			'INSERT INTO info (id, quarter_id , name, type , description , url , rating , theme , map)
-		 	 VALUES (:id, :quarter_id , :name, :type , :description , :url , :rating , :theme , :map)',
+			'INSERT INTO info (id, quarter_id , name, type , description , url , rating , theme , longitude , latitude , adress )
+		 	 VALUES (:id, :quarter_id , :name, :type , :description , :url , :rating , :theme , :longitude , :latitude , :adress )',
 			array(
 				'id' => (int) $this->id,
                 'quarter_id' => $this->quarter_id,
@@ -179,7 +185,10 @@ public function getForm($type, $action, $request, $isPost = false, $errors = arr
                 'url' => $this->url,
                 'rating' => $this->rating,
                 'theme' => $this->theme,
-                'map' => $this->map,
+                'longitude' => $this->longitude,
+                'latitude' => $this->latitude,
+                'adress' => $this->adress,
+             
 
 
 			)
@@ -193,7 +202,7 @@ public function getForm($type, $action, $request, $isPost = false, $errors = arr
 		}
 
 		return Db::update(
-			'UPDATE info SET id = :id, quarter_id = :quarter_id, name = :name, type = :type, description = :description ,  url = :url, rating = :rating, theme = :theme , map = :map
+			'UPDATE info SET id = :id, quarter_id = :quarter_id, name = :name, type = :type, description = :description ,  url = :url, rating = :rating, theme = :theme , longitude = :longitude , latitude = :latitude , adress = :adress
 		 	 WHERE id = :id',
 			array(
 				'id' => (int) $this->id,
@@ -204,7 +213,10 @@ public function getForm($type, $action, $request, $isPost = false, $errors = arr
                 'url' => $this->url,
                 'rating' => $this->rating,
                 'theme' => $this->theme,
-                'map' => $this->map,
+                'longitude' => $this->longitude,
+                'latitude' => $this->latitude,
+                'adress' => $this->adress,
+               
 
 			)
 		);

@@ -30,7 +30,7 @@
 				<!-- Top part of the slider -->
 				<div class="row">
 					<div class="col-sm-12" id="carousel-bounding-box">
-						<div class="carousel slide" id="myCarousel">
+						<div class="carousel slide" id="wallCarousel">
 							<!-- Carousel items -->
 							<div class="carousel-inner">
 
@@ -48,10 +48,10 @@
 
 							</div>
 							<!-- Carousel nav -->
-							<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+							<a class="left carousel-control" href="#wallCarousel" role="button" data-slide="prev">
 							<span class="glyphicon glyphicon-chevron-left"></span>
 							</a>
-							<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+							<a class="right carousel-control" href="#wallCarousel" role="button" data-slide="next">
 								<span class="glyphicon glyphicon-chevron-right"></span>
 							</a>
 						</div>
@@ -66,7 +66,9 @@
 
 		<div class="col-md-12 text-center">
 
-			{include file="partials/pagination.tpl" uri="{$HTTP_ROOT}wall/"}
+			{if $count_pages > 1}
+				{include file="partials/pagination.tpl" uri="{$HTTP_ROOT}wall/"}
+			{/if}
 
 		</div>
 

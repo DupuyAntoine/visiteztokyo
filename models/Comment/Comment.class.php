@@ -60,7 +60,7 @@ class Comment extends Model {
 		$form->addField('user_id', Lang::_('User Id'), 'text', $this->_getfieldvalue('user_id', $type, $request), true, '', @$errors['user_id']);
 		$form->addField('quarter_id', Lang::_('Quarter Id'), 'text', $this->_getfieldvalue('quarter_id', $type, $request), false, '', @$errors['quarter_id']);
 		$form->addField('info_id', Lang::_('Info Id'), 'text', $this->_getfieldvalue('info_id', $type, $request), false, '', @$errors['info_id']);
-		$form->addField('content', Lang::_('Content'), 'text', $this->_getfieldvalue('content', $type, $request), true, '', @$errors['content']);
+		$form->addField('content', Lang::_('Content'), 'text-area', $this->_getfieldvalue('content', $type, $request), true, '', @$errors['content']);
 		$form->addField('photo_id', Lang::_('Photo Id'), 'file', $this->_getfieldvalue('photo_id', $type, $request), false);
 		
 		return $form->render();
