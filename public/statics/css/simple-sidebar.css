@@ -1,6 +1,8 @@
 /* Toggle Styles */
 
 #wrapper {
+    margin-left: 2.7%;
+    margin-right: 2.7%;
     padding-left: 0;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
@@ -130,7 +132,5 @@
         position: relative;
         margin-right: 0;
     }
-
-
 }
 
