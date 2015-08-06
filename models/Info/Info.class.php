@@ -117,7 +117,7 @@ class Info extends Model {
 		$result = Db::selectOne('SELECT src FROM photo WHERE info_id = :info_id', array('info_id' => $this->id));
 		if (empty($result)) {
 			$picture = new Picture();
-			$picture->src = 'http://placehold.it/60x60';
+			$picture->src = 'http://placehold.it/320x200';
 			return $picture;
 		}
 		return new Picture($result);
@@ -167,7 +167,7 @@ public function getForm($type, $action, $request, $isPost = false, $errors = arr
 		$form->addField('latitude', Lang::_('Latitude'), 'text', $this->_getfieldvalue('latitude', $type, $request), true, '', @$errors['latitude']);
 		$form->addField('adress', Lang::_('Adress'), 'text', $this->_getfieldvalue('adress', $type, $request), true, '', @$errors['adress']);
 
-		
+
 		return $form->render();
 	}
 
@@ -179,7 +179,7 @@ public function getForm($type, $action, $request, $isPost = false, $errors = arr
 			array(
 				'id' => (int) $this->id,
                 'quarter_id' => $this->quarter_id,
-                'name' => $this->name, 
+                'name' => $this->name,
                 'type' => $this->type,
                 'description' => $this->description,
                 'url' => $this->url,
@@ -188,7 +188,7 @@ public function getForm($type, $action, $request, $isPost = false, $errors = arr
                 'longitude' => $this->longitude,
                 'latitude' => $this->latitude,
                 'adress' => $this->adress,
-             
+
 
 
 			)
@@ -207,7 +207,7 @@ public function getForm($type, $action, $request, $isPost = false, $errors = arr
 			array(
 				'id' => (int) $this->id,
                 'quarter_id' => $this->quarter_id,
-                'name' => $this->name, 
+                'name' => $this->name,
                 'type' => $this->type,
                 'description' => $this->description,
                 'url' => $this->url,
@@ -216,7 +216,7 @@ public function getForm($type, $action, $request, $isPost = false, $errors = arr
                 'longitude' => $this->longitude,
                 'latitude' => $this->latitude,
                 'adress' => $this->adress,
-               
+
 
 			)
 		);
