@@ -20,14 +20,15 @@
 
 <hr>
 
-<div class="row col-12" style="text-align : center">
+<div class="row">
 	{foreach $types as $type_id => $type_label}
-	<div class="col-xs-6 col-md-4 col-lg-4">
+	<div class="col-xs-6 col-sm-4">
 		<div class="thumbnail">
-			<img src="{$quarter->getRandomInfoPicture($type_id)->src}" alt="" class="img-responsive" style="width: 100%; max-height: 180px">
+			<div class="ele-img">
+				<img src="{$quarter->getRandomInfoPicture($type_id)->src}" alt="">
+			</div>
 			<div class="caption">
 				<h4 class="text-center"><a href="{$HTTP_ROOT}elements/{$quarter->id}-{Utils::cleanString($type_label)}">{$type_label}</a></h4>
-
 			</div>
 		</div>
 	</div>
