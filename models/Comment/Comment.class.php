@@ -8,6 +8,7 @@ class Comment extends Model {
 	protected $content;
 	protected $info_id;
 	protected $photo_id;
+	protected $date;
 
 	public function getId() {
 		return $this->id;
@@ -26,6 +27,9 @@ class Comment extends Model {
 	}
 	public function getPhotoId() {
 		return $this->photo_id;
+	}
+	public function getDate() {
+		return $this->date;
 	}
 	public function getPicture() {
 		/*$result = Db::selectOne('SELECT src FROM photo WHERE user_id = :user_id', array('user_id' => $this->user_id));
@@ -52,6 +56,9 @@ class Comment extends Model {
 	public function setPhotoId($photo_id) {
 		$this->photo_id = $photo_id;
 	}
+	public function setDate($date) {
+		$this->date = $date;
+	}
 
 	public function getForm($type, $action, $request, $isPost = false, $errors = array()) {
 
@@ -69,8 +76,8 @@ class Comment extends Model {
 	public function insert() {
 
 		return Db::insert(
-			'INSERT INTO comment (id , user_id, quarter_id, info_id, content, photo_id)
-		 	 VALUES (:id , :user_id, :quarter_id, :info_id, :content, :photo_id)',
+			'INSERT INTO comment (id , user_id, quarter_id, info_id, content, photo_id, date)
+		 	 VALUES (:id , :user_id, :quarter_id, :info_id, :content, :photo_id, NOW())',
 			array(
 				'id' => (int) $this->id,
 				'user_id' => $this->user_id,

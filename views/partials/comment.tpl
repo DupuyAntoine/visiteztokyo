@@ -1,3 +1,4 @@
+{if User::isLogged()}
 <hr>
 
 {if !isset($quarter_id)}
@@ -33,10 +34,11 @@
 	</div>
 	-->
 	<div class="form-group">
-		<label for="content">
+		<label for="content">Poste ton message</label>
 		<textarea name="content" id="content" class="form-control"></textarea>
 	</div>
 	<button type="submit" class="btn btn-default">Submit</button>
 </form>
+{/if}
 
 {include file="partials/comment-post.tpl"}
