@@ -197,31 +197,59 @@ h6, .h6 {
 * css pour photo de la page index
 */
 
-
+.indexpicture {
+	border-top-right-radius: 51px;
+    border-top-left-radius: 51px;
+}
 .indexdivpicture {
-	    border: 1px solid rgb(191, 191, 191);
+
+    border: 1px solid rgb(191, 191, 191);
 
 }
 
 /*
-* template elements : rating
+* template elements
 */
-.rating-back {
+
+.ele-img {
+	text-align: center;
+	overflow: hidden;
+}
+.ele-img img {
+	max-height: 180px;
+	min-height: 180px;
+}
+.ele-titre {
+	font-size: 1.2em;
+	text-align: center;
+	height: 28px;
+	overflow: hidden;
+}
+.ele-theme {
+	font-size: 1em;
+	text-align: center;
+	height: 26px;
+	overflow: hidden;
+}
+.ele-star {
+	text-align: center;
+	height: 20px;
+}
+.ele-rating-back {
 	color: #E8E8E8;
 }
-.rating-up {
+.ele-rating-up {
 	color: #FFCC00;
 }
 
 /*
 * template multiple : images
 */
+
 .picture-container {
 	height: 200px;
 	overflow: hidden;
 }
-
 .picture-container img {
 	height: 100%;
 }
-

@@ -1,3 +1,5 @@
+<hr>
+
 {if !isset($quarter_id)}
 	{assign var=quarter_id value=''}
 {/if}

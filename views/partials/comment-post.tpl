@@ -1,14 +1,19 @@
 {if !empty($comments)}
 {foreach $comments as $comment}
 
-<div class="list-group">
+<hr>
+
+<div class="comment-center">
+	<div class="well well-lg col-md-6">
+		<h4>{if !empty($comment->pseudo)}{$comment->pseudo}{else}Utilisateur inconnu{/if}</h4>
+		<p>{$comment->content}</p>
 	{if !empty ($comment->src)}
-	<img class="comment-img" src="{$comment->src}">
-	{/if}
-	<div>
-		<h4 class="list-group-item-heading">{if !empty($user_id)}{$comment->pseudo}{else}Utilisateur inconnu{/if}</h4>
-		<p class="list-group-item-text">{$comment->content}</p>
 	</div>
+	<div class="col-md-4">
+		<img src="{$comment->src}">
+	</div>
+	{/if}
 </div>
+<div class="clearfix"></div>
 {/foreach}
 {/if}
