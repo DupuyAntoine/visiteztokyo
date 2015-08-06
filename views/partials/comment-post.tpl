@@ -3,10 +3,10 @@
 
 <div class="list-group">
 	{if !empty ($comment->src)}
-	<img class="comment-img" src="{$comment->src}">
+	<img src="{$comment->src}">
 	{/if}
 	<div>
-		<h4 class="list-group-item-heading">{if !empty($user_id)}{$comment->pseudo}{else}Utilisateur inconnu{/if}</h4>
+		<h4 class="list-group-item-heading">{if !empty($comment->pseudo)}{$comment->pseudo}{else}Utilisateur inconnu{/if}</h4>
 		<p class="list-group-item-text">{$comment->content}</p>
 	</div>
 </div>
