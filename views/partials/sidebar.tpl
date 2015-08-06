@@ -19,19 +19,19 @@
                 {/if}
             {/foreach}
             {if !empty($user) && User::isLogged()}
-                <li><a class="blog-nav-item">{t}Logged as{/t} {$user->pseudo}</a></li>
+                <li><a class="blog-nav-item">{t}Bienvenue{/t} {$user->pseudo}</a></li>
                 <li><a href="{$HTTP_ROOT}logout" class="blog-nav-item{if $current_page == 'user/logout/'} active{/if}">{t}Logout{/t}</a></li>
             {else}
                 <li{if $current_page == 'user/login/'} class="active"{/if}><a href="{$HTTP_ROOT}login" class="blog-nav-item">{t}Login{/t}</a></li>
                 <li{if $current_page == 'user/register/'} class="active"{/if}><a href="{$HTTP_ROOT}register" class="blog-nav-item">{t}Register{/t}</a></li>
             {/if}
-                <form action="{$HTTP_ROOT}search" class="navbar-form navbar-left" role="search">
-                    <input type="hidden" name="qs" value="1">
-                    <div class="form-group">
-                        <input name="q" type="text" class="form-control" placeholder="Search">
-                    </div>
-                    <button type="submit" class="btn btn-default">Submit</button>
-                </form>
+            <form action="{$HTTP_ROOT}search" class="navbar-form navbar-left" role="search">
+                <input type="hidden" name="qs" value="1">
+                <div class="form-group">
+                    <input name="q" type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
             </ul>
         </div>
         <!-- /#sidebar-wrapper -->
