@@ -5,7 +5,7 @@
 
 <div class="comment-center">
 	<div class="well well-lg col-md-6">
-		<h4>{if !empty($comment->pseudo)}{$comment->pseudo}{else}Utilisateur inconnu{/if}</h4>
+		<h4>{if !empty($comment->pseudo)}{$comment->pseudo}{else}Utilisateur inconnu{/if} <small>{$comment->date}</small></h4>
 		<p>{$comment->content}</p>
 	{if !empty ($comment->src)}
 	</div>
