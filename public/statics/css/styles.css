@@ -186,17 +186,17 @@ h6, .h6 {
 .carousel-inner>.item>img, .carousel-inner>.item>a>img {
 	width: 100%;
 }
+
+/*
+* css pour photo de la page index
+*/
+
 .homecontent{
 	text-align: center;
 }
 .button-center {
 	text-align: center;
 }
-
-/*
-* css pour photo de la page index
-*/
-
 .indexpicture {
 	border-top-right-radius: 51px;
     border-top-left-radius: 51px;
