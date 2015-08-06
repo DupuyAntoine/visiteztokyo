@@ -13,7 +13,7 @@
 				{$i = 0}
 				{foreach $pictures as $picture}
 
-					<li class="col-sm-3">
+					<li class="col-sm-6">
 						<a class="thumbnail" id="carousel-selector-{$i}"><img src="{$picture->src}" style="height: 120px"></a>
 					</li>
 					{if $i == 19}

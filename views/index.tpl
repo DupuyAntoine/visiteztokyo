@@ -3,7 +3,7 @@
     <div class="row">
         <ul class="thumbnails">
             {foreach $quarters as $quarter}
-            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 col-xxs-12">
                 <div class="thumbnail indexdivpicture">
                     <div class="picture-container">
                      <img src="{$quarter->getPicture()->src}" alt="{$quarter->name}" class="img-responsive indexpicture" style="max-height:250px;margin-left: 0px;margin-right: 0px;width: 100%;"/>

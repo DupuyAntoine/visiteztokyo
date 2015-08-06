@@ -10,6 +10,7 @@
 
 	<title>{$website_title} - {$title}</title>
 
+	<link rel="stylesheet" media="screen and (max-width: 360px)" href="{$CSS_ROOT}smallscreen.css" type="text/css" />
 	<link rel="stylesheet" href="{$CSS_ROOT}simple-sidebar.css" >
 	<link rel="stylesheet" href="{$CSS_ROOT}bootstrap.min.css">
 	<link rel="stylesheet" href="{$CSS_ROOT}bootstrap-theme.min.css">
@@ -35,5 +36,5 @@
 
                 				<a href="#menu-toggle" class="btn btn-default" id="menu-toggle">
                 					<img src="{$IMG_ROOT}mini_logo.png" alt="logo" width="100%" class="logo" hidden>
-                					<span class="glyphicon glyphicon-chevron-left"></span>
+                					<span class="glyphicon glyphicon-menu-hamburger"></span>
                 				</a>

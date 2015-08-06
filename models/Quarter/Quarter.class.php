@@ -85,7 +85,7 @@ class Quarter extends Model {
 					LEFT JOIN user u ON c.user_id = u.id
 					LEFT JOIN photo p ON p.id = c.photo_id
 					WHERE q.id = :quarter_id
-					AND c.info_id IS NULL',
+					AND c.info_id = 0',
 		array(
 			'quarter_id' => $this->id
 		));
