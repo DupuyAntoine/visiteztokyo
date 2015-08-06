@@ -11,8 +11,8 @@
     <!-- /#wrapper -->
 
 	<footer class="blog-footer">
-
-      <p style ="text-align : center">{$website_title} &copy; 2015</p>
+			<a href="{$IMG_ROOT}1438865519_578_conditions_generales_d_utilisation_d_un_site_internet.pdf">CGU (PDF)</a>
+      <p style ="text-align : center">{$website_title} &copy; {date("Y")}</p>
     </footer>
 
     {include file="partials/debug.tpl"}
