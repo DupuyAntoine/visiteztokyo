@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Ven 07 Août 2015 à 12:59
+-- Généré le :  Ven 07 Août 2015 à 13:13
 -- Version du serveur :  5.6.24
 -- Version de PHP :  5.6.8
 
@@ -1138,16 +1138,17 @@ CREATE TABLE IF NOT EXISTS `user` (
   `password` varchar(60) DEFAULT NULL,
   `newsletter` tinyint(1) DEFAULT NULL,
   `cgu` tinyint(1) DEFAULT NULL,
-  `register_date` datetime NOT NULL
+  `register_date` datetime NOT NULL,
+  `status` tinyint(4) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `user`
 --
 
-INSERT INTO `user` (`id`, `pseudo`, `firstname`, `lastname`, `email`, `password`, `newsletter`, `cgu`, `register_date`) VALUES
-(1, 'Iskandir', 'Nicolas', 'Brohette', 'manalegende2@gmail.com', 'iskandir13', 0, 1, '2015-08-02 04:28:43'),
-(3, 'Draazen', 'Antoine', 'Dupuy', 'a.dupuy.pro@gmail.com', '$2y$10$TV/Y78b6MSjI7PkeQTOENOmVjCAqB7xBK2YfpsyuUvKkD17a5zM5S', 0, 1, '2015-08-03 10:43:58');
+INSERT INTO `user` (`id`, `pseudo`, `firstname`, `lastname`, `email`, `password`, `newsletter`, `cgu`, `register_date`, `status`) VALUES
+(1, 'Iskandir', 'Nicolas', 'Brohette', 'manalegende2@gmail.com', 'iskandir13', 0, 1, '2015-08-02 04:28:43', 0),
+(3, 'Draazen', 'Antoine', 'Dupuy', 'a.dupuy.pro@gmail.com', '$2y$10$TV/Y78b6MSjI7PkeQTOENOmVjCAqB7xBK2YfpsyuUvKkD17a5zM5S', 0, 1, '2015-08-03 10:43:58', 1);
 
 --
 -- Index pour les tables exportées
