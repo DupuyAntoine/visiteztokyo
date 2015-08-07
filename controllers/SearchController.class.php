@@ -96,7 +96,7 @@ class SearchController extends BaseController {
 				$infos[] = new Info($result);
 			}
 			foreach ($infos as $key => $info) {
-				$info->description=substr($info->description,0, 50);
+				$info->description=substr($info->description,0, 200);
 			}
 			$vars = array_merge($vars, array(
 				'page' => $page,
