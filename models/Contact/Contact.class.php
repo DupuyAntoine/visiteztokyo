@@ -6,7 +6,6 @@ class Contact extends Model {
 	protected $firstname;
 	protected $email;
 	protected $message;
-	protected $newsletter;
 	protected $cgu;
 	protected $date;
 
@@ -25,9 +24,6 @@ class Contact extends Model {
 	}
 	public function getMessage() {
 		return $this->message;
-	}
-	public function getNewsletter() {
-		return $this->newsletter;
 	}
 	public function getCgu() {
 		return $this->cgu;
@@ -64,9 +60,6 @@ class Contact extends Model {
 		}
 		$this->message = strip_tags($message);
 	}
-	public function setNewsletter($newsletter) {
-		$this->newsletter = $newsletter;
-	}
 	public function setCgu($cgu) {
 		if (empty($cgu)) {
 			throw new Exception(Lang::_('You have to accept the terms of service'));
@@ -84,7 +77,6 @@ class Contact extends Model {
 		$form->addField('firstname', Lang::_('Firstname'), 'text', $this->_getfieldvalue('firstname', $type, $request), true, '', @$errors['firstname']);
 		$form->addField('email', Lang::_('Email'), 'email', $this->_getfieldvalue('email', $type, $request), true, '', @$errors['email']);
 		$form->addField('message', Lang::_('Message'), 'textarea', $this->_getfieldvalue('message', $type, $request), true, '', @$errors['message']);
-		$form->addField('newsletter', Lang::_('Subscribe to the newsletter'), 'checkbox', $this->_getfieldvalue('newsletter', $type, $request), false);
 		$form->addField('cgu', Lang::_('Accept the terms of service'), 'checkbox', $this->_getfieldvalue('cgu', $type, $request), true, '', @$errors['cgu']);
 
 		return $form->render();
@@ -93,13 +85,12 @@ class Contact extends Model {
 	public function insert() {
 
 		return Db::insert(
-			'INSERT INTO contact (lastname, firstname, email, newsletter, cgu, message, date)
-		 	 VALUES (:lastname, :firstname, :email, :newsletter, :cgu, :message, NOW())',
+			'INSERT INTO contact (lastname, firstname, email, cgu, message, date)
+		 	 VALUES (:lastname, :firstname, :email, :cgu, :message, NOW())',
 			array(
 				'lastname' => $this->lastname,
 				'firstname' => $this->firstname,
 				'email' => $this->email,
-				'newsletter' => (int) $this->newsletter,
 				'cgu' => (int) $this->cgu,
 				'message' => $this->message
 			)
@@ -113,13 +104,12 @@ class Contact extends Model {
 		}
 
 		return Db::update(
-			'UPDATE contact SET lastname = :lastname, firstname = :firstname, email = :email, newsletter = :newsletter, cgu = :cgu, message = :message, date = NOW()
+			'UPDATE contact SET lastname = :lastname, firstname = :firstname, email = :email, cgu = :cgu, message = :message, date = NOW()
 		 	 WHERE id = :id',
 			array(
 				'lastname' => $this->lastname,
 				'firstname' => $this->firstname,
 				'email' => $this->email,
-				'newsletter' => (int) $this->newsletter,
 				'cgu' => (int) $this->cgu,
 				'message' => $this->message,
 				'id' => (int) $this->id

@@ -25,9 +25,7 @@
 	<div class="col-xs-6 col-sm-4">
 		<div class="thumbnail">
 			<div class="ele-img">
-				<a href="{$HTTP_ROOT}elements/{$quarter->id}-{Utils::cleanString($type_label)}">
-					<img src="{$quarter->getRandomInfoPicture($type_id)->src}" alt="">
-				</a>
+				<img src="{$quarter->getRandomInfoPicture($type_id)->src}" alt="">
 			</div>
 			<div class="caption">
 				<h4 class="text-center"><a href="{$HTTP_ROOT}elements/{$quarter->id}-{Utils::cleanString($type_label)}">{$type_label}</a></h4>

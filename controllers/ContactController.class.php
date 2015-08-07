@@ -6,7 +6,7 @@ class ContactController extends BaseController {
 
 		$vars = array(
 			'title' => 'Contact',
-			'description' => '...'
+			'description' => ''
 		);
 
 		$isPost = $this->request->isPost();
