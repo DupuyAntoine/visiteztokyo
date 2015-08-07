@@ -188,9 +188,6 @@ public function getForm($type, $action, $request, $isPost = false, $errors = arr
                 'longitude' => $this->longitude,
                 'latitude' => $this->latitude,
                 'adress' => $this->adress,
-
-
-
 			)
 		);
 	}
