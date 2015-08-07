@@ -15,7 +15,13 @@
 
 			{if !empty($isPost) && !empty($success)}
 				<div class="alert alert-success" role="success">{$title} {t}success{/t}</div>
-				{Utils::redirectJS($HTTP_ROOT, 1)}
+
+				{assign var=url value=$HTTP_ROOT}
+				{if User::isLogged() && $user->status === 1}
+					{assign var=url value="{$HTTP_ROOT}admin"}
+				{/if}
+
+				{Utils::redirectJS($url, 1)}
 			{/if}
 
 			{if isset($form) && empty($success)}

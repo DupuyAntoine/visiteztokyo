@@ -31,6 +31,10 @@ class UserController extends BaseController {
 
 			if (empty($errors)) {
 				$success = $user->checkLogin($remember_me);
+
+				if ($success) {
+					$user = User::get($this->session->user_id);
+				}
 			}
 
 			if ($success === false) {
@@ -40,12 +44,14 @@ class UserController extends BaseController {
 
 		$form = $user->getLoginForm('insert', ROOT_HTTP.$this->lang->getUserLang().'/user/login', $this->request, $isPost, $errors);
 
+
 		$vars = array(
 			'title' => Lang::_('Login'),
 			'isPost' => $isPost,
 			'form' => $form,
 			'errors' => $errors,
-			'success' => $success
+			'success' => $success,
+			'user' => $user
 		);
 
 		$fb_active = API_Facebook::isActive();
@@ -113,7 +119,7 @@ class UserController extends BaseController {
 						$user_id = $user->register();
 
 						if (!empty($user_id)) {
-							$success = $this->login();
+							$success = $user->login();
 						} else {
 							$errors['authent'] = Lang::_('Register failed');
 						}

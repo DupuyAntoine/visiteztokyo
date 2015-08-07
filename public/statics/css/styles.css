@@ -178,7 +178,7 @@ h6, .h6 {
 .hide-bullets {
 	list-style: none;
 	margin-left: -40px;
-	margin-top: 20px;
+	margin-top: 0px;
 }
 .thumbnail {
 	padding: 0;

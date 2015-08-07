@@ -18,6 +18,16 @@ abstract class BaseAdminController extends BaseController {
             'admin/comment/' => array('Comment', 'fa fa-paper-plane')
 		);
 
+		if (!User::isLogged()) {
+			$this->response->redirect(ROOT_HTTP.'login');
+		}
+
+		$user = User::get($this->session->user_id);
+
+		if ($user->status === 0) {
+			$this->response->redirect(ROOT_HTTP.'login');	
+		}
+
 		$this->response->addVars($vars);
 	}
 

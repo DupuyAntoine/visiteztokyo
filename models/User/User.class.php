@@ -49,7 +49,7 @@ class User extends Model {
 		return $this->confirm_password;
 	}
 	public function getStatus() {
-		return $this->status;
+		return (int) $this->status;
 	}
 	public function getNewsletter() {
 		return $this->newsletter;
@@ -109,7 +109,7 @@ class User extends Model {
 		$this->confirm_password = $confirm_password;
 	}
 	public function setStatus($status) {
-		$this->status = $status;
+		$this->status = (int) $status;
 	}
 	public function setNewsletter($newsletter) {
 		$this->newsletter = $newsletter;

@@ -33,6 +33,7 @@
                         {foreach $pages as $page_url => $page_params}
                         <li><a href="{$HTTP_ROOT}{$page_url}"{if $page_url == $current_page} class="active"{/if}><i class="fa {$page_params[1]} fa-fw"></i> {$page_params[0]}</a></li>
                         {/foreach}
+                     <li><a href="{$HTTP_ROOT}logout" class="blog-nav-item{if $current_page == 'user/logout/'} active{/if}">{t}Logout{/t}</a></li>
 
                         <!--
                         <li class="active">
