@@ -22,8 +22,10 @@
 	<script src="{$JS_ROOT}bootstrap.min.js"></script>
 	<script>var HTTP_ROOT = '{$HTTP_ROOT}';</script>
 	<script src="{$JS_ROOT}main.js"></script>
+  <script src="{$JS_ROOT}jquery.scrollTo-2.1.1\jquery.scrollTo.min.js"></script>
 
 	<script>
+  {literal}
 /*
 	$.getScript('//cdn.jsdelivr.net/isotope/1.5.25/jquery.isotope.min.js', function(){
 		$('.thumbnails').isotope({
@@ -37,6 +39,7 @@
 		$(".logo").toggle("hidden", false);
     $(".glyphicon-menu-hamburger").toggle();
     $(this).toggleClass('open');
+    $('html, body').scrollTo(0, 200);
   });
 
 	/*
@@ -53,6 +56,7 @@
 		};
   });
   */
+  {/literal}
 	</script>
 </body>
 </html>
