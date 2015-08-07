@@ -1,7 +1,7 @@
 {include file="partials/header.tpl"}
 
     <div class="row">
-        <ul class="thumbnails">
+        <ul class="thumbnails" style="padding-left: 0px;">
             {foreach $quarters as $quarter}
             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 col-xxs-12">
                 <div class="thumbnail indexdivpicture">

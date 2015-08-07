@@ -72,7 +72,7 @@
 				<div class="col-xs-12">
 					<a href="{$HTTP_ROOT}info/{$info->getSlug()}">
 						<div class="col-xs-1">
-							<img src="{$info->getPicture()->src}" width="80px" height="60px">
+							<img src="{$info->getPicture()->src}" width="80px" height="40px">
 						</div>
 						<div class="col-xs-11">
 							<span>{$info->name}</span>

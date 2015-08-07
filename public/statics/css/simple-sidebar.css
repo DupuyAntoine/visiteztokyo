@@ -171,6 +171,9 @@
     width: 100%;
     height: auto;
 }
+.thumbnails ul{
+    padding: 0 !important;
+}
 
 @media(max-width:767px) {
 
@@ -180,7 +183,7 @@
         padding: 0;
         position: relative;
         top: 0;
-        left: 50%;
+        left: 46%;
         width: 32px;
         height: 32px;
         margin-bottom: 20px;
@@ -194,7 +197,7 @@
     #menu-toggle .logo {
         width: 32px;
         height: 32px;
-        background-image: url(../img/image-thumbs.jpg);
+        background-image: url(../img/haut.jpg);
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
