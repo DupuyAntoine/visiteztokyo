@@ -43,9 +43,7 @@
 		<div class="thumbnail">
 			<!--<img src="{$info->getPicture()->src}" alt="image" style="max-height: 180px; min-height: 180px; overflow: hidden">-->
 			<div class="ele-img">
-				<a href="{$HTTP_ROOT}info/{$info->getSlug()}">
-					<img src="{$info->getPicture()->src}" alt="image">
-				</a>
+				<img src="{$info->getPicture()->src}" alt="image">
 			</div>
 			<div class="caption" style="max-height: 97px; min-height: 97px">
 				<div class="ele-titre" ><a href="{$HTTP_ROOT}info/{$info->getSlug()}">{$info->name}</a></div>

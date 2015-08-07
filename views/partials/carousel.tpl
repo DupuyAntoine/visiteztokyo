@@ -16,8 +16,7 @@
 		<div class="carousel-inner" role="listbox">
 			{$i = 0}
 			{foreach $entity->getPictures() as $picture}
-			<div class="item{if $i == 0} active{/if}">
-				<img src="{$picture->src}" alt="{$entity_name}">
+			<div class="item{if $i == 0} active{/if} picture-container" style="background-image:url({$entity->getPicture()->src}); max-height : 500px; min-height : 500px" alt="{$entity->name}">
 			</div>
 			{assign var=i value=$i + 1}
 			{/foreach}
