@@ -1,5 +1,0 @@
-AuthType basic
-AuthName Accès restreint;
-AuthUserFile "c:/xampp/htdocs/visiteztokyo/views/admin/.htpasswd"
-AuthGroupFile /dev/null
-Require valid-user  
