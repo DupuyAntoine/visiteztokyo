@@ -8,6 +8,7 @@ class Contact extends Model {
 	protected $message;
 	protected $newsletter;
 	protected $cgu;
+	protected $date;
 
 	/* Getters */
 	public function getId() {
@@ -30,6 +31,9 @@ class Contact extends Model {
 	}
 	public function getCgu() {
 		return $this->cgu;
+	}
+	public function getDate() {
+		return $this->date;
 	}
 
 	/* Setters */
@@ -68,6 +72,9 @@ class Contact extends Model {
 			throw new Exception(Lang::_('You have to accept the terms of service'));
 		}
 		$this->cgu = $cgu;
+	}
+	public function setDate($date) {
+		$this->date = $date;
 	}
 
 	public function getForm($type, $action, $request, $isPost = false, $errors = array()) {

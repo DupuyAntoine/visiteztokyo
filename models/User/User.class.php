@@ -236,8 +236,8 @@ class User extends Model {
 	public function insert() {
 
 		return Db::insert(
-			'INSERT INTO user (firstname, lastname, pseudo, email,  password , newsletter , cgu)
-		 	 VALUES (:firstname, :lastname, :pseudo, :email , :password , :newsletter , :cgu)',
+			'INSERT INTO user (firstname, lastname, pseudo, email,  password , newsletter , status, cgu)
+		 	 VALUES (:firstname, :lastname, :pseudo, :email , :password , :newsletter , :status, :cgu)',
 			array(
 				'id' => (int) $this->id,
 				'firstname' => $this->firstname,
@@ -246,6 +246,7 @@ class User extends Model {
 				'email' => $this->email,
 				'password' => $this->password,
 				'newsletter' => (int) $this->newsletter,
+				'status' => (int) $this->status,
 				'cgu' => (int) $this->cgu,
 			)
 		);
@@ -258,7 +259,7 @@ class User extends Model {
 		}
 
 		return Db::update(
-			'UPDATE user SET id = :id, firstname = :firstname, lastname = :lastname, pseudo = :pseudo, email = :email , password = :password, newsletter = :newsletter, cgu = :cgu
+			'UPDATE user SET id = :id, firstname = :firstname, lastname = :lastname, pseudo = :pseudo, email = :email , password = :password, newsletter = :newsletter, status = :status, cgu = :cgu
 		 	 WHERE id = :id',
 			array(
 				'id' => (int) $this->id,
@@ -268,6 +269,7 @@ class User extends Model {
 				'email' => $this->email,
 				'password' => $this->password,
 				'newsletter' => (int) $this->newsletter,
+				'status' => (int) $this->status,
 				'cgu' => (int) $this->cgu,
 			)
 		);
@@ -286,8 +288,8 @@ class User extends Model {
 
 	public function register() {
 		return Db::insert(
-		   'INSERT INTO user (lastname, firstname, pseudo, email, password, newsletter, cgu, register_date)
-			VALUES (:lastname, :firstname, :pseudo, :email, :password, :newsletter, :cgu, NOW())',
+		   'INSERT INTO user (lastname, firstname, pseudo, email, password, newsletter, status, cgu, register_date)
+			VALUES (:lastname, :firstname, :pseudo, :email, :password, :newsletter, :status, :cgu, NOW())',
 			array(
 				'lastname' => $this->lastname,
 				'firstname' => $this->firstname,
@@ -295,6 +297,7 @@ class User extends Model {
 				'email' => $this->email,
 				'password' => $this->password,
 				'newsletter' => $this->newsletter,
+				'status' => $this->status,
 				'cgu' => $this->cgu
 			)
 		);

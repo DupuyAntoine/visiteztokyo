@@ -61,4 +61,8 @@ class AdminController extends BaseAdminController {
 		$this->render('admin/search', $vars);
 	}
 
+	public function contact() {
+		return $this->base_list('contact', array('id', 'lastname', 'firstname', 'email', 'cgu', 'message', 'date'));
+	}
+
 }

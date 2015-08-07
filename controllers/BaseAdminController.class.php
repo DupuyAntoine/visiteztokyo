@@ -15,7 +15,8 @@ abstract class BaseAdminController extends BaseController {
             'admin/info/' => array('Info', 'fa fa-info-circle'),
             'admin/photo/' => array('Picture', 'fa fa-picture-o'),
             'admin/user/' => array('Users', 'fa fa-user'),
-            'admin/comment/' => array('Comment', 'fa fa-paper-plane')
+            'admin/comment/' => array('Comment', 'fa fa-paper-plane'),
+            'admin/contact/' => array('Contact', 'fa fa-envelope'),
 		);
 
 		if (!User::isLogged()) {
